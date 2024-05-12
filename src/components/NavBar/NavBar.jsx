@@ -5,14 +5,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import './NavBar.scss'
 
 function NavBar() {
   return (
     <>
        <Navbar expand="lg" className="bg-white mb-3">
   <Container fluid>
-    <Navbar.Brand href="#home"><img src='/src/assets/navBarLogo.png' width='100' height='100'></img></Navbar.Brand>
-    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
+  {/* <img src='/src/assets/navBarLogo.png' width='100' height='100'></img> */}
+    <Navbar.Brand href="#home">LOGO</Navbar.Brand>
+    <Navbar.Toggle className='navbar-toggler'  aria-controls={`offcanvasNavbar-expand-lg`} />
     <Navbar.Offcanvas
       id={`offcanvasNavbar-expand-lg`}
       aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
