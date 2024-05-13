@@ -34,7 +34,6 @@ function NavBar() {
             <Nav.Link href="#action2">Courses</Nav.Link>
             <Nav.Link href="#action2">Resources</Nav.Link>
             <Nav.Link href="#action2">Contact us</Nav.Link>
-         
           </Nav>
          
                </Offcanvas.Body>
@@ -45,4 +44,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavBar
