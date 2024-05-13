@@ -1,9 +1,13 @@
 @import './../../../_variables.scss';
 
+.button-container {
+    text-align: center;
+}
 .section-action-button {
-    padding: 10px;
+    padding: 1rem 6rem;
+    font-weight: 600;
     border: black 1px; 
-    border-radius: 10px;
+    border-radius: 2rem;
 }
 
 .secondary-font-color {
