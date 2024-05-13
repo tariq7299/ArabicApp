@@ -3,6 +3,7 @@
 ## GLOBAL  
 - Use prettier and test it
 - Use lint and test it  
+- Find a better wat to @import _variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
 
 ## NavBar  
 - Crop logo only form the logo image nested inside the navbar

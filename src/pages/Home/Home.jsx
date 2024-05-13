@@ -1,4 +1,6 @@
+import HeroSection from "../../components/HeroSection/HeroSection"
 import NavBar from "../../components/NavBar/NavBar"
+
 
 function Home() {
 
@@ -6,6 +8,7 @@ function Home() {
 
         <>
             <NavBar></NavBar>
+            <HeroSection></HeroSection>
         </>
 
     )
