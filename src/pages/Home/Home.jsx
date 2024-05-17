@@ -1,6 +1,7 @@
-import HeroSection from "../../components/HeroSection/HeroSection"
 import NavBar from "../../components/NavBar/NavBar"
-
+import HeroSection from "../../components/HeroSection/HeroSection"
+import LearnAboutTutorSection from "../../components/LearnAboutTutorSection/LearnAboutTutorSection"
+import SubscriptionPlansSection from "../../components/SubscriptionPlansSection/SubscriptionPlansSection"
 
 function Home() {
 
@@ -8,7 +9,12 @@ function Home() {
 
         <>
             <NavBar></NavBar>
+
             <HeroSection></HeroSection>
+
+            <LearnAboutTutorSection></LearnAboutTutorSection>
+
+            <SubscriptionPlansSection></SubscriptionPlansSection>
         </>
 
     )
