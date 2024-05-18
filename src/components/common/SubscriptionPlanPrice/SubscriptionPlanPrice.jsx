@@ -5,7 +5,7 @@ function SubscriptionPlanPrice() {
 
         <div className="subscription-plan-wrapper">
          <p>Starting from</p>
-         <p>EGP 1500 / month</p>
+         <p ><span className="price-amount">EGP 1,500 </span>/ month</p>
         </div>
 
     )

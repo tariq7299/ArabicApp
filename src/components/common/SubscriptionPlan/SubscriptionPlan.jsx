@@ -10,7 +10,7 @@ function SubscriptionPlan() {
         <div className="subscription-plan-wrapper">
             <SubscriptionPlanCard></SubscriptionPlanCard>
             <SubscriptionPlanPrice></SubscriptionPlanPrice>
-            <MyButton></MyButton>
+            <MyButton text="Sign up" buttonColor="secondary-color" textColor="primary-font-color"></MyButton>
         </div>
 
     )

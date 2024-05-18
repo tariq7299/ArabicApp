@@ -6,12 +6,13 @@
 
 
 - **Style the subscritpion plan section**
-    -   **Style the subscription plan card cocmpontne**
-        - Creat the over all flex container of the card  
-        - Create the flex of all sub items  
-        - 
+    -   **Style the price**  
+        -   
 
 - Also Dublicate all of them many times to mock the actual target web
+- Make the card header to be bold  
+- Make title of subscriptopn plan section with the correct color 
+- 
 
 
 

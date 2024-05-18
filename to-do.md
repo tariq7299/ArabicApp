@@ -30,6 +30,8 @@
 
 ## MyButton  
 - Add arrow icon to button
+- Make get started button at the hero section bigger than the other buttons 
+
 
 ## HeroSection  
 - Ask ahmed ali what to replace the videos in the first section in camply website ?? 
@@ -37,3 +39,7 @@
 
 ## MyTitle  
 - Find another bettert way to define the textColor for the title !! like it is very clunky right now  
+
+## Subscription plan  
+- Find some nice pictures for plans and crop them if necessary  
+- 
