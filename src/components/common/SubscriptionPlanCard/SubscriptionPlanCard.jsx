@@ -5,14 +5,20 @@ function SubscriptionPlanCard() {
     return (
 
         <div className="subscription-plan-card-wrapper">
-              <div className="subscription-plan-card-wrapper">
-            <img src="subscritptionPlanCardAvatar.avif" alt="Plan avatar"></img>
-            <h2>Complete</h2>
-            <h3>For access to all of Camply</h3>
-            <p>OUr most comprehennsive experience</p>
-            <p>OUr most comprehennsive experience</p>
-            <p>OUr most comprehennsive experience</p>
-        </div>
+           
+           <div className="img-plan-header-wrapper">
+                <img src="/src/assets/subscritptionPlanCardAvatar.png" alt="Plan avatar"></img>
+                <h2>Complete</h2>
+           </div>
+
+            <p className="benefits-header">For access to all of Camply</p>
+
+            <div className="benefits-wrapper">
+                <p>OUr most comprehennsive experience</p>
+                <p>OUr most comprehennsive experience</p>
+                <p>OUr most comprehennsive experience</p>
+            </div>
+
         </div>
 
     )
