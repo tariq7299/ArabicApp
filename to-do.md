@@ -31,6 +31,7 @@
 ## MyButton  
 - Add arrow icon to button
 - Make get started button at the hero section bigger than the other buttons 
+- Add the camply hover effect
 
 
 ## HeroSection  

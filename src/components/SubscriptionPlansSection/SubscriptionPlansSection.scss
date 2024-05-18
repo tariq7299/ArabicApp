@@ -3,7 +3,7 @@
 
 .subscription-plans-wrapper {
     display: grid;
-    grid-template-columns: minmax(150px, 300px);
+    grid-template-columns: minmax(250px, 300px);
     gap: 1rem; 
     justify-content: center;
 
@@ -12,6 +12,6 @@
 /* For screens 992px and larger (desktops) */
 @media (min-width: 992px) {
     .subscription-plans-wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     }
 }

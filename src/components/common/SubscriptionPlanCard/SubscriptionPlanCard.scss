@@ -4,16 +4,11 @@
     flex-direction: column;  
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
     background-color: #fff;
     border-radius: 6px;
-
     > * {
         width: 100%;
-    }
-    .benefits-header {
-        // width: 100%;
-        // text-align: start;
     }
 
     img {
