@@ -1,7 +1,12 @@
 @import './../../variables';
 
-.hero-container {
+.hero-section-container {
     padding: 100px 0;
     background-color: $primary-color;
-    height: 100lvh;
+    height: 100lvh;   
 }
+
+.bottom-space {
+    padding-bottom: 3rem;
+}
+

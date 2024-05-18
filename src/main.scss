@@ -1,10 +1,13 @@
-@import './_variables.scss';
+a@import './_variables.scss';
 @import 'customBootStrapSassStyles.scss';
-
 
 body {
   background-color: $primary-background-color;
   // color: $primary-font-color;
-  font-family: 'British Council Sans', sans-serif;
+  font-family: 'British Council Sans',sans-serif;
+}
+
+.section-space {
+  padding: 3rem 0;
 }
 
