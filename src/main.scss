@@ -1,4 +1,4 @@
-a@import './_variables.scss';
+@import './_variables.scss';
 @import 'customBootStrapSassStyles.scss';
 
 body {
@@ -7,7 +7,7 @@ body {
   font-family: 'British Council Sans',sans-serif;
 }
 
-.section-space {
-  padding: 3rem 0;
+.section-gap {
+  padding: 3rem 1.5rem;
 }
 

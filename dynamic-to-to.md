@@ -1,9 +1,13 @@
 # Creating the subscription plans section  
 
 - **Style the LearnAbout Tutor Section**  
+    -    Add inline padding to all page  
+    - change meta font and style 
+    - 
 - **Style the subscritpion plan section**
     - Find any mock avatar  for the "Compelete plan"
-    - Style the compoenent
+    - **Style the compoenent** 
+        -   create the 
     - Creadet the plan title "Comelete", "Kids", "Group"
     - Pass the avatar as a prop
     - Pass the plan title as a prop from parent
