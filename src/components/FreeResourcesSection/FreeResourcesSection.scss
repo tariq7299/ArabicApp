@@ -1,0 +1,33 @@
+@import "./../../variables";
+
+.free-resoureces-section-container {
+    // * > {
+    //     margin: 0;
+    // }
+    // text-align: center;
+    // margin: auto;
+    padding: 2rem;
+    // width: fit-content;
+
+    h2 {
+        // text-align: left;
+        // margin: auto;
+        padding-top: 7rem;
+    }
+    
+    .free-resources-elements-wrapper{
+        background-color: $accent-color;
+        padding: 3rem;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            transform: translate(0, -55%);
+            position: absolute;
+        }
+    }
+
+}

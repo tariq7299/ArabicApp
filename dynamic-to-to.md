@@ -5,4 +5,7 @@
     - with a title  
     - meta compontnet  
     - my button  
-    
+- make it at the middle  
+- Backgournd of resources section
+- assignb the iimage at iits correct place  
+- give it some padding   
