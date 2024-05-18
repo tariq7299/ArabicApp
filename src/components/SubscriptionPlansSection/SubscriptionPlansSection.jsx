@@ -8,8 +8,12 @@ function SubscriptionPlansSection() {
 
         <div className="subscription-plans-section-container section-gap">
             <MyTitle text="Pick the plan that works for you" textColor="secondary-font-color"></MyTitle>
-            <SubscriptionPlan></SubscriptionPlan>
 
+        <div className="subscription-plans-wrapper">
+                <SubscriptionPlan></SubscriptionPlan>
+                <SubscriptionPlan></SubscriptionPlan>
+                <SubscriptionPlan></SubscriptionPlan>
+            </div>
         </div>
 
     )
