@@ -5,13 +5,11 @@
     - Pass the benefits as children prop or normal prop
 
 
-- **Style the subscritpion plan section**
-    -   **Style the price**  
-        -   
-
-- Also Dublicate all of them many times to mock the actual target web
-- Make the card header to be bold  
-- Make title of subscriptopn plan section with the correct color 
+- **Style the subscritpion plan section**-
+    - Make the cards at the middle  
+    - make price at the middle
+    - Add some gap/padding between the card and price and button  
+    - 
 - 
 
 

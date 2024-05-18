@@ -9,8 +9,12 @@ function SubscriptionPlan() {
 
         <div className="subscription-plan-wrapper">
             <SubscriptionPlanCard></SubscriptionPlanCard>
+        <div className="price-button-wrapper">
+
             <SubscriptionPlanPrice></SubscriptionPlanPrice>
             <MyButton text="Sign up" buttonColor="secondary-color" textColor="primary-font-color"></MyButton>
+        </div>
+
         </div>
 
     )

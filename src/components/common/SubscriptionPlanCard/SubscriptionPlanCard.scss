@@ -22,18 +22,16 @@
 
 
     .img-plan-header-wrapper {
-        // flex: 1;
-        // flex-basis: 100%;
         width: 100%;
         display: flex;
         gap: 1rem;
         justify-content: start;
         align-items: center;
+        h2 {
+            font-weight: 600;
+        }
     }
 
-    .benefits-wrapper {
-        // width: 100%;
-    }
 
 
 

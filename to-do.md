@@ -19,7 +19,7 @@
 - Use lint and test it  
 - Find a better wat to @import _variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
 - Don't forget about incorberating the arabic language  
-- 
+- Find another font for section titles only
 
 ## NavBar  
 - Crop logo only form the logo image nested inside the navbar
@@ -36,6 +36,8 @@
 ## HeroSection  
 - Ask ahmed ali what to replace the videos in the first section in camply website ?? 
 - +Put the logo in mobile navbar  
+- Add more padddin-bottom to the hero title header  
+
 
 ## MyTitle  
 - Find another bettert way to define the textColor for the title !! like it is very clunky right now  
@@ -43,3 +45,6 @@
 ## Subscription plan  
 - Find some nice pictures for plans and crop them if necessary  
 - 
+
+## Subscription plan price  
+- Make grow with view port using calmp() to be like the price in camply
