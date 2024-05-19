@@ -20,6 +20,8 @@
 - Find a better wat to @import _variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
 - Don't forget about incorberating the arabic language  
 - Find another font for section titles only
+- Find a a better names for color variables  
+
 
 ## NavBar  
 - Crop logo only form the logo image nested inside the navbar
