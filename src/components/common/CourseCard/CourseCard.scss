@@ -6,7 +6,16 @@
     border-radius: 10px;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-    
+    top: 0;
+    transition: top .3s ease-in-out;
+    position: relative;
+
+    &:hover {
+        top: -12px;
+        background-color: #d7d7d7;
+        cursor: pointer;
+    }
+
     &:nth-of-type(odd) {
         transform: rotate(-7.2deg);
       }
@@ -39,6 +48,7 @@
 
         p {
             color: #7f7973;
+            font-size: 0.85rem;
             margin: 0;
         }
     }
