@@ -6,7 +6,16 @@
     border-radius: 10px;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-    transform: rotate(-7.2deg);
+    
+    &:nth-of-type(odd) {
+        transform: rotate(-7.2deg);
+      }
+    
+      &:nth-of-type(even) {
+        transform: rotate(7.2deg);
+      }
+    
+
     .image-wrapper{
         img {
             border-top-left-radius: 10px;
@@ -15,12 +24,18 @@
         }
     }
     .course-details-wrapper{
+
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0.5rem;
+
         h4{
             font-size: 1rem;
             font-weight: 600;
-            padding:  0.5rem 0 0rem 0;
         }
-        padding: 0.5rem;
+
 
         p {
             color: #7f7973;

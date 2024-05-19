@@ -10,8 +10,11 @@ function CourseCard() {
             </div>
             <div className='course-details-wrapper'>
                 <h4>IELTS Speaking Part 1</h4>
+                <div className='course-card-meta-wrapper'>
+
                 <p>ANY LEVEL</p>
                 <p>8 LESSONS</p>
+                </div>
             </div>
 
         </div>
