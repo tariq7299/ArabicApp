@@ -19,10 +19,13 @@ function CoursesSection() {
                 <CourseCard></CourseCard>
             </div>
 
-            <div></div>
-            <MyTitle text="Courses for every skill level and interest"></MyTitle>  
-            <SectionMeta>Focus on your specific goals with our guided courses, including academic test prep, business English, conversation practice, and more.</SectionMeta>
-            <MyButton text="Explore all courses -->" buttonColor="secondary-color" textColor="primary-font-color"></MyButton>
+            <div className="explore-all-courses-wrapper section-gap">
+
+
+                <MyTitle text="Courses for every skill level and interest" textColor="primary-color"></MyTitle>  
+                <SectionMeta>Focus on your specific goals with our guided courses, including academic test prep, business English, conversation practice, and more.</SectionMeta>
+                <MyButton text="Explore all courses -->" buttonColor="secondary-color" textColor="primary-font-color"></MyButton>
+            </div>
         </div>
 
     )

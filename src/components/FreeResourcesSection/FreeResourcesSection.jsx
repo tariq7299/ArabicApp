@@ -14,7 +14,8 @@ function FreeResourcesSection() {
                     <div className='section-meta-wrapper'>
                     <SectionMeta>Get a taste of Arabic App with our most popular tools and guides. No subscription required.</SectionMeta>
                     </div>
-                    <MyButton text="Join now" buttonColor="background-color-black" textColor="secondary-font-color"></MyButton>
+                    <MyButton text="Join now" buttonColor="background-color-black" textColor="secondary-font-color"
+                    className="free-resources-button"></MyButton>
 
                 </div>
 
