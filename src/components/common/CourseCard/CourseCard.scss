@@ -1,0 +1,30 @@
+.course-card-wrapper{
+    width: 200px;
+    height: 270px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: rotate(-7.2deg);
+    .image-wrapper{
+        img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+    }
+    .course-details-wrapper{
+        h4{
+            font-size: 1rem;
+            font-weight: 600;
+            padding:  0.5rem 0 0rem 0;
+        }
+        padding: 0.5rem;
+
+        p {
+            color: #7f7973;
+            margin: 0;
+        }
+    }
+}
