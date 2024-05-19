@@ -52,6 +52,9 @@
 ## Subscription plan price  
 - Make grow with view port using calmp() to be like the price in camply
 
+## Course Card  
+- Make the hover effect of color of card apply to all card like in camply and not just the meta of card without picture ! and i think they did this using some over lay div/color of some sort !!!
+
 # Backend  
 
 ## GLOBAL  
