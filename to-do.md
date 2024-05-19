@@ -51,3 +51,11 @@
 
 ## Subscription plan price  
 - Make grow with view port using calmp() to be like the price in camply
+
+# Backend  
+
+## GLOBAL  
+
+- Create the software architicure using flow charts and DDD  
+- We need to create a route for the admin panel of the website  (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)  
+
