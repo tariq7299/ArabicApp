@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-20T06:18:27.048Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="8R4zd37OGniApwVFun6w" version="24.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-05-20T06:55:17.960Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="hiJ64PfHbwlssEJfnpMO" version="24.4.0" type="github" pages="9">
   <diagram name="Home" id="qQ95E2DLK1bnDsNlfMF8">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -134,7 +134,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="vQE7vvgTvT3320Fhl1fX" name="NavBar">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="988" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -210,7 +210,7 @@
           <mxGeometry x="550" y="240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="p5dpOKsnA8Q_YTcsY6Lo-2" value="About us (Learn more about your tutor)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="700" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="700" y="240" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="p5dpOKsnA8Q_YTcsY6Lo-4" value="Join now (will take him to survay/test)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="270" y="350" width="120" height="60" as="geometry" />
@@ -221,11 +221,265 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="QKszedKwvFP-QUrR3vZq" name="Coursess">
+  <diagram id="QKszedKwvFP-QUrR3vZq" name="CoursesPage">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uB3lZuAtJhWU3ZwrZ7g3-1" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1" target="uB3lZuAtJhWU3ZwrZ7g3-3">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="440" y="10" as="sourcePoint" />
+            <mxPoint x="440" y="90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uB3lZuAtJhWU3ZwrZ7g3-2" value="Client directed/presses on courses page" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="28" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uB3lZuAtJhWU3ZwrZ7g3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uB3lZuAtJhWU3ZwrZ7g3-3" target="uB3lZuAtJhWU3ZwrZ7g3-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="280" y="120" />
+              <mxPoint x="280" y="170" />
+              <mxPoint x="145" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uB3lZuAtJhWU3ZwrZ7g3-7" value="Clien press on a course card" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uB3lZuAtJhWU3ZwrZ7g3-4">
+          <mxGeometry x="0.0605" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uB3lZuAtJhWU3ZwrZ7g3-3" value="See all courses as cards (exactly as camply courses page)&lt;div&gt;and they are categorized into (Adults-kids...etc)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="70" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uB3lZuAtJhWU3ZwrZ7g3-5" value="&lt;u&gt;&lt;b&gt;See all course details&lt;/b&gt;&lt;/u&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Course/book title&lt;/div&gt;&lt;div&gt;Course info&lt;/div&gt;&lt;div&gt;Syllabus&lt;/div&gt;&lt;div&gt;Try it out button (Join now)&lt;/div&gt;&lt;div&gt;tags(adult-level-...etc)&lt;/div&gt;&lt;div&gt;Other Courses&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="250" width="210" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tzEvsl8KpvASyx-76CDh" name="TestPage">
+    <mxGraphModel dx="1185" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RE3mwSIbp9zGbHqjbAvO-1" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1" target="RE3mwSIbp9zGbHqjbAvO-3">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="440" y="10" as="sourcePoint" />
+            <mxPoint x="440" y="100" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE3mwSIbp9zGbHqjbAvO-2" value="Client presses on join now button" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RE3mwSIbp9zGbHqjbAvO-1">
+          <mxGeometry x="-0.0603" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LlV7WL3NGxs4MEIPcyIP-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RE3mwSIbp9zGbHqjbAvO-3" target="LlV7WL3NGxs4MEIPcyIP-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LlV7WL3NGxs4MEIPcyIP-6" value="First Phase" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LlV7WL3NGxs4MEIPcyIP-4">
+          <mxGeometry x="0.4286" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE3mwSIbp9zGbHqjbAvO-3" value="&lt;u&gt;&lt;b&gt;Client sees the survey/test&lt;/b&gt;&lt;/u&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;test phases up top&lt;/div&gt;&lt;div&gt;phase questions&lt;/div&gt;&lt;div&gt;at the end he will be on the checkout with the appropirate payment plan for him&lt;/div&gt;&lt;div&gt;And after he pay you may show him the invocie where can print it or download it (It must contian unique number)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="480" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LlV7WL3NGxs4MEIPcyIP-5" value="Inf" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="CI355EpnzvKX1VtgfptM" name="FreeResourcesPage">
+    <mxGraphModel dx="1185" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V4mTrTui0ELXM4Fs0Xw9-1" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1" target="V4mTrTui0ELXM4Fs0Xw9-3">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="440" y="20" as="sourcePoint" />
+            <mxPoint x="440" y="110" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V4mTrTui0ELXM4Fs0Xw9-2" value="Client presses on free resources page" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="V4mTrTui0ELXM4Fs0Xw9-1">
+          <mxGeometry x="-0.1937" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V4mTrTui0ELXM4Fs0Xw9-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="V4mTrTui0ELXM4Fs0Xw9-3" target="V4mTrTui0ELXM4Fs0Xw9-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V4mTrTui0ELXM4Fs0Xw9-5" value="Client presses on a resource" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="V4mTrTui0ELXM4Fs0Xw9-4">
+          <mxGeometry x="-0.0274" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V4mTrTui0ELXM4Fs0Xw9-3" value="&lt;b&gt;&lt;u&gt;Client sees all the free resources (just like in camply)&lt;/u&gt;&lt;/b&gt;&lt;div&gt;Resources cards&lt;/div&gt;&lt;div&gt;join now button&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="120" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="V4mTrTui0ELXM4Fs0Xw9-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="320" width="300" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="0rYFkXEj88z6BJiJMRTO" name="ContactUsPage">
+    <mxGraphModel dx="988" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fkW3sX-ybW8KuCKRwhAY-1" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1" target="fkW3sX-ybW8KuCKRwhAY-2">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="400" y="10" as="sourcePoint" />
+            <mxPoint x="400" y="80" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fkW3sX-ybW8KuCKRwhAY-3" value="Client directed/presses on contact us page" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fkW3sX-ybW8KuCKRwhAY-1">
+          <mxGeometry x="-0.2603" y="1" relative="1" as="geometry">
+            <mxPoint x="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fkW3sX-ybW8KuCKRwhAY-2" value="&lt;b&gt;&lt;u&gt;Client sees a bunch of inputs so he can enter his details in them&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;Name&lt;/div&gt;&lt;div&gt;Email&lt;/div&gt;&lt;div&gt;Phone Number&lt;/div&gt;&lt;div&gt;Gender&lt;/div&gt;&lt;div&gt;Native language&lt;/div&gt;&lt;div&gt;Origin Country&lt;/div&gt;&lt;div&gt;Arabic level&lt;/div&gt;&lt;div&gt;Age&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Message (Optional)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="90" width="380" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Olqq-c95l4SBbOqqx3QL" name="AboutUsORLearnMoreAboutYourTutorPage">
+    <mxGraphModel dx="988" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4_cNXhDmkJWjyUubfjrY-1" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1" target="4_cNXhDmkJWjyUubfjrY-3">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="440" y="20" as="sourcePoint" />
+            <mxPoint x="440" y="120" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4_cNXhDmkJWjyUubfjrY-2" value="Client presses on learn more about your tutor page" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4_cNXhDmkJWjyUubfjrY-1">
+          <mxGeometry x="-0.0295" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4_cNXhDmkJWjyUubfjrY-3" value="Tutor bio and info&lt;div&gt;Contact us now button&lt;/div&gt;&lt;div&gt;Join now button&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="130" width="340" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3ZruaZfo9Zzu6ULaJqnI" name="PaymentPlansPage">
     <mxGraphModel dx="2074" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Me4W-ue9wVeITyY-dv9F" name="AdminPanelPage">
+    <mxGraphModel dx="1185" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-1" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1" target="_R4BAQkw3wgSuIhfWQux-3">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="420" y="20" as="sourcePoint" />
+            <mxPoint x="420" y="120" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-2" value="Client heads to admin route/page" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_R4BAQkw3wgSuIhfWQux-1">
+          <mxGeometry x="0.1371" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.389;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6zVvQmFkq9nPuPwvFK3H-3" target="_R4BAQkw3wgSuIhfWQux-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="454.97" as="targetPoint" />
+            <mxPoint x="300" y="349.9985714285714" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6zVvQmFkq9nPuPwvFK3H-3" target="_R4BAQkw3wgSuIhfWQux-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="454.97" as="targetPoint" />
+            <mxPoint x="450.02857142857147" y="404.97" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="430" y="432" />
+              <mxPoint x="420" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.025;exitY=0.571;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6zVvQmFkq9nPuPwvFK3H-3" target="_R4BAQkw3wgSuIhfWQux-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="484.97" as="targetPoint" />
+            <mxPoint x="520" y="349.9985714285714" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U77Jp8TXZ3Wo2ei837WM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6zVvQmFkq9nPuPwvFK3H-3" target="U77Jp8TXZ3Wo2ei837WM-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="624.9699999999999" as="targetPoint" />
+            <mxPoint x="410.02857142857147" y="404.97" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="380" y="435" />
+              <mxPoint x="250" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U77Jp8TXZ3Wo2ei837WM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.406;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6zVvQmFkq9nPuPwvFK3H-3" target="U77Jp8TXZ3Wo2ei837WM-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="644.9699999999999" as="targetPoint" />
+            <mxPoint x="410.02857142857147" y="404.97" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="460" y="425" />
+              <mxPoint x="559" y="425" />
+              <mxPoint x="559" y="635" />
+              <mxPoint x="549" y="635" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6zVvQmFkq9nPuPwvFK3H-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_R4BAQkw3wgSuIhfWQux-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6zVvQmFkq9nPuPwvFK3H-2" value="Admin logs in" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6zVvQmFkq9nPuPwvFK3H-1">
+          <mxGeometry x="-0.0927" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-3" value="He is in log in screen" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="315" y="120" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-6" value="Courses page (Where he can CRUD courses)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="464.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-9" value="Free rouces page (Where he can CRUD Free reources)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="327.5" y="514.97" width="185" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_R4BAQkw3wgSuIhfWQux-11" value="Clients submittion from contact us page where" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="474.97" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U77Jp8TXZ3Wo2ei837WM-2" value="Cliens test reults page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="634.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U77Jp8TXZ3Wo2ei837WM-4" value="Payments/invoices from clients" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="644.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6zVvQmFkq9nPuPwvFK3H-3" value="Admin in his home page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
