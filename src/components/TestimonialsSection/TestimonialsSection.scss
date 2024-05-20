@@ -1,6 +1,9 @@
 @import "./../../variables";
 
+
 .testimonial-section-container {
+    // Here is used this because i am using w
+    overflow: scroll;
     
     .test-wrapper {
         display: flex;
