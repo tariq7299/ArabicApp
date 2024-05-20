@@ -12,7 +12,14 @@
 - **Inertia.js**
 
 
+##    Fetuers i want to add later  
+- Blogs with the ability to also share on other social media websites(telegram-whatsapp-face)
+- Dash board and learning platform  
+- Mobile app for all of that   
+- Accounts for clients/studens
+
 # Frontend
+
 
 ## GLOBAL  
 - Use prettier and test it
@@ -21,7 +28,8 @@
 - Don't forget about incorberating the arabic language  
 - Find another font for section titles only
 - Find a a better names for color variables  
-
+- Change the color pallete for the whole website  
+- Find better names for the nav bar tabs (like instaead of about us make it (learn more about your tutor))
 
 ## NavBar  
 - Crop logo only form the logo image nested inside the navbar
@@ -55,10 +63,18 @@
 ## Course Card  
 - Make the hover effect of color of card apply to all card like in camply and not just the meta of card without picture ! and i think they did this using some over lay div/color of some sort !!!
 
+
+##  Testimonials section
+- Make the each testimonial be unique 
+
+
 # Backend  
 
 ## GLOBAL  
 
 - Create the software architicure using flow charts and DDD  
 - We need to create a route for the admin panel of the website  (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)  
+- Check the correct namings/names for every thing with the help from the domain exepert  
+- 
+
 
