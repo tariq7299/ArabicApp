@@ -45,7 +45,9 @@
 
 ## Subscription plan  
 - Find some nice pictures for plans and crop them if necessary  
-- 
+- Two main subscription plans (Adult and kids) and inside each one antother three secondary plans
 
 ## Subscription plan price  
 - Make grow with view port using calmp() to be like the price in camply
+
+## Su
