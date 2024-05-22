@@ -4,6 +4,7 @@ import LearnAboutTutorSection from "../../components/LearnAboutTutorSection/Lear
 import SubscriptionPlansSection from "../../components/SubscriptionPlansSection/SubscriptionPlansSection"
 import "./Home.scss"
 import FreeResourcesSection from "../../components/FreeResourcesSection/FreeResourcesSection"
+import CoursesSection from "../../components/CoursesSection/CoursesSection"
 
 function Home() {
 
@@ -18,6 +19,10 @@ function Home() {
             <SubscriptionPlansSection></SubscriptionPlansSection>
 
             <FreeResourcesSection></FreeResourcesSection>
+
+            <CoursesSection></CoursesSection>
+
+
         </>
     )
 }

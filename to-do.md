@@ -20,6 +20,8 @@
 - Find a better wat to @import _variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
 - Don't forget about incorberating the arabic language  
 - Find another font for section titles only
+- Find a a better names for color variables  
+
 
 ## NavBar  
 - Crop logo only form the logo image nested inside the navbar
@@ -50,4 +52,13 @@
 ## Subscription plan price  
 - Make grow with view port using calmp() to be like the price in camply
 
-## Su
+## Course Card  
+- Make the hover effect of color of card apply to all card like in camply and not just the meta of card without picture ! and i think they did this using some over lay div/color of some sort !!!
+
+# Backend  
+
+## GLOBAL  
+
+- Create the software architicure using flow charts and DDD  
+- We need to create a route for the admin panel of the website  (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)  
+

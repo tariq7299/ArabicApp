@@ -1,11 +1,2 @@
-# Create free resources section  
-- Create the basic structure using jsx
-    - Create section container  
-    - Inside it is a image 
-    - with a title  
-    - meta compontnet  
-    - my button  
-- make it at the middle  
-- Backgournd of resources section
-- assignb the iimage at iits correct place  
-- give it some padding   
+# Create the courses section  
+- Create two distecint dsection on for cards chain section and antoher for 
