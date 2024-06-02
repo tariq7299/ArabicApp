@@ -1,66 +1,74 @@
 # Questions
-- How that test part going to be implemented
--  
 
-# TECH TO USE  
-- **JWT Auth**  
-    - **Encrypt token before stroing it in localStorage or put it insise a http-only cookie**
-- **React Hook Form**   
-    - **Controller**  
-- **Graph QL Apollo Client**  
+- How that test part going to be implemented
+-
+
+# TECH TO USE
+
+- **JWT Auth**
+  - **Encrypt token before stroing it in localStorage or put it insise a http-only cookie**
+- **React Hook Form**
+  - **Controller**
+- **Graph QL Apollo Client**
 - **REACT JS**
-    - **Context API**
-    - **useMemo and useCallBack**  
-- **React Bootstrap** 
+  - **Context API**
+  - **useMemo and useCallBack**
+- **React Bootstrap**
 - **React Data Table Component**
 - **Inertia.js**
 
-
 # Frontend
 
-## GLOBAL  
-- Find a better wat to @import _variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
-- Don't forget about incorberating the arabic language  
+## GLOBAL
+
+- Find a better wat to @import \_variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
+- Don't forget about incorberating the arabic language
 - Find another font for section titles only
-- Find a a better names for color variables  
+- Find a a better names for color variables
+- Integrate typeScript with the frontend code
 
+## NavBar
 
-## NavBar  
 - Crop logo only form the logo image nested inside the navbar
 - Change the burger toggle icon to be black and bolder (You can't style it more you need to change the icon compleetely)
 - Create the navbar expanding and collapsing transition to be just like british councel navbar
 - Put the correct menue items with the correct font
-- Put the logo in mobile navbar  
+- Put the logo in mobile navbar
 
-## MyButton  
+## MyButton
+
 - Add arrow icon to button
-- Make get started button at the hero section bigger than the other buttons 
+- Make get started button at the hero section bigger than the other buttons
 - Add the camply hover effect
 
+## HeroSection
 
-## HeroSection  
-- Ask ahmed ali what to replace the videos in the first section in camply website ?? 
-- +Put the logo in mobile navbar  
-- Add more padddin-bottom to the hero title header  
+- Ask ahmed ali what to replace the videos in the first section in camply website ??
+- +Put the logo in mobile navbar
+- Add more padddin-bottom to the hero title header
 
+## MyTitle
 
-## MyTitle  
-- Find another bettert way to define the textColor for the title !! like it is very clunky right now  
+- Find another bettert way to define the textColor for the title !! like it is very clunky right now
 
-## Subscription plan  
-- Find some nice pictures for plans and crop them if necessary  
+## Subscription plan
+
+- Find some nice pictures for plans and crop them if necessary
 - Two main subscription plans (Adult and kids) and inside each one antother three secondary plans
 
-## Subscription plan price  
+## Subscription plan price
+
 - Make grow with view port using calmp() to be like the price in camply
 
-## Course Card  
+## Course Card
+
 - Make the hover effect of color of card apply to all card like in camply and not just the meta of card without picture ! and i think they did this using some over lay div/color of some sort !!!
 
-# Backend  
+# Backend
 
-## GLOBAL  
+## GLOBAL
 
-- Create the software architicure using flow charts and DDD  
-- We need to create a route for the admin panel of the website  (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)  
-
+- Create the software architicure using flow charts and DDD
+- We need to create a route for the admin panel of the website (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)
+- Create a requiremnts.txt and requirements-dev.txt
+- Integrate mypy to use static typing in your python project
