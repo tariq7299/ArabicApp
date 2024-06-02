@@ -1,3 +1,7 @@
+# Questions
+- How that test part going to be implemented
+-  
+
 # TECH TO USE  
 - **JWT Auth**  
     - **Encrypt token before stroing it in localStorage or put it insise a http-only cookie**
@@ -15,8 +19,6 @@
 # Frontend
 
 ## GLOBAL  
-- Use prettier and test it
-- Use lint and test it  
 - Find a better wat to @import _variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
 - Don't forget about incorberating the arabic language  
 - Find another font for section titles only
