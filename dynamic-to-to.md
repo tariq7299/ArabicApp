@@ -1,5 +1,3 @@
-- Follow python and graph ql course and implement it steo by step in you dja
-  Read qraphQL and then init your djanog and create
 - Create register page and login page
 
   - route is /www/login
@@ -17,21 +15,24 @@
 - Create a qyeruy.py this will hold all your qraph ql data qyeries
 - create a mutation.py at root also and this will hold all graph ql mutations
 - Create a folder called types that will hold all object types in your project
+- Use postgres instead of sqlite
+
 
 # Steps and code
 
-Create a virtual env for python using
-activate it
-pip install django
-django-admin startproject arabicApp  
-cd arabicApp
-python manage.py startapp authintication
+
+- add mutations to the root of shema
+- add the query in your queries
+- add verigy token qyeryu
+- add refreshToken to obtain a brand new token with renewed expiration time
+
 create you models in model.py
 migrate your models python manage.py makemigrations
 python manage.py migrate  
 Create the admin interface in admin.py add this
 add my authintication applicatio to installedApps and also add strawberry in installed apps
-
+- Add authentication to our application urls.py 
+- 
 ```
 from django.contrib import admin
 from .models import Post
