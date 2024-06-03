@@ -72,3 +72,6 @@
 - We need to create a route for the admin panel of the website (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)
 - Create a requiremnts.txt and requirements-dev.txt
 - Integrate mypy to use static typing in your python project
+- Use Strawberry instead of graphen and use mypy with it for static typing useing python
+- extedn the User model that is created by default in django instead of creating your own user model (Tutor)
+-
