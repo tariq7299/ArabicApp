@@ -1,40 +1,22 @@
-- Read and digest the whole medium project
-- Create your shcema
-- test app
-- apply JWT auth
-- Create forntedn 
+**Create authenticaion page of register and login using graphQL and JWT auth**
 
+    - DIsable auto saving in Vs code
+    - Read the whole page of graphQL learingin page
+    - Wirte your queries, mutations, types.... of graphQL things
+    - Read a little bit about django using Mmdn web docs_ django tutorial
+    - Read about authentication in django
+        - Read this https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication
+        - Read this ----> https://www.geeksforgeeks.org/user-authentication-system-using-django/
+        - Read this ---> https://www.youtube.com/watch?v=WuyKxdLcw3w
+        - Read this ----> https://frontegg.com/blog/django-authentication
+        - Read this ---> https://medium.com/@devsumitg/django-auth-user-signup-and-login-7b424dae7fab
+        - Read this ---> https://www.smashingmagazine.com/2020/02/django-highlights-user-models-authentication/
+    - Read about JWT AUTH
+    - Implement JWT auth with GraphQL in django
+        - READ THIS ---> https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-764babd30bb0
+        - REad this ----> https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-part-2-2e9b0e5f17cd
+
+    - Write the frontend of regjster and login pages
+    - COnfigure GraphiQL
 
 # Steps and code
-
--  
-- add mutations to the root of shema
-- add the query in your queries
-- add verigy token qyeryug
-- add refreshToken to obtain a brand new token with renewed expiration time
-create you models in model.py
-migrate your models python manage.py makemigrations
-python manage.py migrate  
-Create the admin interface in admin.py add this
-add my authintication applicatio to installedApps and also add strawberry in installed apps
-- Add authentication to our application urls.py 
-- Create super user admin 
-- Create some tutors
-- test my qyeries
-- test my mutations
-- apply jwt using graphene
-
-```
-from django.contrib import admin
-from .models import Post
-
-admin.site.register(Post)
-
-```
-
-- python manage.py createsuperuser
-- in views define your register view handler
-- in url define your path and handler function
-- define your admin/ url that will view django admin page
-- Check how i hadnled forms and validations in network application
--

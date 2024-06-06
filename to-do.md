@@ -74,4 +74,4 @@
 - Integrate mypy to use static typing in your python project
 - Use Strawberry instead of graphen and use mypy with it for static typing useing python
 - extedn the User model that is created by default in django instead of creating your own user model (Tutor)
--
+- Create authenticaion page of register and login using graphQL and JWT auth
