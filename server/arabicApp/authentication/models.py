@@ -1,13 +1,12 @@
 from django.db import models
+from django.contrib.auth.admin import User
 
-class Tutor(models.Model):
+class Tutor(User):
 
-    first_name = models.CharField(max_length=50, blank=False)
-    last_name = models.CharField(max_length=50, blank=False)
-    phone_number = models.CharField(max_length=50, blank=False)
-    email = models.EmailField(blank=False)  # Added the email field
-    username = models.CharField(max_length=50, blank=False)  
-    password = models.CharField(max_length=128, blank=False)  
+    class Meta:
+        proxy = True
+
+    # phone_number = models.CharField(max_length=50, blank=False)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
