@@ -1,28 +1,28 @@
 from django.core.management.base import BaseCommand, CommandError
-from authentication.models import Tutor
+# from authentication.models import User
 from django.contrib.auth.models import User
 import pprint
 
 
 class Command(BaseCommand):
-    help = "Gets all Tutor instance and prints them"
+    help = "Gets all User instance and prints them"
     
     def handle(self, *args, **options):
 
         # List all fields
-        print(Tutor._meta.fields)
+        print(User._meta.fields)
 
         # List field names
-        # print([field.name for field in Tutor._meta.fields])
+        # print([field.name for field in User._meta.fields])
 
         # Get more detailed information about fields
-        # for field in Tutor._meta.fields:
+        # for field in User._meta.fields:
             # print(f"Field: {field.name}, Type: {field.__class__.__name__}")
 
         # Show all attributes and methods
-        # print(dir(Tutor))
+        # print(dir(User))
         
-        tutors = Tutor.objects.all()
+        tutors = User.objects.all()
 
         # Pretty print each tutor instance
         for tutor in tutors:

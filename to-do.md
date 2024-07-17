@@ -110,3 +110,4 @@
 ## Authenticaton App
 
 - Create mutate.py and query.py and populate each instead of writing all in scheme.py
+- inhereit from User model and

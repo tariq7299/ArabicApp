@@ -10,15 +10,28 @@
 - **Create Query and Mutation in schema**
 
 - Create Test it using GrapphiQL tool/
-  - add first name to schema CreateTutor mutation
-    - See what tutor object looks like
-      - Create get all tutors in command
-        - Create management folder and insie create commands folder and then create allTutors.py
-        - Write a handle() method inside Comannd class to get all tutrors and print them
-        - Write command steps in README.md
-        - Write notes about
-  - add lst anme to schema CreateTutor mutation
+
+  - Make whoami work
+
+    - Implement Tutor proxy model successfully _DONE_
+    - Remove inheritence of User mdoel and implelement authentcation from scratch
+      - Understand how to impoelemt JWT authentication properly
+        - see on whether to include your core app in INSTALLED_APPS or not _DONE_
+        - Ask about every thing in settings.py
+        -
+        - Implement user JWT auth things in schema as mentioned
+        - migrate
+        - test graph routes
+        - Change the model later to Tutor
+
+  - Make sure JWT authentication work
+
+    - test propctedt routs
+    - Understand excatly how it works
+
   -
+  -
+
 - Ask GPT to explain the content of schema.py in each app so i can understand better
 - Create protectted route and test
 - Create a register page frontend/UI
