@@ -75,26 +75,38 @@
 - Use Strawberry instead of graphen and use mypy with it for static typing useing python
 - extedn the User model that is created by default in django instead of creating your own user model (Tutor)
 - Create authenticaion page of register and login using graphQL and JWT auth
-- Use BLL method to struct your application, BLL is *Business logic layer* like i want the app to be in three main parts
+- Use BLL method to struct your application, BLL is _Business logic layer_ like i want the app to be in three main parts
 
-    1. UI part
-    3. BLL part 
-    4. DATA LAYER part
-    looke
-    // Authorization logic lives inside postRepository
-    const postRepository = require('postRepository');
-    
-    const postType = new GraphQLObjectType({
-      name: 'Post',
-      fields: {
-        body: {
-          type: GraphQLString,
-          resolve(post, args, context, { rootValue }) {
-            return postRepository.getBody(context.user, post)
-          }
-        }
-      }
-    })
+  1. UI part
+  2. BLL part
+  3. DATA LAYER part
+     looke
+     // Authorization logic lives inside postRepository
+     const postRepository = require('postRepository');
 
-- Formate the code on save using a formatting and vs code settings  
+  const postType = new GraphQLObjectType({
+  name: 'Post',
+  fields: {
+  body: {
+  type: GraphQLString,
+  resolve(post, args, context, { rootValue }) {
+  return postRepository.getBody(context.user, post)
+  }
+  }
+  }
+  })
+
+- Formate the code on save using a formatting and vs code settings
 - Use Groups and create groups that will facilitate Authorization
+- Chnage the arabicApp app inside django to become `core` instead
+- Use prettier to formate your code
+- get some view/template to be rendered at route "/" of my app
+-
+
+## Courses App
+
+- Create mutate.py and query.py and populate each instead of writing all in scheme.py
+
+## Authenticaton App
+
+- Create mutate.py and query.py and populate each instead of writing all in scheme.py
