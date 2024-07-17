@@ -24,8 +24,8 @@ class CreateTutor(graphene.Mutation):
         username = graphene.String(required=True)
         password = graphene.String(required=True)
         email = graphene.String(required=True)
-        
-    def mutate(self, info, first_name, last_name, username, password, email):
+    
+    def mutate(self, info, username, password, email, first_name=None, last_name=None):
         
         tutor = Tutor(
             first_name=first_name,
@@ -37,7 +37,7 @@ class CreateTutor(graphene.Mutation):
         tutor.save()
         token = get_token(tutor)
         refresh_token = create_refresh_token(tutor)
-        return CreateTutor(first_name=first_name, last_name=last_name, username=username, token=token, refresh_token=refresh_token)
+        return CreateTutor(tutor=tutor, token=token, refresh_token=refresh_token)
 
 class Query(graphene.ObjectType):
     whoami = graphene.Field(TutorType)

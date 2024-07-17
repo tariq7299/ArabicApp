@@ -15,7 +15,8 @@
       - Create get all tutors in command
         - Create management folder and insie create commands folder and then create allTutors.py
         - Write a handle() method inside Comannd class to get all tutrors and print them
-        -
+        - Write command steps in README.md
+        - Write notes about
   - add lst anme to schema CreateTutor mutation
   -
 - Ask GPT to explain the content of schema.py in each app so i can understand better

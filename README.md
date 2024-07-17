@@ -39,7 +39,19 @@ also to have the best the experience select your python interpreter in vs code, 
 5. past it
 6. DONE
 
-# After you edit models.py
+# Some tips and hacks
+
+## After you edit models.py
 
 - Head to root of project and then `python manage.py makemigrations <appNameYouChnagedItsModel>`
 - `python manage.py migrate` to apply migrations
+
+## Command files in django
+
+Lets say you want to do some custom commands with your models or other parts of your app
+
+[follow this page from Django docs](https://docs.djangoproject.com/en/5.0/howto/custom-management-commands/)
+
+## Orgnaize large terminal outputs
+
+Use `pprint` python package

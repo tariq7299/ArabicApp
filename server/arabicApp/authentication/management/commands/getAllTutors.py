@@ -1,12 +1,40 @@
 from django.core.management.base import BaseCommand, CommandError
 from authentication.models import Tutor
+from django.contrib.auth.models import User
+import pprint
 
 
 class Command(BaseCommand):
     help = "Gets all Tutor instance and prints them"
     
     def handle(self, *args, **options):
-        all_tutors = Tutor.objects.all()
+
+        # List all fields
+        print(Tutor._meta.fields)
+
+        # List field names
+        # print([field.name for field in Tutor._meta.fields])
+
+        # Get more detailed information about fields
+        # for field in Tutor._meta.fields:
+            # print(f"Field: {field.name}, Type: {field.__class__.__name__}")
+
+        # Show all attributes and methods
+        # print(dir(Tutor))
         
-        for tutor in all_tutors:
-            print("Tutor", tutor)
+        tutors = Tutor.objects.all()
+
+        # Pretty print each tutor instance
+        for tutor in tutors:
+            tutor_info = {
+                'id': tutor.id,
+                'username': tutor.username,
+                'first_name': tutor.first_name,
+                'last_name': tutor.last_name,
+                'email': tutor.email,
+                'is_staff': tutor.is_staff,
+                'is_active': tutor.is_active,
+                'date_joined': tutor.date_joined,
+            }
+            self.stdout.write(pprint.pformat(tutor_info))
+            self.stdout.write("\n" + "="*50 + "\n")  # Separator for readability
