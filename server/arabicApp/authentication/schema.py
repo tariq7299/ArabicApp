@@ -13,6 +13,7 @@ from graphql_jwt.shortcuts import create_refresh_token, get_token
 class TutorType(DjangoObjectType):
     class Meta:
         model = Tutor
+        fields = ('id', 'username', 'first_name', 'last_name', 'email') 
 
 class CreateTutor(graphene.Mutation):
     tutor = graphene.Field(TutorType)
@@ -43,6 +44,9 @@ class Query(graphene.ObjectType):
     whoami = graphene.Field(TutorType)
     tutors = graphene.List(TutorType)
     def resolve_whoami(self, info):
+        # print(f"User: {info.context.user}")
+        # print(f"Authenticated: {info.context.user.is_authenticated}")
+        # print(f"User type: {type(info.context.user)}")
         tutor = info.context.tutor
         # Check if tutor is authenticated
         if tutor.is_anonymous:
@@ -51,7 +55,7 @@ class Query(graphene.ObjectType):
     # Check if tutor is authenticated using decorator
     @login_required
     def resolve_tutors(self, info):
-        return Tutor().objects.all()
+        return Tutor.objects.all()
 
 class Mutation(graphene.ObjectType):
     token_auth = graphql_jwt.ObtainJSONWebToken.Field()
