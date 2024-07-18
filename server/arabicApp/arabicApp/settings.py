@@ -56,18 +56,23 @@ GRAPHQL_JWT = {
 
 GRAPHENE = {
     "SCHEMA": "arabicApp.schema.schema",
+    # JSONWebTokenMiddleware inspects the incouming request's header for JWT token
+    # It then enable you to use/access info.context.user 
     "MIDDLEWARE": [
         "graphql_jwt.middleware.JSONWebTokenMiddleware",
     ],
 }
 
+# Django will use this array to authenticate users trying to access the app
+# It will go by the first one then the second ...etc
+# If any one fails to will go to the next authetication_backend listed
 AUTHENTICATION_BACKENDS = [
     "graphql_jwt.backends.JSONWebTokenBackend",
     "django.contrib.auth.backends.ModelBackend",
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+    # 'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

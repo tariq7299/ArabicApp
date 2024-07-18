@@ -1,44 +1,22 @@
 # What i want to do now -- Main objectives
 
-1. Create a register and login page that will authenticate a tutor
-2. Then create a test page that will preview all tutors in regiterd in the app as a test
-3. Make the admin route of django `/admin` suitable for ahmed ali needs (Like to see all students submittions-test results-students data-studenst contact us submmitssions- courses in our app with its details- add/update/delete any recorde)
-4. Use PosgresQL
+0. Pull latest code form home pc
+1. Create course section in home page
+2. Create footer frontend
+3. Create logo in figma
+4. Replace the supscrition plans part in the home page with something else
+5. Fix the nav bar and remove all unecessary tabs
+6. Add logo in nav bar
+7. Create course page ui section
+8. Create courses page
+9. Create contact us page
 
 ## Implemetation and steps
 
-- **Create Query and Mutation in schema**
+- Create hero section
 
-- Create Test it using GrapphiQL tool/
-
-  - Make whoami work
-
-    - Implement Tutor proxy model successfully _DONE_
-    - Remove inheritence of User mdoel and implelement authentcation from scratch
-      - Understand how to impoelemt JWT authentication properly
-        - see on whether to include your core app in INSTALLED_APPS or not _DONE_
-        - Ask about every thing in settings.py
-        -
-        - Implement user JWT auth things in schema as mentioned
-        - migrate
-        - test graph routes
-        - Change the model later to Tutor
-
-  - Make sure JWT authentication work
-
-    - test propctedt routs
-    - Understand excatly how it works
-
+  - set a pattern at the background
   -
-  -
-
-- Ask GPT to explain the content of schema.py in each app so i can understand better
-- Create protectted route and test
-- Create a register page frontend/UI
-- Create a login page frontend/UI
-- Create a protected page called home that will previous names of students
-  /UI
-- Use postgres instead of sqlite
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 

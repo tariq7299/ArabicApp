@@ -43,7 +43,7 @@
 
 ## HeroSection
 
-- Ask ahmed ali what to replace the videos in the first section in camply website ??
+- Ask ahmed ali what to replace the [v](https://benjamincrozat.com/bun-package-manager)ideos in the first section in camply website ??
 - +Put the logo in mobile navbar
 - Add more padddin-bottom to the hero title header
 
@@ -53,6 +53,7 @@
 
 ## Subscription plan
 
+- Remove this section in the first version of the application
 - Find some nice pictures for plans and crop them if necessary
 - Two main subscription plans (Adult and kids) and inside each one antother three secondary plans
 
