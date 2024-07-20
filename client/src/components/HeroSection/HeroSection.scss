@@ -1,0 +1,11 @@
+@import "./../../variables";
+
+.hero-section-container {
+  padding-top: 7rem;
+  height: 100lvh;
+  text-align: center;
+  background-image: url("src/assets/hero-section-image-x2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

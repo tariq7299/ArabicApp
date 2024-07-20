@@ -1,15 +1,57 @@
 # Contiunure te homw page
+
     - **Create the testemonieals section**
         - mkae the testominials wrapper be obver folow is scrool using gride
         - hide the scroll bars
 
-    - **Create the mobile app coming soon section**  
+    - **Create the mobile app coming soon section**
     - **Ahieve your goals by**
-    - **Contact us section**  
-    - **Create footer page**  
-# Create the test/survay page  
+    - **Contact us section**
+    - **Create footer page**
+
+# Create the test/survay page
+
 # Create about us page
+
 # Craete contact us page
+
 # Create Payment plans page
+
 # Crrete courses page
-# Create free resouces page  
+
+# Create free resouces page
+
+# What i want to do now -- Main objectives
+
+0. Pull latest code form home pc
+1. Create course section in home page
+2. Create footer frontend
+3. Create logo in figma
+4. Replace the supscrition plans part in the home page with something else
+5. Fix the nav bar and remove all unecessary tabs
+6. Add logo in nav bar
+7. Create course page ui section
+8. Create courses page
+9. Create contact us page
+
+## Implemetation and steps
+
+- Create hero section
+
+  - set a pattern at the background
+  -
+
+# Refrences and strenghin my knowledge of django and JWT and Graphiql
+
+    - Read a little bit about django using Mmdn web docs_ django tutorial
+    - Read about authentication in django
+        - Read this https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication
+        - Read this ----> https://www.geeksforgeeks.org/user-authentication-system-using-django/
+        - Read this ---> https://www.youtube.com/watch?v=WuyKxdLcw3w
+        - Read this ----> https://frontegg.com/blog/django-authentication
+        - Read this ---> https://medium.com/@devsumitg/django-auth-user-signup-and-login-7b424dae7fab
+        <!-- - Read this ---> https://www.smashingmagazine.com/2020/02/django-highlights-user-models-authentication/ -->
+    - Read about JWT AUTH
+    - Implement JWT auth with GraphQL in django
+        - READ THIS ---> https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-764babd30bb0
+        - Read this ----> https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-part-2-2e9b0e5f17cd
