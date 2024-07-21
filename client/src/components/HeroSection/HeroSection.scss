@@ -30,12 +30,13 @@
   position: absolute;
   padding-top: 7rem;
   z-index: 2;
+  max-width: $max-ch-md;
 }
 
 @media (min-width: 992px) {
   .hero-section__content {
     text-align: left;
-    top: 20%;
+    top: 15%;
     // padding-top: 10rem;
   }
 }
