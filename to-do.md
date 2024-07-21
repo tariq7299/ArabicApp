@@ -17,6 +17,26 @@
 - **React Data Table Component**
 - **Inertia.js**
 
+## Fetuers i want to add later
+
+- Blogs with the ability to also share on other social media websites(telegram-whatsapp-face)
+- Dash board and learning platform
+- Mobile app for all of that
+- Accounts for clients/studens
+
+# Frontend
+
+## GLOBAL
+
+- Use prettier and test it
+- Use lint and test it
+- Find a better wat to @import \_variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
+- Don't forget about incorberating the arabic language
+- Find another font for section titles only
+- Find a a better names for color variables
+- Change the color pallete for the whole website
+- Find better names for the nav bar tabs (like instaead of about us make it (learn more about your tutor))
+
 # Frontend
 
 ## GLOBAL
@@ -65,9 +85,30 @@
 
 - Make the hover effect of color of card apply to all card like in camply and not just the meta of card without picture ! and i think they did this using some over lay div/color of some sort !!!
 
+<<<<<<< HEAD
+
+## Testimonials section
+
+- Make the each testimonial be unique
+
 # Backend
 
+=======
+
+# Backend
+
+> > > > > > > bda7a6b4210f77abbefcc6c6b6827416ea75c6c8
+
 ## GLOBAL
+
+<<<<<<< HEAD
+
+- Create the software architicure using flow charts and DDD
+- We need to create a route for the admin panel of the website (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)
+- Check the correct namings/names for every thing with the help from the domain exepert
+-
+
+=======
 
 - Create the software architicure using flow charts and DDD
 - We need to create a route for the admin panel of the website (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)
@@ -77,6 +118,8 @@
 - extedn the User model that is created by default in django instead of creating your own user model (Tutor)
 - Create authenticaion page of register and login using graphQL and JWT auth
 - Use BLL method to struct your application, BLL is _Business logic layer_ like i want the app to be in three main parts
+
+  > > > > > > > bda7a6b4210f77abbefcc6c6b6827416ea75c6c8
 
   1. UI part
   2. BLL part
