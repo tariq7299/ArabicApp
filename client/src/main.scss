@@ -21,3 +21,39 @@ body {
 .background-color-black {
   background-color: $background-color-black;
 }
+
+.contact-us-section__container {
+  padding: 10rem 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  // justify-content: space-around;
+  // align-items: center;
+  text-align: left;
+  gap: 2rem;
+
+  .contact-us-section__content {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+
+    // justify-content: stretch;
+    // align-items: center;
+    flex-basis: 500px;
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+  .contact-us-section__img-wrapper {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    // max-height: 400px;
+    // max-width: 400px;
+    // flex: 1 1 300px;
+    img {
+      border-bottom-right-radius: 45px;
+      border-top-left-radius: 45px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

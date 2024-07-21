@@ -1,32 +1,33 @@
-import NavBar from "../../components/NavBar/NavBar"
-import HeroSection from "../../components/HeroSection/HeroSection"
-import LearnAboutTutorSection from "../../components/LearnAboutTutorSection/LearnAboutTutorSection"
-import SubscriptionPlansSection from "../../components/SubscriptionPlansSection/SubscriptionPlansSection"
-import "./Home.scss"
-import FreeResourcesSection from "../../components/FreeResourcesSection/FreeResourcesSection"
-import CoursesSection from "../../components/CoursesSection/CoursesSection"
-import TestimonialsSection from "../../components/TestimonialsSection/TestimonialsSection"
+import NavBar from "../../components/NavBar/NavBar";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import LearnAboutTutorSection from "../../components/LearnAboutTutorSection/LearnAboutTutorSection";
+import SubscriptionPlansSection from "../../components/SubscriptionPlansSection/SubscriptionPlansSection";
+import "./Home.scss";
+import FreeResourcesSection from "../../components/FreeResourcesSection/FreeResourcesSection";
+import CoursesSection from "../../components/CoursesSection/CoursesSection";
+import TestimonialsSection from "../../components/TestimonialsSection/TestimonialsSection";
+import ContactUsSection from "../../components/ContactUsSection";
 
 function Home() {
+  return (
+    <>
+      <NavBar></NavBar>
 
-    return (
-        <>
-            <NavBar ></NavBar>
+      <HeroSection></HeroSection>
 
-            <HeroSection></HeroSection>
+      <LearnAboutTutorSection></LearnAboutTutorSection>
 
-            <LearnAboutTutorSection></LearnAboutTutorSection>
+      <SubscriptionPlansSection></SubscriptionPlansSection>
 
-            <SubscriptionPlansSection></SubscriptionPlansSection>
+      <FreeResourcesSection></FreeResourcesSection>
 
-            <FreeResourcesSection></FreeResourcesSection>
+      <CoursesSection></CoursesSection>
 
-            <CoursesSection></CoursesSection>
+      <TestimonialsSection></TestimonialsSection>
 
-            <TestimonialsSection></TestimonialsSection>
-
-        </>
-    )
+      <ContactUsSection></ContactUsSection>
+    </>
+  );
 }
 
-export default Home
+export default Home;
