@@ -1,20 +1,24 @@
-@import './../../../_variables.scss';
+@import "./../../../_variables.scss";
 
 .button-container {
-    // text-align: center;
+  // text-align: center;
 }
 .section-action-button {
-    padding: 1.2rem 2rem;
-    min-width: 250px;
-    font-weight: 600;
-    border: black 1px; 
-    border-radius: 2rem;
+  padding: 1.2rem 2rem;
+  min-width: 250px;
+  font-weight: 600;
+  border: black 1px;
+  border-radius: 2rem;
 }
 
 .secondary-font-color {
-    color: $secondary-font-color;
+  color: $secondary-font-color;
 }
 
 .secondary-color {
-    background-color: $secondary-color;
+  background-color: $secondary-color;
+}
+
+.button--large {
+  min-width: 300px;
 }

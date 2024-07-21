@@ -7,23 +7,24 @@ import "./HeroSection.scss";
 function HeroSection() {
   return (
     <div className="hero-section">
-      <Container fluid className="hero-section__container px-md-5">
-        <div className="hero-section__content">
+      <Container fluid className="hero-section__container px-md-5 px-4">
+        <div className="hero-section__content px-4 px-md-5 ">
           <MyTitle
             text="Online Arabic classes by top class tutors"
             textColor="secondary-font-color"
-            className="fs-1"
+            className="fs-1 pb-3"
           ></MyTitle>
 
-          <SectionMeta className="text-light">
-            I am one of the best tutors ! and if you wanna learn more about me
-            press on the button{" "}
+          <SectionMeta className="hero-section__meta text-light pb-4">
+            I am one of the best tutors ! and if you wanna learn more about
+            measdfadf adsfadf adsf press on the button{" "}
           </SectionMeta>
 
           <MyButton
             text="Get started"
             buttonColor="secondary-color"
             textColor="primary-font-color"
+            className="btn button--large fs-5"
           ></MyButton>
         </div>
 
