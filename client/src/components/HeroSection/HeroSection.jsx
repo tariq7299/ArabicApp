@@ -6,12 +6,13 @@ import "./HeroSection.scss";
 
 function HeroSection() {
   return (
-    <div className="hero-section-container">
-      <Container fluid className="px-md-5">
+    <div className="hero-section">
+      <Container fluid className="hero-section__container px-md-5">
         <div className="hero-section__content">
           <MyTitle
             text="Online Arabic classes by top class tutors"
             textColor="secondary-font-color"
+            className="fs-1"
           ></MyTitle>
 
           <SectionMeta className="text-light">

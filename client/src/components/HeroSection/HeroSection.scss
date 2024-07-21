@@ -1,6 +1,9 @@
 @import "./../../variables";
 
-.hero-section-container {
+.hero-section {
+}
+
+.hero-section__container {
   width: 100%;
   position: relative;
   padding-top: 7rem;
@@ -22,6 +25,9 @@
 }
 
 .hero-section__content {
+  left: 5%; /* Adjust for centering */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
   // width: 100%;
   text-align: left;
   position: absolute;

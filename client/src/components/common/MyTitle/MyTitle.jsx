@@ -1,9 +1,9 @@
 import "./MyTitle.scss";
 
-function MyTitle({ text, textColor, classNames = "" }) {
+function MyTitle({ text, textColor, className = "" }) {
   return (
     <div className="title-container">
-      <h1 className={`section-header ${textColor} ${classNames}`}>{text}</h1>
+      <h1 className={`section-header ${textColor} ${className}`}>{text}</h1>
     </div>
   );
 }
