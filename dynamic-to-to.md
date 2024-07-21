@@ -1,6 +1,5 @@
 # What i want to do now -- Main objectives
 
-0. Pull latest code form home pc
 1. Create course section in home page
 2. Create footer frontend
 3. Create logo in figma
@@ -13,10 +12,10 @@
 
 ## Implemetation and steps
 
-- Create hero section
-
-  - set a pattern at the background
-  -
+- Finish hero section
+  - Add the meta section text in hero section
+  - Aleing text and make it responsive
+  - Make text appear on right
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
