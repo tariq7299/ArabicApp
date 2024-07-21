@@ -1,44 +1,27 @@
-# Contiunure te homw page
-
-    - **Create the testemonieals section**
-        - mkae the testominials wrapper be obver folow is scrool using gride
-        - hide the scroll bars
-
-    - **Create the mobile app coming soon section**
-    - **Ahieve your goals by**
-    - **Contact us section**
-    - **Create footer page**
-
-# Create the test/survay page
-
-# Create about us page
-
-# Craete contact us page
-
-# Create Payment plans page
-
-# Crrete courses page
-
-# Create free resouces page
-
 # What i want to do now -- Main objectives
 
-1. Create course section in home page
-2. Create footer frontend
-3. Create logo in figma
-4. Replace the supscrition plans part in the home page with something else
-5. Fix the nav bar and remove all unecessary tabs
-6. Add logo in nav bar
-7. Create course page ui section
+1. Finish the hero section _DONE_
+2. Create Contact Us section
+3. Create footer frontend
+4. Create logo in figma
+5. Replace the supscrition plans part in the home page with something else
+6. Fix the nav bar and remove all unecessary tabs
+7. Add logo in nav bar
 8. Create courses page
 9. Create contact us page
+10. Add paddding to all sections using bootstrap also use Container fluid from bootstrap
+11. Ornaize scss folder and make like bolesa lannding page structure
+12.
 
 ## Implemetation and steps
 
-- Finish hero section
-  - Add the meta section text in hero section
-  - Aleing text and make it responsive
-  - Make text appear on right
+2. Create contact us seciton
+
+- Create the UI of contact us sectoin in home page _DONE_
+  - Craete the compoent boiler blate
+  - Downlowd theimage
+  - Donload the icons
+  -
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
