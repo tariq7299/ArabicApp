@@ -5,7 +5,7 @@ import MyButton from "./common/MyButton/MyButton";
 function ContactUsSection({ className }) {
   return (
     <div className="contact-us-section">
-      <Container fluid className="contact-us-section__container p-md-0 p-3">
+      <Container fluid className="contact-us-section__container p-3">
         <div className="contact-us-section__img-wrapper">
           <img
             src="src/assets/old-phone/old-phone-x1.jpg"
@@ -14,9 +14,9 @@ function ContactUsSection({ className }) {
           />
         </div>
 
-        <div className="contact-us-section__content ">
-          <h3>We here to help</h3>
-          <SectionMeta>
+        <div className="contact-us-section__content">
+          <h3 className="pb-2">We here to help</h3>
+          <SectionMeta className="pb-4">
             Get in touch with our Customer Support Team with any questions you
             may have.
           </SectionMeta>

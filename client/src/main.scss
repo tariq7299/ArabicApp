@@ -24,11 +24,10 @@ body {
 
 .contact-us-section__container {
   background-color: $primary-color;
-  // padding: 10rem 2rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  // align-items: center;
+  align-items: center;
   text-align: left;
   gap: 2rem;
 
@@ -37,19 +36,16 @@ body {
     flex-flow: column;
     text-align: left;
 
-    // justify-content: space-arounf;
-    // align-items: center;
-    flex-basis: 500px;
-    flex-grow: 0;
-    flex-shrink: 1;
+    justify-content: center;
+    flex: 1 1 400px;
+    max-width: 600px;
   }
   .contact-us-section__img-wrapper {
     flex-basis: 400px;
-    flex-grow: 0;
+    flex-grow: 1;
     flex-shrink: 1;
-    // max-height: 400px;
-    // max-width: 400px;
-    // flex: 1 1 300px;
+    flex: 1 1 400px;
+    max-width: 500px;
     img {
       border-bottom-right-radius: 45px;
       border-top-left-radius: 45px;

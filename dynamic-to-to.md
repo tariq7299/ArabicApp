@@ -18,7 +18,6 @@
 2. Create contact us seciton
 
 - Create the UI of contact us sectoin in home page _DONE_
-- Check the border on mobile devices
 - Make the img not exceeding certain width
 - Make the contetn and far from each other using justify content space between
   - Make justify c
