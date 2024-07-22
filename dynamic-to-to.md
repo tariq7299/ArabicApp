@@ -21,6 +21,7 @@
 - Check the border on mobile devices
 - Make the img not exceeding certain width
 - Make the contetn and far from each other using justify content space between
+  - Make justify c
 - Add some gap betwenn theem
 - Make the text white
 - Make the button take the width of text with some padding only
@@ -28,7 +29,7 @@
 - Donload the icons
 - Add each icon
 - Make the text on right
-- a
+-
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
