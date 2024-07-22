@@ -15,15 +15,6 @@
 
 ## Implemetation and steps
 
-- Orgnaize the scss files
-  - Make the structu just like bolesa landing page
-    - add contact us to section
-    - Add theme colors to map amend and amdend them
-    - Craete $spacer variables like in bolesa landing page
-    - use bootstarp in each file
-    -
-  -
-
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
     - Read a little bit about django using Mmdn web docs_ django tutorial

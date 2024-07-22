@@ -1,7 +1,5 @@
 @use "src/scss/custom-bootstrap" as *;
 
-@debug $theme-colors;
-
 .contact-us-section__container {
   background-color: $primary;
   display: flex;
@@ -25,9 +23,9 @@
   .contact-us-section__img-wrapper {
     position: relative;
     // padding: 0 3rem;
-    flex-basis: 400px;
-    flex-grow: 1;
-    flex-shrink: 1;
+    // flex-basis: 400px;
+    // flex-grow: 1;
+    // flex-shrink: 1;
     flex: 1 1 300px;
 
     max-width: 550px;
