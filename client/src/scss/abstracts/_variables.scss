@@ -1,0 +1,23 @@
+$primary: #4d96ea;
+$secondary-1: #ffe732;
+$secondary-2: #23085a;
+$secondary-3: #eeeeee;
+$secondary-font-color: #fff;
+$accent-color: #fbe8a3;
+$background-color-black: #000;
+
+$gray-100: #f8f9fa;
+$light: $gray-100;
+$gray-800: #343a40;
+$dark: $gray-800;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary-1": $secondary-1,
+  "secondary-2": $secondary-2,
+  "secondary-3": $secondary-3,
+  "light": $light,
+  "dark": $dark,
+);
+
+$max-ch-md: 65ch;

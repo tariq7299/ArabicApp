@@ -1,0 +1,13 @@
+// @use "../custom-bootstrap" as *;
+@use "./../../scss/abstracts/variables" as *;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $secondary-3;
+  // color: $primary-font-color;
+  font-family: "British Council Sans", sans-serif;
+}

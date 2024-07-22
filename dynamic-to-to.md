@@ -15,12 +15,14 @@
 
 ## Implemetation and steps
 
-2. Create contact us seciton
-   - Add icons and position them
-     - Make set the correct widht of each icon
-     - Add positions to each div
-     - set each one in its appropriate place
-   - fix border of image
+- Orgnaize the scss files
+  - Make the structu just like bolesa landing page
+    - add contact us to section
+    - Add theme colors to map amend and amdend them
+    - Craete $spacer variables like in bolesa landing page
+    - use bootstarp in each file
+    -
+  -
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 

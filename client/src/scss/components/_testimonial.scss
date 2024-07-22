@@ -1,0 +1,27 @@
+@use "src/scss/custom-bootstrap" as *;
+
+.testimonial-wrapper {
+  flex-shrink: 0;
+  flex-basis: 335px;
+  max-width: 400px;
+  flex-grow: 1;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: $secondary-font-color;
+  height: fit-content;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+
+  .testimony-text {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+  .student-name {
+    font-weight: 800;
+  }
+}

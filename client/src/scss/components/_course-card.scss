@@ -1,0 +1,53 @@
+@use "src/scss/custom-bootstrap" as *;
+
+.course-card-wrapper {
+  width: 200px;
+  height: 270px;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  top: 0;
+  transition: top 0.3s ease-in-out;
+  position: relative;
+
+  &:hover {
+    top: -12px;
+    background-color: #d7d7d7;
+    cursor: pointer;
+  }
+
+  &:nth-of-type(odd) {
+    transform: rotate(-7.2deg);
+  }
+
+  &:nth-of-type(even) {
+    transform: rotate(7.2deg);
+  }
+
+  .image-wrapper {
+    img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
+  .course-details-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0.5rem;
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: #7f7973;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+  }
+}

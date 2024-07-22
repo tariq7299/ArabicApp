@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/esm/Container";
-import SectionMeta from "./common/SectionMeta/SectionMeta";
-import MyButton from "./common/MyButton/MyButton";
+import SectionMeta from "./common/SectionMeta";
+import MyButton from "./common/MyButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
 import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
@@ -31,7 +31,7 @@ function ContactUsSection({ className }) {
         </div>
 
         <div className="contact-us-section__content">
-          <h3 className="pb-2 text-light fw-bold">We are here to help</h3>
+          <h3 className="pb-2 fw-bold text-light">We are here to help</h3>
 
           <SectionMeta className="pb-4 text-light">
             Get in touch with our Customer Support Team with any questions you

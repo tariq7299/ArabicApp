@@ -1,0 +1,24 @@
+@use "src/scss/custom-bootstrap" as *;
+
+.testimonial-section-container {
+  // Here is used this because i am using w
+  overflow: scroll;
+
+  .test-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    overflow: scroll;
+    padding: 0.5rem;
+
+    width: fit-content;
+    margin: auto;
+
+    // justify-content: center;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    ::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+  }
+}
