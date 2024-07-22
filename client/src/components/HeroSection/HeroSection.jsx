@@ -22,7 +22,7 @@ function HeroSection() {
 
           <MyButton
             text="Get started"
-            buttonColor="secondary-color"
+            buttonColor="secondary-1"
             textColor="primary-font-color"
             className="btn button--large fs-5"
           ></MyButton>

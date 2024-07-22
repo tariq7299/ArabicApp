@@ -94,23 +94,11 @@
 
 # Backend
 
-=======
-
-# Backend
-
-> > > > > > > bda7a6b4210f77abbefcc6c6b6827416ea75c6c8
-
 ## GLOBAL
 
-<<<<<<< HEAD
-
-- Create the software architicure using flow charts and DDD
-- We need to create a route for the admin panel of the website (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)
-- Check the correct namings/names for every thing with the help from the domain exepert
--
-
 =======
 
+- Check the correct namings/names for every thing with the help from the domain exepert
 - Create the software architicure using flow charts and DDD
 - We need to create a route for the admin panel of the website (This admin panel will enable the owner to add course/books, see all the people info that submitted, answers of the survies)
 - Create a requiremnts.txt and requirements-dev.txt
@@ -119,8 +107,6 @@
 - extedn the User model that is created by default in django instead of creating your own user model (Tutor)
 - Create authenticaion page of register and login using graphQL and JWT auth
 - Use BLL method to struct your application, BLL is _Business logic layer_ like i want the app to be in three main parts
-
-  > > > > > > > bda7a6b4210f77abbefcc6c6b6827416ea75c6c8
 
   1. UI part
   2. BLL part

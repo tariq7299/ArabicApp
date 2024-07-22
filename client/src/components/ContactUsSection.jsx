@@ -1,6 +1,10 @@
 import Container from "react-bootstrap/esm/Container";
 import SectionMeta from "./common/SectionMeta/SectionMeta";
 import MyButton from "./common/MyButton/MyButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
+import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 
 function ContactUsSection({ className }) {
   return (
@@ -12,10 +16,23 @@ function ContactUsSection({ className }) {
             alt=""
             className="contact-us-section__image"
           />
+          <FontAwesomeIcon
+            className="contact-us-section__icon envelop-icon text-secondary-1"
+            icon={faEnvelopesBulk}
+          />
+          <FontAwesomeIcon
+            className=" contact-us-section__icon comment-icon text-secondary-2"
+            icon={faCommentDots}
+          />
+          <FontAwesomeIcon
+            className="contact-us-section__icon location-icon text-secondary-2"
+            icon={faLocationArrow}
+          />
         </div>
 
         <div className="contact-us-section__content">
           <h3 className="pb-2 text-light fw-bold">We are here to help</h3>
+
           <SectionMeta className="pb-4 text-light">
             Get in touch with our Customer Support Team with any questions you
             may have.
@@ -23,7 +40,7 @@ function ContactUsSection({ className }) {
           <MyButton
             className="btn"
             text="Contact Us"
-            buttonColor="secondary-color"
+            buttonColor="secondary-1"
             textColor="primary-font-color"
           ></MyButton>
         </div>

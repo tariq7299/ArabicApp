@@ -16,13 +16,11 @@
 ## Implemetation and steps
 
 2. Create contact us seciton
-
-- Make the button take the width of text with some padding only
-- Make the spacing of contetn look nice
-- Donload the icons
-- Add each icon
-- Make the text on right
--
+   - Add icons and position them
+     - Make set the correct widht of each icon
+     - Add positions to each div
+     - set each one in its appropriate place
+   - fix border of image
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 

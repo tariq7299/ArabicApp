@@ -1,1 +1,11 @@
+$secondary-1: #ffe732;
+$secondary-2: #23085a;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary-1": $secondary-1,
+  "secondary-2": $secondary-2,
+  "light": $white,
+);
+
 @import "./../node_modules/bootstrap/scss/bootstrap";
