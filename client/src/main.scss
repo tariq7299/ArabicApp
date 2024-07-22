@@ -35,17 +35,17 @@ body {
     display: flex;
     flex-flow: column;
     text-align: left;
-
+    align-items: start;
     justify-content: center;
     flex: 1 1 400px;
-    max-width: 600px;
+    max-width: 550px;
   }
   .contact-us-section__img-wrapper {
     flex-basis: 400px;
     flex-grow: 1;
     flex-shrink: 1;
     flex: 1 1 400px;
-    max-width: 500px;
+    max-width: 550px;
     img {
       border-bottom-right-radius: 45px;
       border-top-left-radius: 45px;

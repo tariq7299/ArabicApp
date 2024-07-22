@@ -76,6 +76,7 @@
 - Remove this section in the first version of the application
 - Find some nice pictures for plans and crop them if necessary
 - Two main subscription plans (Adult and kids) and inside each one antother three secondary plans
+- Fix the buttons widths
 
 ## Subscription plan price
 

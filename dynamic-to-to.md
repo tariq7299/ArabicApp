@@ -17,12 +17,6 @@
 
 2. Create contact us seciton
 
-- Create the UI of contact us sectoin in home page _DONE_
-- Make the img not exceeding certain width
-- Make the contetn and far from each other using justify content space between
-  - Make justify c
-- Add some gap betwenn theem
-- Make the text white
 - Make the button take the width of text with some padding only
 - Make the spacing of contetn look nice
 - Donload the icons
