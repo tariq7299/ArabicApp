@@ -1,6 +1,5 @@
 # What i want to do now -- Main objectives
 
-4. Create logo in figma
 5. Replace the supscrition plans part in the home page with something else
 6. Fix the nav bar and remove all unecessary tabs
 7. Add logo in nav bar
@@ -8,16 +7,12 @@
 9. Create contact us page
 10. Add paddding to all sections using bootstrap also use Container fluid from bootstrap
 11. Make contact us work in backend
-12.
+12. Add logo to nav bar and footer
+13. Make button in hero with a modifeir called primary button
+    14.Color the nav bar and both the text and bg also add the logo also do any other thing necessary on it
+14.
 
 ## Implemetation and steps
-
-### 3. Create logo in figma
-
-    - Ask bing to create logo
-    - Search figma for logos
-    - Search for ai tools to create logos
-    -
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
