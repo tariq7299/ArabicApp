@@ -26,11 +26,13 @@ function NavBar() {
             id={`offcanvasNavbar-expand-lg`}
             aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
             placement="end"
-            className="expanded-navbar-body"
+            className="expanded-navbar-body bg-secondary-2 "
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
-                LOGO
+                <KalimaLogoSvg
+                  className={"kalima-logo--small kalima-logo--primary-color "}
+                ></KalimaLogoSvg>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
