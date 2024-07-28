@@ -8,8 +8,8 @@ import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 
 function ContactUsSection({ className }) {
   return (
-    <div className="contact-us-section">
-      <Container fluid className="contact-us-section__container p-3">
+    <div className="contact-us-section py-5">
+      <Container fluid className="contact-us-section__container p-3 px-md-6">
         <div className="contact-us-section__img-wrapper">
           <img
             src="src/assets/old-phone/old-phone-x1.jpg"
@@ -17,7 +17,7 @@ function ContactUsSection({ className }) {
             className="contact-us-section__image"
           />
           <FontAwesomeIcon
-            className="contact-us-section__icon envelop-icon text-secondary-1"
+            clapssName="contact-us-section__icon envelop-icon text-secondary-1"
             icon={faEnvelopesBulk}
           />
           <FontAwesomeIcon

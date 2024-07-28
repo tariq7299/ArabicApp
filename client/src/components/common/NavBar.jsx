@@ -38,11 +38,11 @@ function NavBar() {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">About us</Nav.Link>
-                <Nav.Link href="#action2">Blog</Nav.Link>
                 <Nav.Link href="#action2">Courses</Nav.Link>
-                <Nav.Link href="#action2">Resources</Nav.Link>
                 <Nav.Link href="#action2">Contact us</Nav.Link>
+                <Nav.Link href="#action2">Plans</Nav.Link>
+
+                {/* <Nav.Link href="#action2">About us</Nav.Link> */}
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

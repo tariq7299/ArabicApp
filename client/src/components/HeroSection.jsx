@@ -7,8 +7,8 @@ import Container from "react-bootstrap/esm/Container";
 function HeroSection() {
   return (
     <div className="hero-section">
-      <Container fluid className="hero-section__container px-md-5 px-4">
-        <div className="hero-section__content px-4 px-md-5 ">
+      <Container fluid className="hero-section__container p-3 px-md-5">
+        <div className="hero-section__content  p-3 px-md-5">
           <MyTitle
             text="Online Arabic classes by top class tutors"
             className="fs-1 pb-3 text-secondary-1"

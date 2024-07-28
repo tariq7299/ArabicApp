@@ -1,11 +1,7 @@
 @use "src/scss/custom-bootstrap" as *;
 
-.button-container {
-  button {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-}
 .section-action-button {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1.2rem 2rem;
   // min-width: 250px;
   font-weight: 600;

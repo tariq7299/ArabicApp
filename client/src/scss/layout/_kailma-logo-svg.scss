@@ -4,7 +4,7 @@
   width: 110px;
 }
 .kalima-logo--big {
-  width: 300px;
+  width: 200px;
 }
 
 .kalima-logo--primary-color {
@@ -17,6 +17,12 @@
 }
 
 .kalima-logo--secondary-1-color {
+  .kalima-logo__main {
+    fill: $secondary-2;
+  }
+  .kalima-logo__slogan {
+    fill: $secondary-2;
+  }
 }
 
 .kalima-logo--secondary-2-color {

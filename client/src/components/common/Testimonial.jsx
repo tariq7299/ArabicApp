@@ -1,7 +1,7 @@
 function Testimonial() {
   return (
     <>
-      <div className="testimonial-wrapper">
+      <div className="testimonial-wrapper ">
         <img src="https://staticimagescdn.cambly.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshoji_image.03f54480.png&amp;w=256&amp;q=75"></img>
 
         <p className="testimony-text">

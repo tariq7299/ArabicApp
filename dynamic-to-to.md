@@ -1,32 +1,33 @@
 # What i want to do now -- Main objectives
 
-6. Fix the nav bar and remove all unecessary tabs
-7. Add logo in nav bar
 8. Create courses page
 9. Create contact us page
 10. Add paddding to all sections using bootstrap also use Container fluid from bootstrap
 11. Make contact us work in backend
 12. Add logo to nav bar and footer
 13. Make button in hero with a modifeir called primary button
-    14.Color the nav bar and both the text and bg also add the logo also do any other thing necessary on it
-14.
+14. fix home page things
+15. Change the p-3 of each container to p-4
 
 ## Implemetation and steps
 
-6. Fix the nav bar
+15. fix home page things
 
-   - set correct colors
+    - Add padding to each section
+    - wrapp it inside Container fluid
+    - Make each section titile in the middle
+    - Add logo to footer and make slogan readable
+    - Change the colors of social media icons
 
-     - MAke the nav bar logo to be as secondary-1 or -2
-     - Make the solgan as secondary-1 or -2
-     - mAke the background of nav bar as primary or secondary-1
-     - Make text as secondary-1 or -2
-     - M
-
-   - Remove unncessary tabs
-   - MAke them work
-   - Check offcanvas nav bar
-   -
+    - Fix footer padidng and marings nad other
+      - Make logo and button with more padding
+      - make button appear on end of its col
+        - # Solution 1
+          - Add d-flex and justify-content end
+        - # Solution 3
+          - Try to find a column that will take the width of its content
+        - # Solution 4
+          -
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 

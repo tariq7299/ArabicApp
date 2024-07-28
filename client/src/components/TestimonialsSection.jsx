@@ -1,12 +1,13 @@
 import Testimonial from "./common/Testimonial";
+import Container from "react-bootstrap/esm/Container";
 
 function TestimonialsSection() {
   return (
-    <div className="testimonial-section-container">
-      <div className="test-wrapper">
+    <section className="testimonial-section-container py-5">
+      <Container fluid className="test-wrapper p-3 px-md-6">
         <Testimonial></Testimonial>
-      </div>
-    </div>
+      </Container>
+    </section>
   );
 }
 

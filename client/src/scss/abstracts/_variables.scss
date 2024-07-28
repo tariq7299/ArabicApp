@@ -8,6 +8,7 @@ $gray-100: #f8f9fa;
 $light: $gray-100;
 $gray-800: #343a40;
 $dark: $gray-800;
+$white: #fff;
 
 $theme-colors: (
   "primary": $primary,
@@ -18,6 +19,7 @@ $theme-colors: (
   "light": $light,
   "dark": $dark,
   "black": #000,
+  "white": $white,
 );
 
 // Navbar overrides
