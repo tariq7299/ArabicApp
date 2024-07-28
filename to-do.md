@@ -28,18 +28,12 @@
 
 ## GLOBAL
 
-- Change the color pallete for the whole website
-- Find better names for the nav bar tabs (like instaead of about us make it (learn more about your tutor))
-
-# Frontend
-
-## GLOBAL
-
 - Find a better wat to @import \_variables.scss file into your scss fieles, like iam using the full relative path !! and i believe that there is a better way using `vite` or something
 - Don't forget about incorberating the arabic language
 - Find another font for section titles only
 - Find a a better names for color variables
 - Integrate typeScript with the frontend code
+- Find better names for the nav bar tabs (like instaead of about us make it (learn more about your tutor))
 
 ## NavBar
 

@@ -1,0 +1,23 @@
+@use "src/scss/custom-bootstrap" as *;
+
+.kalima-logo--small {
+  width: 110px;
+}
+.kalima-logo--big {
+  width: 300px;
+}
+
+.kalima-logo--primary-color {
+  .kalima-logo__main {
+    fill: $primary;
+  }
+  .kalima-logo__slogan {
+    fill: red;
+  }
+}
+
+.kalima-logo--secondary-1-color {
+}
+
+.kalima-logo--secondary-2-color {
+}

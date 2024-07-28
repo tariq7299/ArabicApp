@@ -5,14 +5,19 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-
+import KalimaLogoSvg from "./KalimaLogoSvg";
+KalimaLogoSvg;
 function NavBar() {
   return (
     <>
       <Navbar expand="lg" className="bg-white mb-3 mx-md-5" fixed="top">
         <Container fluid>
-          {/* <img src='/src/assets/navBarLogo.png' width='100' height='100'></img> */}
-          <Navbar.Brand href="#home">LOGO</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            {" "}
+            <KalimaLogoSvg
+              className={"kalima-logo--small kalima-logo--primary-color "}
+            ></KalimaLogoSvg>
+          </Navbar.Brand>
           <Navbar.Toggle
             className="navbar-toggler"
             aria-controls={`offcanvasNavbar-expand-lg`}

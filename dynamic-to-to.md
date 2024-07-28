@@ -1,6 +1,5 @@
 # What i want to do now -- Main objectives
 
-5. Replace the supscrition plans part in the home page with something else
 6. Fix the nav bar and remove all unecessary tabs
 7. Add logo in nav bar
 8. Create courses page
@@ -13,6 +12,21 @@
 14.
 
 ## Implemetation and steps
+
+6. Fix the nav bar
+
+   - set correct colors
+
+     - MAke the nav bar logo to be as secondary-1 or -2
+     - Make the solgan as secondary-1 or -2
+     - mAke the background of nav bar as primary or secondary-1
+     - Make text as secondary-1 or -2
+     - M
+
+   - Remove unncessary tabs
+   - MAke them work
+   - Check offcanvas nav bar
+   -
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
