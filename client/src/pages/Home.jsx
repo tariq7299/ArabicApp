@@ -6,6 +6,7 @@ import FreeResourcesSection from "../components/FreeResourcesSection";
 import CoursesSection from "../components/CoursesSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactUsSection from "../components/ContactUsSection";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -22,9 +23,11 @@ function Home() {
 
       <CoursesSection></CoursesSection>
 
+      <ContactUsSection></ContactUsSection>
+
       <TestimonialsSection></TestimonialsSection>
 
-      <ContactUsSection></ContactUsSection>
+      <Footer></Footer>
     </>
   );
 }

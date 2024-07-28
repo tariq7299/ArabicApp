@@ -1,7 +1,9 @@
 @use "src/scss/custom-bootstrap" as *;
 
 .button-container {
-  // text-align: center;
+  button {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
 .section-action-button {
   padding: 1.2rem 2rem;
@@ -12,7 +14,7 @@
 }
 
 .secondary-font-color {
-  color: $secondary-font-color;
+  color: $light;
 }
 
 .secondary-1 {
@@ -20,5 +22,6 @@
 }
 
 .button--large {
-  min-width: 300px;
+  width: 100%;
+  max-width: 350px;
 }

@@ -7,7 +7,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: left;
-  gap: 3rem;
+  gap: $space-6;
 
   .contact-us-section__content {
     display: flex;
@@ -16,19 +16,15 @@
     align-items: start;
     justify-content: center;
     flex: 1 1 400px;
-    max-width: 550px;
+    max-width: 450px;
     position: relative;
     z-index: 2;
   }
   .contact-us-section__img-wrapper {
     position: relative;
-    // padding: 0 3rem;
-    // flex-basis: 400px;
-    // flex-grow: 1;
-    // flex-shrink: 1;
     flex: 1 1 300px;
 
-    max-width: 550px;
+    max-width: 450px;
     .contact-us-section__icon {
       position: absolute;
       width: clamp(50px, 8vw, 100px);

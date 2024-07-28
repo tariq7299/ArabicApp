@@ -1,8 +1,5 @@
 # What i want to do now -- Main objectives
 
-1. Finish the hero section _DONE_
-2. Create Contact Us section
-3. Create footer frontend
 4. Create logo in figma
 5. Replace the supscrition plans part in the home page with something else
 6. Fix the nav bar and remove all unecessary tabs
@@ -10,10 +7,17 @@
 8. Create courses page
 9. Create contact us page
 10. Add paddding to all sections using bootstrap also use Container fluid from bootstrap
-11. Ornaize scss folder and make like bolesa lannding page structure
+11. Make contact us work in backend
 12.
 
 ## Implemetation and steps
+
+### 3. Create logo in figma
+
+    - Ask bing to create logo
+    - Search figma for logos
+    - Search for ai tools to create logos
+    -
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 

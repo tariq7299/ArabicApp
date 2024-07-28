@@ -11,20 +11,17 @@ function HeroSection() {
         <div className="hero-section__content px-4 px-md-5 ">
           <MyTitle
             text="Online Arabic classes by top class tutors"
-            textColor="secondary-font-color"
-            className="fs-1 pb-3"
+            className="fs-1 pb-3 text-secondary-1"
           ></MyTitle>
 
-          <SectionMeta className="hero-section__meta text-light pb-4">
+          <SectionMeta className="hero-section__meta text-secondary-1 pb-4 ">
             I am one of the best tutors ! and if you wanna learn more about
             measdfadf adsfadf adsf press on the button{" "}
           </SectionMeta>
 
           <MyButton
             text="Get started"
-            buttonColor="secondary-1"
-            textColor="primary-font-color"
-            className="btn button--large fs-5"
+            className="btn button--large fs-5 bg-primary text-secondary-2"
           ></MyButton>
         </div>
 

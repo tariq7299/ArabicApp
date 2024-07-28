@@ -5,7 +5,7 @@ import SectionMeta from "./common/SectionMeta";
 
 function LearnAboutTutorSection() {
   return (
-    <div className="learn-about-tutor-container section-gap text-center">
+    <div className="learn-about-tutor-container section-gap text-center ">
       <MyTitle
         text="Learn more about your tutor !"
         textColor="primary"
