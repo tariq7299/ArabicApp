@@ -54,6 +54,7 @@
 - Ask ahmed ali what to replace the [v](https://benjamincrozat.com/bun-package-manager)ideos in the first section in camply website ??
 - +Put the logo in mobile navbar
 - Add more padddin-bottom to the hero title header
+- Change the background of hero section using photo shop
 
 ## MyTitle
 
@@ -79,6 +80,8 @@
 ## Testimonials section
 
 - Make the each testimonial be unique
+- Add next and previous button to testominals aslo make them draggable using swirper library
+-
 
 # Backend
 

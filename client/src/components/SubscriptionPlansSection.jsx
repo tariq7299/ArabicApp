@@ -5,7 +5,7 @@ import Container from "react-bootstrap/esm/Container";
 function SubscriptionPlansSection() {
   return (
     <div className="subscription-plans-section-container section-gap py-5">
-      <Container fluid className="p-3 px-md-6">
+      <Container fluid className="p-3 px-lg-6">
         <MyTitle
           text="Pick the plan that works for you"
           textColor="primary"

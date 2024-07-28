@@ -9,7 +9,7 @@ import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 function ContactUsSection({ className }) {
   return (
     <div className="contact-us-section py-5">
-      <Container fluid className="contact-us-section__container p-3 px-md-6">
+      <Container fluid className="contact-us-section__container p-3 px-lg-6">
         <div className="contact-us-section__img-wrapper">
           <img
             src="src/assets/old-phone/old-phone-x1.jpg"

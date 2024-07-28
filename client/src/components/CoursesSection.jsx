@@ -16,7 +16,7 @@ function CoursesSection() {
           <CourseCard></CourseCard>
           <CourseCard></CourseCard>
         </div>
-        <div className="explore-all-courses-wrapper p-3 px-md-6">
+        <div className="explore-all-courses-wrapper p-3 px-lg-6">
           <MyTitle
             text="Courses for every skill level and interest"
             textColor="primary"

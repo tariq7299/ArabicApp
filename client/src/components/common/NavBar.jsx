@@ -10,7 +10,7 @@ KalimaLogoSvg;
 function NavBar() {
   return (
     <>
-      <Navbar expand="lg" className="bg-secondary-2 mb-3 mx-md-5" fixed="top">
+      <Navbar expand="lg" className="bg-secondary-2  mx-lg-5" fixed="top">
         <Container fluid>
           <Navbar.Brand href="#home">
             {" "}

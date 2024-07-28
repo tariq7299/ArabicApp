@@ -2,32 +2,12 @@
 
 8. Create courses page
 9. Create contact us page
-10. Add paddding to all sections using bootstrap also use Container fluid from bootstrap
-11. Make contact us work in backend
-12. Add logo to nav bar and footer
-13. Make button in hero with a modifeir called primary button
-14. fix home page things
-15. Change the p-3 of each container to p-4
+10. Make contact us work in backnd
+11. Make button in hero with a modifeir called primary button
 
 ## Implemetation and steps
 
-15. fix home page things
-
-    - Add padding to each section
-    - wrapp it inside Container fluid
-    - Make each section titile in the middle
-    - Add logo to footer and make slogan readable
-    - Change the colors of social media icons
-
-    - Fix footer padidng and marings nad other
-      - Make logo and button with more padding
-      - make button appear on end of its col
-        - # Solution 1
-          - Add d-flex and justify-content end
-        - # Solution 3
-          - Try to find a column that will take the width of its content
-        - # Solution 4
-          -
+9. Create Contats us page
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 

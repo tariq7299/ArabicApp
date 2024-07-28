@@ -7,7 +7,7 @@ import Container from "react-bootstrap/esm/Container";
 function LearnAboutTutorSection() {
   return (
     <div className="learn-about-tutor-container section-gap text-center py-5">
-      <Container fluid className="p-3 px-md-6">
+      <Container fluid className="p-3 px-lg-6">
         <MyTitle
           text="Learn more about your tutor !"
           textColor="primary"

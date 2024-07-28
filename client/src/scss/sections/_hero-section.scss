@@ -25,17 +25,23 @@
 }
 
 .hero-section__content {
-  left: 0;
-  text-align: center;
+  // left: 0;
+  text-align: left;
   position: absolute;
-  padding-top: 7rem;
+  width: 100%;
+  // padding-top: 7rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 20%;
   z-index: 2;
   max-width: $max-ch-md;
 }
 
 @media (min-width: 992px) {
   .hero-section__content {
+    left: 0;
+    transform: translate(0%, 0%);
     text-align: left;
-    top: 15%;
+    top: 25%;
   }
 }
