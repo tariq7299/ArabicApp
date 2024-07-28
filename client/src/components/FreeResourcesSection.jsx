@@ -17,9 +17,7 @@ function FreeResourcesSection() {
             </div>
             <MyButton
               text="Join now"
-              buttonColor="background-color-black"
-              textColor="secondary-font-color"
-              className="free-resources-button"
+              className="free-resources-button btn text-primary bg-secondary-1"
             ></MyButton>
           </div>
           <img

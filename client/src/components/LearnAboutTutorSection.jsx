@@ -18,8 +18,7 @@ function LearnAboutTutorSection() {
         </SectionMeta>
         <MyButton
           text="About me"
-          buttonColor="secondary-1"
-          textColor="primary-font-color"
+          className="btn text-primary bg-secondary-1"
         ></MyButton>
       </Container>
     </div>

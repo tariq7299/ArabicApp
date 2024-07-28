@@ -10,8 +10,7 @@ function SubscriptionPlan() {
         <SubscriptionPlanPrice></SubscriptionPlanPrice>
         <MyButton
           text="Sign up"
-          buttonColor="secondary-1"
-          textColor="primary-font-color"
+          className="btn text-primary bg-secondary-1"
         ></MyButton>
       </div>
     </div>

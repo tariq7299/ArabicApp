@@ -27,9 +27,8 @@ function CoursesSection() {
             more.
           </SectionMeta>
           <MyButton
-            text="Explore all courses -->"
-            buttonColor="secondary-1"
-            textColor="primary-font-color"
+            text="Explore all courses"
+            className="btn text-primary bg-secondary-1"
           ></MyButton>
         </div>
       </Container>

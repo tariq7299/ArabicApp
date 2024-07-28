@@ -17,7 +17,7 @@ function ContactUsSection({ className }) {
             className="contact-us-section__image"
           />
           <FontAwesomeIcon
-            clapssName="contact-us-section__icon envelop-icon text-secondary-1"
+            className="contact-us-section__icon envelop-icon text-secondary-1"
             icon={faEnvelopesBulk}
           />
           <FontAwesomeIcon
@@ -38,10 +38,9 @@ function ContactUsSection({ className }) {
             may have.
           </SectionMeta>
           <MyButton
-            className="btn"
+            className="btn text-primary bg-secondary-1"
             text="Contact Us"
             buttonColor="secondary-1"
-            textColor="primary-font-color"
           ></MyButton>
         </div>
       </Container>

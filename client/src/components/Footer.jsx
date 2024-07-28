@@ -11,7 +11,7 @@ function Footer() {
     <footer className="footer bg-primary py-5">
       <Container className="footer__container p-3 px-md-6" fluid>
         <div className="row d-flex justify-content-center justify-content-md-between py-5 pb-md-8 ">
-          <div className="footer__logo text-center col-5 col-md-2 pb-4 pb-md-0 text-light">
+          <div className="footer__logo text-center col-9 col-md-2 pb-4 pb-md-0 text-light">
             <KalimaLogoSvg
               className={" kalima-logo--secondary-1-color "}
             ></KalimaLogoSvg>
@@ -19,9 +19,7 @@ function Footer() {
           <div className="footer__action-button col-12 col-md-3 justify-content-end">
             <MyButton
               text="Get started"
-              buttonColor="secondary-1"
-              textColor="priamry-font-color"
-              className="btn button--large fs-5"
+              className="btn button--large fs-5 text-primary bg-secondary-1"
             ></MyButton>
           </div>
         </div>
