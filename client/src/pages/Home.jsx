@@ -10,25 +10,15 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <>
-      {/* <NavBar></NavBar> */}
-
+    <main>
       <HeroSection></HeroSection>
-
       <LearnAboutTutorSection></LearnAboutTutorSection>
-
       <SubscriptionPlansSection></SubscriptionPlansSection>
-
       <FreeResourcesSection></FreeResourcesSection>
-
       <CoursesSection></CoursesSection>
-
       <ContactUsSection></ContactUsSection>
-
       <TestimonialsSection></TestimonialsSection>
-
-      {/* <Footer></Footer> */}
-    </>
+    </main>
   );
 }
 
