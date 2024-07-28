@@ -19,7 +19,7 @@ function CoursesSection() {
         <div className="explore-all-courses-wrapper p-3 px-lg-6">
           <MyTitle
             text="Courses for every skill level and interest"
-            textColor="primary"
+            className="text-primary"
           ></MyTitle>
           <SectionMeta className="pb-4">
             Focus on your specific goals with our guided courses, including

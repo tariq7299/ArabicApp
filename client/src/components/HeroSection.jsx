@@ -11,12 +11,12 @@ function HeroSection() {
         <div className="hero-section__content p-3 px-lg-5">
           <MyTitle
             text="Online Arabic classes by top class tutors"
-            className="fs-1 pb-3 text-secondary-1"
+            className="display-4 pb-3 text-secondary-1"
           ></MyTitle>
 
-          <SectionMeta className="hero-section__meta text-secondary-1 pb-4 ">
-            I am one of the best tutors ! and if you wanna learn more about
-            measdfadf adsfadf adsf press on the button{" "}
+          <SectionMeta className="hero-section__meta text-secondary-1 pb-4 fs-5 ">
+            This is the best hero meta text! you will ever encounter in your
+            whole life
           </SectionMeta>
 
           <MyButton

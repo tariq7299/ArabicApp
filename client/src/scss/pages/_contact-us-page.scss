@@ -1,0 +1,16 @@
+@use "src/scss/custom-bootstrap" as *;
+
+.contact-us-page__section {
+  .contact-us-page__contact-info {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .contact-us-page__section {
+    .contact-us-page__contact-info {
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 25px;
+    }
+  }
+}

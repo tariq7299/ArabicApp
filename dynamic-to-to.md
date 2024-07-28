@@ -4,21 +4,17 @@
 9. Create contact us page
 10. Make contact us work in backnd
 11. Make button in hero with a modifeir called primary button
+12. Fix bg-white of contact us as it is not rendring whte background
 
 ## Implemetation and steps
 
 9. Create Contats us page
-   - Create the title eleemtn
-   - Add color
-   - Add font size
-   - Add meta
-   - Create over all skeleton of contact us section
-   -
-   - left part of contact us section
-   - Createt of left part and sub title;
-   - Create cpmtact info
-   - Add icons
-   - Add social media icons
+
+   - Create left part
+     - make space/gap between icons and contact info less
+     - make every thing on left
+     - Add more padding in desktop
+     - Remove padding of icons in desktop
    - Create right part
    -
 

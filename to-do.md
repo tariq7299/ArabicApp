@@ -35,6 +35,9 @@
 - Integrate typeScript with the frontend code
 - Find better names for the nav bar tabs (like instaead of about us make it (learn more about your tutor))
 - Use section-article-nav-footer-header-main- in there approprita html tags
+- Change the english font of the app from britich to somethign sexy
+- Use `@include media-breakpoint-up(){}` instead of evfy media query
+- fix `downloadable font: download failed (font-family: "Alata" style:normal weight:400 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/alata/v10/PbytFmztEwbIoce9zqYzQ1OW.woff2`
 
 ## NavBar
 

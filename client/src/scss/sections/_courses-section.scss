@@ -20,3 +20,11 @@
     text-align: center;
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .Courses-section-container {
+    .courses-cards-wrapper {
+      justify-content: center;
+    }
+  }
+}

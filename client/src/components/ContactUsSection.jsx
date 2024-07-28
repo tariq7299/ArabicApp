@@ -31,9 +31,11 @@ function ContactUsSection({ className }) {
         </div>
 
         <div className="contact-us-section__content">
-          <h3 className="pb-2 fw-bold text-light">We are here to help</h3>
+          <h2 className="fs-3 pb-2 fw-bold text-secondary-2">
+            We are here to help
+          </h2>
 
-          <SectionMeta className="pb-4 text-light">
+          <SectionMeta className="pb-4 text-light fs-6">
             Get in touch with our Customer Support Team with any questions you
             may have.
           </SectionMeta>

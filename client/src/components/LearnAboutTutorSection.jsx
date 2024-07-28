@@ -10,7 +10,7 @@ function LearnAboutTutorSection() {
       <Container fluid className="p-3 px-lg-6">
         <MyTitle
           text="Learn more about your tutor !"
-          textColor="primary"
+          className="text-primary"
         ></MyTitle>
         <SectionMeta className="pb-4">
           I am one of the best tutors ! and if you wanna learn more about me

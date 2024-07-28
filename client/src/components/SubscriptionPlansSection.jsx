@@ -9,7 +9,7 @@ function SubscriptionPlansSection() {
         <MyTitle
           text="Pick the plan that works for you"
           textColor="primary"
-          className="text-center pb-4"
+          className="text-center pb-4 text-primary"
         ></MyTitle>
         <div className="subscription-plans-wrapper">
           <SubscriptionPlan></SubscriptionPlan>

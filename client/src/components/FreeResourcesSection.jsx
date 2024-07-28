@@ -5,10 +5,13 @@ import Container from "react-bootstrap/esm/Container";
 function FreeResourcesSection() {
   return (
     <div className="free-resoureces-section-container pt-7 pb-5">
-      <Container className="p-3 px-lg-6">
+      <Container
+        className="p-3 px-lg
+      -6"
+      >
         <div className="free-resources-elements-wrapper bg-secondary-2">
           <div className="title-button-meta-wrapper">
-            <h3>Try our free resources</h3>
+            <h3 className="text-primary">Try our free resources</h3>
             <div className="section-meta-wrapper">
               <SectionMeta className="pb-4">
                 Get a taste of Arabic App with our most popular tools and
