@@ -20,6 +20,11 @@ $theme-colors: (
   "black": #000,
 );
 
+// Navbar overrides
+$navbar-light-color: $primary;
+$navbar-light-hover-color: #000;
+$navbar-light-active-color: #000;
+
 $max-ch-md: 65ch;
 
 $spacer: 1rem;

@@ -10,7 +10,7 @@ KalimaLogoSvg;
 function NavBar() {
   return (
     <>
-      <Navbar expand="lg" className="bg-white mb-3 mx-md-5" fixed="top">
+      <Navbar expand="lg" className="bg-secondary-2 mb-3 mx-md-5" fixed="top">
         <Container fluid>
           <Navbar.Brand href="#home">
             {" "}
@@ -34,7 +34,7 @@ function NavBar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3 ">
+              <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link href="#action2">About us</Nav.Link>
                 <Nav.Link href="#action2">Blog</Nav.Link>
