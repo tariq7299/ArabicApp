@@ -9,7 +9,7 @@ import KalimaLogoSvg from "./KalimaLogoSvg";
 KalimaLogoSvg;
 function NavBar() {
   return (
-    <>
+    <header>
       <Navbar expand="lg" className="bg-secondary-2  mx-lg-5" fixed="top">
         <Container fluid>
           <Navbar.Brand href="#home">
@@ -39,8 +39,8 @@ function NavBar() {
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link href="#action2">Courses</Nav.Link>
-                <Nav.Link href="#action2">Contact us</Nav.Link>
-                <Nav.Link href="#action2">Plans</Nav.Link>
+                <Nav.Link href="#action3">Contact us</Nav.Link>
+                <Nav.Link href="#action4">Plans</Nav.Link>
 
                 {/* <Nav.Link href="#action2">About us</Nav.Link> */}
               </Nav>
@@ -48,7 +48,7 @@ function NavBar() {
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-    </>
+    </header>
   );
 }
 

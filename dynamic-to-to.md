@@ -8,6 +8,9 @@
 ## Implemetation and steps
 
 9. Create Contats us page
+   - Add layout to the contact us page using react router
+     - Create root compoentn and add to it the header and fotter
+     - Use this layout e
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 

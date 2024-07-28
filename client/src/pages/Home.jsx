@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <>
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
 
       <HeroSection></HeroSection>
 
@@ -27,7 +27,7 @@ function Home() {
 
       <TestimonialsSection></TestimonialsSection>
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 }

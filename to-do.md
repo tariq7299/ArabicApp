@@ -34,6 +34,7 @@
 - Find a a better names for color variables
 - Integrate typeScript with the frontend code
 - Find better names for the nav bar tabs (like instaead of about us make it (learn more about your tutor))
+- Use section-article-nav-footer-header-main- in there approprita html tags
 
 ## NavBar
 
