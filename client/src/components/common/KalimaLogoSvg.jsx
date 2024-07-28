@@ -4,7 +4,7 @@ export default function KalimaLogoSvg({ className }) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         xmlns:svgjs="http://svgjs.dev/svgjs"
         width="100%"
         height="auto"
@@ -18,7 +18,7 @@ export default function KalimaLogoSvg({ className }) {
             height="691"
             width="2000"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
           >
             <g
               id="tight-bounds"
