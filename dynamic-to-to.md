@@ -10,8 +10,8 @@
 
 9. Create Contats us page
    - Create right part
-    - Creaet row and in each row there is col-lg-3 and col-12
-    - Change the font of each text field and make like every thing else
+    - Inputs doesn't look good in medium sized screens
+    - Icons on the left part doesn't become in the bottom of the screen
     - 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
