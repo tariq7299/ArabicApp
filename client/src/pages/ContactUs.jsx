@@ -15,11 +15,11 @@ import {
 export default function ContactUs() {
   return (
     <>
-      <section className="contact-us-page__section mt-7 py-5">
+      <section className="contact-us-page__section mt-7 py-4">
 
         <Container fluid className="p-3 px-lg-6">
 
-          <div className="contact-us-page-title px-5">
+          <div className="contact-us-page-title px-5 py-5">
             <MyTitle
               text="Contact Us"
               className="display-4 text-primary text-center px-6  "

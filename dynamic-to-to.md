@@ -10,10 +10,9 @@
 
 9. Create Contats us page
    - Create right part
-   - Create input componet that can be customized
-    - # Try to sea shadCn comopnet libraty and use it
-    - # 
-
+    - Creaet row and in each row there is col-lg-3 and col-12
+    - Change the font of each text field and make like every thing else
+    - 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
     - Read a little bit about django using Mmdn web docs_ django tutorial
