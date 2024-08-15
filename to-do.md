@@ -87,6 +87,9 @@
 - Add next and previous button to testominals aslo make them draggable using swirper library
 -
 
+## Contact us page 
+- Add some background patterns in the contact us section information
+
 # Backend
 
 ## GLOBAL
