@@ -42,6 +42,8 @@ $space-5: $spacer * 2;
 $space-6: $spacer * 3;
 $space-7: $spacer * 5;
 $space-8: $spacer * 7;
+$space-9: $spacer * 8;
+$space-10: $spacer * 10;
 
 // Spacers map using predefined variables
 $spacers: (
@@ -54,4 +56,6 @@ $spacers: (
   6: $space-6,
   7: $space-7,
   8: $space-8,
+  9: $space-9,
+  10: $space-10,
 );

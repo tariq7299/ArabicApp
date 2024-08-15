@@ -15,6 +15,7 @@ export default function ContactUs() {
   return (
     <>
       <section className="contact-us-page__section mt-7 py-5">
+
         <Container fluid className="p-3 px-lg-6">
           <MyTitle
             text="Contact Us"
@@ -24,41 +25,44 @@ export default function ContactUs() {
             Any question or remarks? Just write us a message!
           </SectionMeta>
 
-          <article className="row ">
-            <div className="col-12 col-lg-5 bg-primary text-center text-lg-start p-3 p-lg-6 contact-us-page__contact-info">
+          <article className="row">
+
+            <div className="col-12 col-lg-5 bg-primary text-center text-lg-start p-3 p-lg-6 contact-us-page__contact-info-wrapper">
+
               <h2 className="text-secondary-2 fw-bold">Contact information</h2>
               <p className="text-secondary-1 pb-4">
                 {" "}
                 We will be happy to receive your message!
               </p>
 
-              <div className="row   d-flex gap-5 gap-lg-6 pb-6  ">
-                <div className="col-12 row">
-                  <div className="col-12 col-lg-1 d-flex justify-content-center justify-content-lg-start align-items-center pb-3 pb-lg-0">
+              <div className="row   d-flex gap-5 gap-lg-6  contact-us-page__contact-info">
+                <div className="col-12 row mx-auto">
+                  <div className="col-12 col-lg-2 d-flex justify-content-center justify-content-lg-start align-items-center pb-3 pb-lg-0">
                     <FaHeadset className="icon--medium text-secondary-1 " />
                   </div>{" "}
-                  <p className="col-12 col-lg-11 d-flex justify-content-center justify-content-lg-start   text-secondary-4 text-center text-lg-start align-items-center ">
+                  <p className="col-12 col-lg-10 d-flex justify-content-center justify-content-lg-start   text-secondary-4 text-center text-lg-start align-items-center ">
                     0201099133377
                   </p>
                 </div>
-                <div className="col-12 row ">
-                  <div className="col-12 col-lg-1 d-flex justify-content-center justify-content-lg-start align-items-center pb-3 pb-lg-0">
+                <div className="col-12 row mx-auto">
+                  <div className="col-12 col-lg-2  d-flex justify-content-center justify-content-lg-start align-items-center pb-3 pb-lg-0">
                     <FaEnvelopeOpen className="icon--medium text-secondary-1  text-center text-lg-start " />
                   </div>{" "}
-                  <p className="col-12 col-lg-11 text-secondary-4 d-flex justify-content-center justify-content-lg-start text-center text-lg-start align-items-center ">
+                  <p className="col-12 col-lg-10 text-secondary-4 d-flex justify-content-center justify-content-lg-start text-center text-lg-start align-items-center ">
                     tr.sar77an78@gmail.com
                   </p>
                 </div>
-                <div className="col-12 row">
-                  <div className="col-12 col-lg-1 d-flex justify-content-center justify-content-lg-start align-items-center pb-3 pb-lg-0">
+                <div className="col-12 row mx-auto">
+                  <div className="col-12 col-lg-2  d-flex justify-content-center justify-content-lg-start align-items-center pb-3 pb-lg-0">
                     {" "}
                     <FaLocationDot className="icon--medium text-secondary-1 " />
                   </div>{" "}
-                  <p className="col-12 col-lg-11 text-secondary-4 d-flex justify-content-center justify-content-lg-start text-center text-lg-start align-items-center ">
+                  <p className="col-12 col-lg-10 text-secondary-4 d-flex justify-content-center justify-content-lg-start text-center text-lg-start align-items-center ">
                     25 9th District, Ismael Wahbi, Nasr City, Cairo, Egypt
                   </p>
                 </div>
               </div>
+
               <div className="text-center d-flex gap-5 justify-content-center py-3">
                 <FaFacebookMessenger className="icon--big text-secondary-2 " />
                 <FaFacebook className="icon--big text-secondary-2" />
@@ -67,7 +71,7 @@ export default function ContactUs() {
               </div>
             </div>
 
-            <div className="col-12 col-lg-7 bg-secondary-1">
+            <div className="col-12 col-lg-7 bg-secondary-1 contact-us-page__inputs">
               <input type="text" />
               <p>testingnalgnda</p>
               <p>testingnalgnda</p>

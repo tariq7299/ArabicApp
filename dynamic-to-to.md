@@ -11,10 +11,15 @@
 9. Create Contats us page
 
    - Create left part
-     - make space/gap between icons and contact info less
-     - make every thing on left
+
      - Add more padding in desktop
      - Remove padding of icons in desktop
+     - Remove padding of text in desktop
+     - Make social media icons on the left
+     - Make border radius of whole contact us section
+      - # Solution 1: Using border of bootstrap
+      - # Solution 2: Using border of wholw ins scss and if not us each part separatly 
+
    - Create right part
    -
 

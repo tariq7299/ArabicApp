@@ -1,16 +1,37 @@
 @use "src/scss/custom-bootstrap" as *;
 
 .contact-us-page__section {
-  .contact-us-page__contact-info {
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+  .contact-us-page__contact-info-wrapper {
+    border-radius: 5px;
+    // border-top-right-radius: 6px;
+    // border-top-left-radius: 5px;
   }
+
+
+  .contact-us-page__contact-info {
+    padding-bottom: $space-5;
+  }
+
+
 }
+
 @include media-breakpoint-up(lg) {
   .contact-us-page__section {
-    .contact-us-page__contact-info {
+    .contact-us-page__contact-info-wrapper {
+      border-top-left-radius: 10px;
       border-top-right-radius: 0px;
-      border-bottom-left-radius: 25px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .contact-us-page__contact-info {
+      padding: $space-9 0;
+    }
+
+    .contact-us-page__inputs {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
   }
+
 }
