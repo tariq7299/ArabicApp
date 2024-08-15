@@ -2,6 +2,7 @@ import Container from "react-bootstrap/esm/Container";
 import MyTitle from "../components/common/MyTitle";
 import SectionMeta from "../components/common/SectionMeta";
 import { FaFacebookMessenger } from "react-icons/fa6";
+import TextField from '@mui/material/TextField';
 import {
   FaFacebook,
   FaSquareXTwitter,
@@ -32,8 +33,8 @@ export default function ContactUs() {
 
             <div className="col-12 col-lg-5 bg-primary text-center text-lg-start px-5 py-3 p-lg-6 contact-us-page__contact-info-wrapper">
 
-              <h2 className="text-secondary-2 fw-bold">Contact information</h2>
-              <p className="text-secondary-1 pb-4">
+              <h2 className="text-secondary-2 fw-bold fs-1">Contact information</h2>
+              <p className="text-secondary-1 pb-4 fs-6">
                 {" "}
                 We will be happy to receive your message!
               </p>
@@ -47,7 +48,7 @@ export default function ContactUs() {
                     <FaHeadset className="icon--medium text-secondary-1 " />
                   </div>{" "}
 
-                  <p className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start   text-secondary-4 text-center text-lg-start align-items-center p-lg-0 ">
+                  <p className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start   text-secondary-1 text-center text-lg-start align-items-center p-lg-0 ">
                     0201099133377
                   </p>
 
@@ -59,7 +60,7 @@ export default function ContactUs() {
                   <div className="col-12 col-lg-auto d-flex justify-content-center justify-content-lg-start align-items-center pb-3 p-lg-0 pe-lg-5">
                     <FaEnvelopeOpen className="icon--medium text-secondary-1  text-center text-lg-start " />
                   </div>{" "}
-                  <p className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start   text-secondary-4 text-center text-lg-start align-items-center  p-lg-0 ">
+                  <p className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start   text-secondary-1 text-center text-lg-start align-items-center  p-lg-0 ">
                     tr.sar77an78@gmail.com
                   </p>
                 </div>
@@ -69,7 +70,7 @@ export default function ContactUs() {
                     {" "}
                     <FaLocationDot className="icon--medium text-secondary-1 " />
                   </div>{" "}
-                  <p className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start   text-secondary-4 text-center text-lg-start align-items-center p-lg-0 ">
+                  <p className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start   text-secondary-1 text-center text-lg-start align-items-center p-lg-0 ">
                     25 9th District, Ismael Wahbi, Nasr City, Cairo, Egypt
                   </p>
                 </div>
@@ -84,19 +85,23 @@ export default function ContactUs() {
             </div>
 
             <div className="col-12 col-lg-7 bg-secondary-1 contact-us-page__inputs">
-              <input type="text" />
-              <p>testingnalgnda</p>
-              <p>testingnalgnda</p>
-              <input type="text" />
-              <input type="text" />
-              <p>testingnalgnda</p>
-              <input type="text" />
-              <input type="text" />
-              <p>testingnalgnda</p>
-              <input type="text" />
-              <input type="text" />
-              <p>testingnalgnda</p>
-              <input type="text" />
+
+
+              <form action="">
+
+                <TextField label="First Name" variant="standard" />
+
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Standard" variant="standard" />
+              </form>
+
             </div>
           </article>
         </Container>

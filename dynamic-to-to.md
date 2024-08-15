@@ -9,19 +9,10 @@
 ## Implemetation and steps
 
 9. Create Contats us page
-
-   - Create left part
-
-     - Add more padding in desktop
-     - Remove padding of icons in desktop
-     - Remove padding of text in desktop
-     - Make social media icons on the left
-     - Make border radius of whole contact us section
-      - # Solution 1: Using border of bootstrap
-      - # Solution 2: Using border of wholw ins scss and if not us each part separatly 
-
    - Create right part
-   -
+   - Create input componet that can be customized
+    - # Try to sea shadCn comopnet libraty and use it
+    - # 
 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
