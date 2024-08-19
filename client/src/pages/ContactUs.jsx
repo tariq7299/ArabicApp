@@ -99,44 +99,42 @@ export default function ContactUs() {
 
             <div className="col-12 col-lg-7 bg-secondary-1 contact-us-page__inputs">
 
-              <form action="" className="row d-flex- justify-content-lg-center p-lg-6 p-3 gap-6 ">
+              <form action="" className="row d-flex- justify-content-lg-center p-lg-6 p-3 gap-3 ">
 
-                <div className="row d-flex  justify-content-lg-between ">
-                  <div className="col-12 col-lg-4 py-5 pe-xl-4 ">
+                <div className="row d-flex   justify-content-between p-0">
+                  <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <TextField label="First Name" variant="standard" placeholder="Ahmed" fullWidth />
                   </div>
-                  <div className="col-12 col-lg-4 py-5 pe-xl-4">
+                  <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto  mx-lg-0">
                     <TextField label="Last Name" variant="standard" placeholder="Ahmed..." fullWidth />
                   </div>
-                  <div className="col-12 col-lg-4 py-5 pe-xl-4">
+                  <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
                     <TextField label="Email" variant="standard" placeholder="Mostafa..." fullWidth />
                   </div>
-                  <div className="col-12 col-lg-4 py-5 pe-xl-4">
+                  <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
                     <TextField label="Phone Number" variant="standard" placeholder="Ahmed" fullWidth />
                   </div>
-                  <div className="col-12 col-lg-4 py-5 pe-xl-4">
+                  <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <TextField label="Gender" variant="standard" placeholder="Ahmed" fullWidth />
                   </div>
-                  <div className="col-12 col-lg-4 py-5 pe-xl-4">
+                  <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <TextField label="Native Language" variant="standard" placeholder="Ahmed" fullWidth />
                   </div>
-                  <div className="col-12 col-lg-5 py-5 pe-xl-4">
+                  <div className="col-12 col-lg-5 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <TextField label="Origin Country" variant="standard" placeholder="Ahmed" fullWidth />
                   </div>
-                  <div className="col-12 col-lg-5 py-4 pe-xl-4">
+                  <div className="col-12 col-lg-5 py-4 pe-xl-4 max-400 mx-auto  mx-lg-0">
                     <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
                     <Select
                       labelId="demo-simple-select-filled-label"
                       id="demo-simple-select-filled"
                       label="Age"
-                      // value={age}
-                      // onChange={handleChange}
                       fullWidth
                       fullHieght
                       variant="standard"
                       className=""
                     >
-                      <MenuItem value="">
+                      <MenuItem value="None">
                         <em>None</em>
                       </MenuItem>
                       <MenuItem value={10}>Ten</MenuItem>
@@ -146,7 +144,7 @@ export default function ContactUs() {
                   </div>
                 </div>
 
-                <FormControl className="row  col-12 py-5 p-lg-5">
+                <FormControl className="row  col-9 col-lg-12 py-5  mx-auto ">
                   <FormLabel id="demo-radio-buttons-group-label" className="py-3">Arabic Level</FormLabel>
                   <RadioGroup
                     row
@@ -176,7 +174,7 @@ export default function ContactUs() {
                   </RadioGroup>
                 </FormControl>
 
-                <div className="col-12 ">
+                <div className="col-12  ">
 
                   <TextField label="First Name"
                     variant="standard"
@@ -185,7 +183,7 @@ export default function ContactUs() {
                     rows={3} />
                 </div>
 
-                <div className="d-flex justify-content-center justify-content-lg-end col-12 pt-lg-7">
+                <div className="d-flex justify-content-center justify-content-lg-end col-12 py-5 pt-lg-7">
 
                   <MyButton
                     text="Send Message"
