@@ -38,6 +38,9 @@
 - Change the english font of the app from britich to somethign sexy
 - Use `@include media-breakpoint-up(){}` instead of evfy media query
 - fix `downloadable font: download failed (font-family: "Alata" style:normal weight:400 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/alata/v10/PbytFmztEwbIoce9zqYzQ1OW.woff2`
+- Create courses page
+- Add Arabic Alphabit letters in the background
+- Fix the hero section bacground (You can just/simply change the background color from blue to like creamy ! with gradient ! and then change the color of the nav bar to like white or green ? or maybe make it primary green at first when user loads the page and then make it creamy !! )
 
 ## NavBar
 
@@ -46,6 +49,8 @@
 - Create the navbar expanding and collapsing transition to be just like british councel navbar
 - Put the correct menue items with the correct font
 - Put the logo in mobile navbar
+- remove slogan from logo in nav bar
+- Change the logo to kaleem
 
 ## MyButton
 
@@ -89,6 +94,9 @@
 
 ## Contact us page 
 - Add some background patterns in the contact us section information
+- Color the inputs and theme them
+- add correct fonts to inputs
+- 
 
 # Backend
 

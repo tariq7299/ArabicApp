@@ -1,10 +1,8 @@
 # What i want to do now -- Main objectives
 
-8. Create courses page
-9. Create contact us page
+
+
 10. Make contact us work in backnd
-11. Make button in hero with a modifeir called primary button
-12. Fix bg-white of contact us as it is not rendring whte background
 
 ## Implemetation and steps
 
@@ -12,7 +10,8 @@
    - Create right part
     - Inputs doesn't look good in medium sized screens
     - Icons on the left part doesn't become in the bottom of the screen
-    - 
+    - Add a label to radio input group
+    - Control inputs using useForm (And before you do so you can just control it using FormControl and useFormControlContext() hook from material ui !)
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
     - Read a little bit about django using Mmdn web docs_ django tutorial
