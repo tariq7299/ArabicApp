@@ -114,12 +114,12 @@ export default function ContactUs() {
 
             <div className="col-12 col-lg-7 bg-secondary-1 contact-us-page__inputs">
 
-              <form action="" className="row d-flex- justify-content-lg-center p-lg-6 p-3 gap-3 ">
+              <form onSubmit={handleSubmit} className="row d-flex- justify-content-lg-center p-lg-6 p-3 gap-3 ">
 
                 <div className="row d-flex   justify-content-between p-0">
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <Controller
-                      name="first-name"
+                      name="firstName"
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
@@ -136,11 +136,11 @@ export default function ContactUs() {
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto  mx-lg-0">
 
                     <Controller
-                      name="last-name"
+                      name="lastName"
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
-                        <TextField type="text" {...field} label="Last Name" variant="standard" placeholder="Ahmed..." fullWidth />
+                        <TextField type="text" {...field} label="Last Name" variant="standard" placeholder="Mostafa..." fullWidth />
                       )}
                     />
                   </div>
@@ -150,17 +150,17 @@ export default function ContactUs() {
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
-                        <TextField {...field} type="email" label="Email" variant="standard" placeholder="Mostafa..." fullWidth />
+                        <TextField {...field} type="email" label="Email" variant="standard" placeholder="tr.sar77an78@gmail.com.." fullWidth />
                       )}
                     />
                   </div>
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
                     <Controller
-                      name="phone-number"
+                      name="phoneNumber"
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
-                        <TextField {...field} type="text" label="Phone Number" variant="standard" placeholder="Ahmed" fullWidth />
+                        <TextField {...field} type="text" label="Phone Number" variant="standard" placeholder="01099133377.." fullWidth />
                       )}
                     />
                   </div>
@@ -177,11 +177,11 @@ export default function ContactUs() {
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
 
                     <Controller
-                      name="native-language"
+                      name="nativeLanguage"
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
-                        <TextField {...field} type="text" label="Native Language" variant="standard" placeholder="Ahmed" fullWidth />
+                        <TextField {...field} type="text" label="Native Language" variant="standard" placeholder="English.." fullWidth />
                       )}
                     />
 
@@ -189,7 +189,7 @@ export default function ContactUs() {
                   <div className="col-12 col-lg-5 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
 
                     <Controller
-                      name="origin-country"
+                      name="originCountry"
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
@@ -201,7 +201,7 @@ export default function ContactUs() {
                   <div className="col-12 col-lg-5 py-4 pe-xl-4 max-400 mx-auto  mx-lg-0">
                     <InputLabel htmlFor="gender" id="gender-label">Gender</InputLabel>
                     <Controller
-                      name="Gender"
+                      name="gender"
                       control={control}
                       defaultValue="male"
                       render={({ field }) => (
@@ -226,9 +226,9 @@ export default function ContactUs() {
 
                 <FormControl className="row  col-9 col-lg-12 py-5  mx-auto ">
                   <Controller
-                    name="arabic-level"
+                    name="arabicLevel"
                     control={control}
-                    defaultValue="male"
+                    defaultValue="beginner"
                     render={({ field }) => (
                       <>
                         <FormLabel id="arabic-level-label" className="py-3">Arabic Level</FormLabel>
@@ -257,22 +257,31 @@ export default function ContactUs() {
 
                     )}
                   />
-
                 </FormControl>
 
-                <div className="col-12  ">
+                <div className="col-12">
 
-                  <TextField label="Message"
-                    variant="standard"
-                    multiline
-                    fullWidth
-                    placeholder="Write your message.."
-                    rows={3} />
+                  <Controller
+                    name="message"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <TextField {...field} type="text" label="Message"
+                        variant="standard"
+                        multiline
+                        fullWidth
+                        placeholder="Write your message.."
+                        rows={3} />
+                    )}
+                  />
+
+
                 </div>
 
                 <div className="d-flex justify-content-center justify-content-lg-end col-12 py-5 pt-lg-7">
 
                   <MyButton
+                    type="submit"
                     text="Send Message"
                     className="btn text-primary bg-secondary-2 col-auto button--medium "
                   ></MyButton>
