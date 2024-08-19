@@ -21,9 +21,20 @@ import FormLabel from '@mui/material/FormLabel';
 import MyButton from "../components/common/MyButton";
 import InputLabel from '@mui/material/InputLabel';
 import { useForm, Controller } from 'react-hook-form';
-import { withTheme } from "@mui/material";
+import { useQuery, gql } from '@apollo/client';
 
 export default function ContactUs() {
+
+  const GET_LOCATIONS = gql`
+  query GetLocations {
+    locations {
+      id
+      name
+      description
+      photo
+    }
+  }
+`;
 
   const {
     register,
@@ -36,6 +47,13 @@ export default function ContactUs() {
 
   console.log("watch", watch())
 
+  const { loading, error, data } = useQuery(GET_LOCATIONS);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error : {error.message}</p>;
+
+
+  console.log('data', data)
 
   return (
     <>
@@ -260,7 +278,6 @@ export default function ContactUs() {
                 </FormControl>
 
                 <div className="col-12">
-
                   <Controller
                     name="message"
                     control={control}
@@ -274,12 +291,9 @@ export default function ContactUs() {
                         rows={3} />
                     )}
                   />
-
-
                 </div>
 
                 <div className="d-flex justify-content-center justify-content-lg-end col-12 py-5 pt-lg-7">
-
                   <MyButton
                     type="submit"
                     text="Send Message"

@@ -7,19 +7,13 @@
 ## Implemetation and steps
 
 9. Create Contats us page
-   - Create right part
-    - Inputs
-    - Add max width to inputs
-        - in screens smaller than lg
-        - #soloution 1 
-            - 
-    - Add justify contetn center in mobile only
-    - Add placeholders to inputs
-    - Add correct labels
-    - Add spacing between radio buttons above and below
+ - Create students app (contact-us-tests-) 
+ - Create query to fetch contact us responses in backedn
+ - Create mutation to that will handle submittion to server by submitting contactus us page
+ - 
 
-    - Control inputs using useForm (And before you do so you can just control it using FormControl and useFormControlContext() hook from material ui !)
-    - 
+
+
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
     - Read a little bit about django using Mmdn web docs_ django tutorial

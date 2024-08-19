@@ -96,7 +96,8 @@
 - Add some background patterns in the contact us section information
 - Color the inputs and theme them
 - add correct fonts to inputs
-- 
+- Add correct types for inputs
+- Check correct validation 
 
 # Backend
 
