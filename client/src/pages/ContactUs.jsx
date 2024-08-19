@@ -20,8 +20,23 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import MyButton from "../components/common/MyButton";
 import InputLabel from '@mui/material/InputLabel';
+import { useForm, Controller } from 'react-hook-form';
+import { withTheme } from "@mui/material";
 
 export default function ContactUs() {
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    control
+  } = useForm()
+
+
+  console.log("watch", watch())
+
+
   return (
     <>
       <section className="contact-us-page__section mt-7 py-4 py-lg-9 ">
@@ -103,52 +118,133 @@ export default function ContactUs() {
 
                 <div className="row d-flex   justify-content-between p-0">
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
-                    <TextField label="First Name" variant="standard" placeholder="Ahmed" fullWidth />
+                    <Controller
+                      name="first-name"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <TextField
+                          type="text"
+                          {...field}
+                          label="First Name" variant="standard" placeholder="Ahmed" fullWidth
+                        />
+                      )}
+                    />
+
+
                   </div>
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto  mx-lg-0">
-                    <TextField label="Last Name" variant="standard" placeholder="Ahmed..." fullWidth />
+
+                    <Controller
+                      name="last-name"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <TextField type="text" {...field} label="Last Name" variant="standard" placeholder="Ahmed..." fullWidth />
+                      )}
+                    />
                   </div>
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
-                    <TextField label="Email" variant="standard" placeholder="Mostafa..." fullWidth />
+                    <Controller
+                      name="email"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <TextField {...field} type="email" label="Email" variant="standard" placeholder="Mostafa..." fullWidth />
+                      )}
+                    />
                   </div>
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
-                    <TextField label="Phone Number" variant="standard" placeholder="Ahmed" fullWidth />
+                    <Controller
+                      name="phone-number"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <TextField {...field} type="text" label="Phone Number" variant="standard" placeholder="Ahmed" fullWidth />
+                      )}
+                    />
                   </div>
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
-                    <TextField label="Gender" variant="standard" placeholder="Ahmed" fullWidth />
+                    <Controller
+                      name="age"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <TextField {...field} type="text" label="Age" variant="standard" placeholder="24.." fullWidth />
+                      )}
+                    />
                   </div>
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
-                    <TextField label="Native Language" variant="standard" placeholder="Ahmed" fullWidth />
+
+                    <Controller
+                      name="native-language"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <TextField {...field} type="text" label="Native Language" variant="standard" placeholder="Ahmed" fullWidth />
+                      )}
+                    />
+
                   </div>
                   <div className="col-12 col-lg-5 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
-                    <TextField label="Origin Country" variant="standard" placeholder="Ahmed" fullWidth />
+
+                    <Controller
+                      name="origin-country"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <TextField {...field} type="text" label="Origin Country" variant="standard" placeholder="Egypt.." fullWidth />
+                      )}
+                    />
+
                   </div>
                   <div className="col-12 col-lg-5 py-4 pe-xl-4 max-400 mx-auto  mx-lg-0">
-                    <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
-                    <Select
-                      labelId="demo-simple-select-filled-label"
-                      id="demo-simple-select-filled"
-                      label="Age"
-                      fullWidth
-                      fullHieght
-                      variant="standard"
-                      className=""
-                    >
-                      <MenuItem value="None">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
+                    <InputLabel htmlFor="gender" id="gender-label">Gender</InputLabel>
+                    <Controller
+                      name="Gender"
+                      control={control}
+                      defaultValue="male"
+                      render={({ field }) => (
+                        <Select
+                          {...field}
+                          id="gender"
+                          aria-labelledby="gender-label"
+                          fullWidth
+                          variant="standard"
+                          className=""
+                        >
+                          <MenuItem value="male">Male</MenuItem>
+                          <MenuItem value="Female">Female</MenuItem>
+                        </Select>
+                      )}
+                    />
+
                   </div>
                 </div>
 
                 <FormControl className="row  col-9 col-lg-12 py-5  mx-auto ">
-                  <FormLabel id="demo-radio-buttons-group-label" className="py-3">Arabic Level</FormLabel>
+                  <FormLabel id="arabic-level-label" className="py-3">Arabic Level</FormLabel>
+                  <Controller
+                    name=""
+                    control={control}
+                    defaultValue="male"
+                    render={({ field }) => (
+                      <Select
+                        {...field}
+                        id="gender"
+                        aria-labelledby="gender-label"
+                        fullWidth
+                        variant="standard"
+                        className=""
+                      >
+                        <MenuItem value="male">Male</MenuItem>
+                        <MenuItem value="Female">Female</MenuItem>
+                      </Select>
+                    )}
+                  />
                   <RadioGroup
                     row
-                    aria-labelledby="demo-radio-buttons-group-label"
+                    aria-labelledby="arabic-level-label"
                     defaultValue="female"
                     name="radio-buttons-group"
                     className="row d-flex justify-content-center col-12 align-items-center gap-4 gap-lg-0"
@@ -176,10 +272,11 @@ export default function ContactUs() {
 
                 <div className="col-12  ">
 
-                  <TextField label="First Name"
+                  <TextField label="Message"
                     variant="standard"
                     multiline
                     fullWidth
+                    placeholder="Write your message.."
                     rows={3} />
                 </div>
 
@@ -197,8 +294,8 @@ export default function ContactUs() {
 
           </article>
 
-        </Container>
-      </section>
+        </Container >
+      </section >
     </>
   );
 }
