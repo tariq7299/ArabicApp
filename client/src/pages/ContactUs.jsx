@@ -222,52 +222,42 @@ export default function ContactUs() {
                   </div>
                 </div>
 
+
+
                 <FormControl className="row  col-9 col-lg-12 py-5  mx-auto ">
-                  <FormLabel id="arabic-level-label" className="py-3">Arabic Level</FormLabel>
                   <Controller
-                    name=""
+                    name="arabic-level"
                     control={control}
                     defaultValue="male"
                     render={({ field }) => (
-                      <Select
-                        {...field}
-                        id="gender"
-                        aria-labelledby="gender-label"
-                        fullWidth
-                        variant="standard"
-                        className=""
-                      >
-                        <MenuItem value="male">Male</MenuItem>
-                        <MenuItem value="Female">Female</MenuItem>
-                      </Select>
+                      <>
+                        <FormLabel id="arabic-level-label" className="py-3">Arabic Level</FormLabel>
+                        <RadioGroup
+                          row
+                          aria-labelledby="arabic-level-label"
+                          defaultValue="female"
+                          name="radio-buttons-group"
+                          className="row d-flex justify-content-center col-12 align-items-center gap-4 gap-lg-0"
+                          {...field}
+                        >
+                          <div className="col-5 col-xl-3 col-lg-4 p-0" >
+                            <FormControlLabel value="beginner" control={<Radio />} label="Beginner" />
+                          </div>
+                          <div className="col-5  col-xl-3 col-lg-4 p-0">
+                            <FormControlLabel value="intermediate" control={<Radio />} label="Intermediate" />
+                          </div>
+                          <div className="col-5 col-xl-3 col-lg-4 p-0">
+                            <FormControlLabel value="advanced" control={<Radio />} label="Advanced" />
+                          </div>
+                          <div className="col-5  col-xl-3 col-lg-4 p-0">
+                            <FormControlLabel value="native" control={<Radio />} label="Native" />
+                          </div>
+                        </RadioGroup>
+                      </>
+
                     )}
                   />
-                  <RadioGroup
-                    row
-                    aria-labelledby="arabic-level-label"
-                    defaultValue="female"
-                    name="radio-buttons-group"
-                    className="row d-flex justify-content-center col-12 align-items-center gap-4 gap-lg-0"
-                  >
-                    <div className="col-5 col-lg-4 p-0" >
-                      <FormControlLabel value="female" control={<Radio />} label="Feew ewemale" />
-                    </div>
-                    <div className="col-5 col-lg-4 p-0">
-                      <FormControlLabel value="male" control={<Radio />} label="Mle" />
-                    </div>
-                    <div className="col-5 col-lg-4 p-0">
-                      <FormControlLabel value="other" control={<Radio />} label="Othewer" />
-                    </div>
-                    <div className="col-5 col-lg-4 p-0">
-                      <FormControlLabel value="other" control={<Radio />} label="weewewewe" />
-                    </div>
-                    <div className="col-5 col-lg-4 p-0">
-                      <FormControlLabel value="other" control={<Radio />} label="Othewewer" />
-                    </div>
-                    <div className="col-5 col-lg-4 p-0">
-                      <FormControlLabel value="other" control={<Radio />} label="Otewewe ewewewher" />
-                    </div>
-                  </RadioGroup>
+
                 </FormControl>
 
                 <div className="col-12  ">
