@@ -8,10 +8,14 @@
 
 9. Create Contats us page
    - Create right part
-    - Inputs doesn't look good in medium sized screens
-    - Icons on the left part doesn't become in the bottom of the screen
     - Add a label to radio input group
     - Control inputs using useForm (And before you do so you can just control it using FormControl and useFormControlContext() hook from material ui !)
+    - Add max width to inputs
+    - Add justify contetn center in mobile only
+    - Add placeholders to inputs
+    - Add correct labels
+    - Add spacing between radio buttons above and below
+    - 
 # Refrences and strenghin my knowledge of django and JWT and Graphiql
 
     - Read a little bit about django using Mmdn web docs_ django tutorial

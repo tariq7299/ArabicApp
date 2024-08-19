@@ -28,6 +28,7 @@ export default function ContactUs() {
         <Container fluid className="p-3 px-lg-6">
 
           <div className="contact-us-page-title px-5 py-5">
+
             <MyTitle
               text="Contact Us"
               className="display-4 text-primary text-center px-6  "
@@ -35,6 +36,7 @@ export default function ContactUs() {
             <SectionMeta className="fs-5 text-primary pb-4 text-center ">
               Any question or remarks? Just write us a message!
             </SectionMeta>
+
           </div>
 
           <article className="row">
@@ -48,7 +50,6 @@ export default function ContactUs() {
               </p>
 
               <div className="row d-flex gap-5 gap-lg-6  contact-us-page__contact-info">
-
 
                 <div className="col-12 row mx-auto p-0">
 
@@ -72,6 +73,7 @@ export default function ContactUs() {
                     tr.sar77an78@gmail.com
                   </p>
                 </div>
+
                 <div className="col-12 row mx-auto p-0">
 
                   <div className="col-12 col-lg-auto d-flex justify-content-center justify-content-lg-start align-items-center pb-3 p-lg-0 pe-lg-5">
@@ -82,23 +84,23 @@ export default function ContactUs() {
                     25 9th District, Ismael Wahbi, Nasr City, Cairo, Egypt
                   </p>
                 </div>
+
               </div>
 
-              <div className="text-center d-flex gap-5 justify-content-center justify-content-lg-start pt-6 pb-3 py-lg-7">
+              <div className="text-center d-flex gap-5 justify-content-center justify-content-lg-start pt-6">
                 <FaFacebookMessenger className="icon--big text-secondary-2 " />
                 <FaFacebook className="icon--big text-secondary-2" />
                 <FaSquareXTwitter className="icon--big text-secondary-2" />
                 <FaSquareInstagram className="icon--big text-secondary-2" />
               </div>
+
             </div>
 
-            <div className="col-12 col-lg-7 bg-secondary-1 contact-us-page__inputs p-6">
+            <div className="col-12 col-lg-7 bg-secondary-1 contact-us-page__inputs">
 
-
-              <form action="" className="row gap-7 d-flex- justify-content-center">
+              <form action="" className="row gap-4 d-flex- justify-content-between p-6">
 
                 <TextField label="First Name" variant="standard" className="col-12 col-lg-3" placeholder="Ahmed" />
-
                 <TextField label="First Name" variant="standard" className="col-12 col-lg-3" />
                 <TextField label="First Name" variant="standard" className="col-12 col-lg-3" />
                 <TextField label="First Name" variant="standard" className="col-12 col-lg-3" />
@@ -166,7 +168,9 @@ export default function ContactUs() {
               </form>
 
             </div>
+
           </article>
+
         </Container>
       </section>
     </>
