@@ -59,3 +59,15 @@ $spacers: (
   9: $space-9,
   10: $space-10,
 );
+
+
+$utilities: (
+  "max-width": (property: max-width,
+    class: mw,
+    values: (25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      "fit-content": fit-content,
+      "max-content": max-content))
+);
