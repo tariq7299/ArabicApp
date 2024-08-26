@@ -62,7 +62,7 @@ class ContactSubmission(models.Model):
             RegexValidator(r"^[a-zA-Z]+$", "Only letters are allowed in the last name.")
         ],
     )
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     phone = models.CharField(
         max_length=15,
         validators=[

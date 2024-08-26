@@ -7,7 +7,9 @@
 ## Implemetation and steps
 
 9. Create Contats us page
- - Create a mutation appollo to backend
+    - Send a get request to get all options 
+        - Make the optins previous the cohsices lables and value be exactly like what the database needs
+        
  - pReview a toaster indiciation successfull submission
  - Add errors helper handlers
  - Add axios folder
