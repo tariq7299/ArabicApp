@@ -98,6 +98,7 @@
 - add correct fonts to inputs
 - Add correct types for inputs
 - Check correct validation 
+- Create a loading indicator in contact us that will be visisble untill the page elemtnst will load
 
 # Backend
 

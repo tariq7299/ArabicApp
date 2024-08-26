@@ -94,3 +94,9 @@ Use `pprint` python package
 .././kaleemVenv/bin/python3 manage.py runserver 
 
 ```
+
+**Migrations**
+```bash
+.././kaleemVenv/bin/python3 manage.py makemigrations
+.././kaleemVenv/bin/python3 manage.py migrate
+```
