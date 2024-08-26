@@ -7,7 +7,11 @@
 ## Implemetation and steps
 
 9. Create Contats us page
- - Create students app (contact-us-tests-) 
+ - Create students app (contact-us-tests-)
+    - Crete new pp called students
+    - Craete mutation and wueris in schema
+    - 
+    - create a new venev
  - Create query to fetch contact us responses in backedn
  - Create mutation to that will handle submittion to server by submitting contactus us page
  - 
