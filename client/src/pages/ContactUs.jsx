@@ -21,20 +21,54 @@ import FormLabel from '@mui/material/FormLabel';
 import MyButton from "../components/common/MyButton";
 import InputLabel from '@mui/material/InputLabel';
 import { useForm, Controller } from 'react-hook-form';
-import { useQuery, gql } from '@apollo/client';
+import { gql, useMutation } from '@apollo/client';
 
-export default function ContactUs() {
-
-  const GET_LOCATIONS = gql`
-  query GetLocations {
-    locations {
-      id
-      name
-      description
-      photo
+// Define mutation
+const CREATE_CONTACT_SUBMISSION = gql`
+  # Submit new contact submission
+  mutation CreateContactSubmission(
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $phone: String!
+    $age: Int!
+    $nativeLanguage: String!
+    $originCountry: String!
+    $gender: String!
+    $arabicLevel: String!
+    $message: String!
+  ) {
+    createContactSubmission(
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      phone: $phone
+      age: $age
+      nativeLanguage: $nativeLanguage
+      originCountry: $originCountry
+      gender: $gender
+      arabicLevel: $arabicLevel
+      message: $message
+    ) {
+       contactSubmission {
+        id
+        firstName
+        lastName
+        email
+        phone
+        age
+        nativeLanguage
+        originCountry
+        gender
+        arabicLevel
+        message
+      }
     }
   }
 `;
+
+export default function ContactUs() {
+
 
   const {
     register,
@@ -45,15 +79,36 @@ export default function ContactUs() {
   } = useForm()
 
 
-  console.log("watch", watch())
+  // console.log("watch", watch())
 
-  const { loading, error, data } = useQuery(GET_LOCATIONS);
+  // const { loading, error, data } = useQuery(GET_LOCATIONS);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error : {error.message}</p>;
+  // Pass mutation to useMutation
+  const [submitContactSubmission, { data: responseFromSubmittion, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION);
+
+  // if (loading) return <p>Loading...</p>;
+
+  // if (error) return <p>Error : {error.message}</p>;
+
+  if (loading) return 'Submitting...';
+
+  if (error) return `Submission error! ${error.message}`;
+
+  const handleNewContactSubmission = async (data) => {
+    try {
+      const result = await submitContactSubmission({ variables: { ...data } });
+      console.log("Submission result:", result);
+      // Handle successful submission (e.g., show success message, reset form)
+    } catch (err) {
+      console.error("Submission error:", err);
+      // Handle error (e.g., show error message)
+    }
+  }
+
+  console.log("responseFromSubmittion", responseFromSubmittion)
 
 
-  console.log('data', data)
+  // console.log('data', data)
 
   return (
     <>
@@ -132,7 +187,7 @@ export default function ContactUs() {
 
             <div className="col-12 col-lg-7 bg-secondary-1 contact-us-page__inputs">
 
-              <form onSubmit={handleSubmit} className="row d-flex- justify-content-lg-center p-lg-6 p-3 gap-3 ">
+              <form onSubmit={handleSubmit(handleNewContactSubmission)} className="row d-flex- justify-content-lg-center p-lg-6 p-3 gap-3 ">
 
                 <div className="row d-flex   justify-content-between p-0">
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
@@ -174,7 +229,7 @@ export default function ContactUs() {
                   </div>
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
                     <Controller
-                      name="phoneNumber"
+                      name="phone"
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
@@ -188,7 +243,8 @@ export default function ContactUs() {
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
-                        <TextField {...field} type="text" label="Age" variant="standard" placeholder="24.." fullWidth />
+                        <TextField {...field} onChange={(e) => field.onChange(parseInt(e.target.value, 10) || '')} // Parse on change 
+                          type="text" label="Age" variant="standard" placeholder="24.." fullWidth />
                       )}
                     />
                   </div>

@@ -98,7 +98,12 @@
 - add correct fonts to inputs
 - Add correct types for inputs
 - Check correct validation 
-- Create a loading indicator in contact us that will be visisble untill the page elemtnst will load
+- Create a loading indicator in contact us that will be visisble untill the 
+page elemtnst will load
+- Wuery for all select options of contact us fields from backckedn (database) when page relaods
+- Make the phone field as phone filed with +CountryCode
+- Make country as Country with flags
+- 
 
 # Backend
 

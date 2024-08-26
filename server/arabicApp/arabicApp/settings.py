@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "students",
     "graphene_django",
     "graphql_jwt.refresh_token.apps.RefreshTokenConfig",
+    "corsheaders",
 ]
 
 GRAPHQL_JWT = {
@@ -80,6 +81,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "arabicApp.urls"
@@ -156,3 +158,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # AUTH_USER_MODEL = 'authentication.Tutor'
+
+# CORS Configurations
+CORS_ORIGIN_ALLOW_ALL = True

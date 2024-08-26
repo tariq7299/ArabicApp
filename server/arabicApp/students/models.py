@@ -48,7 +48,7 @@ class ContactSubmission(models.Model):
         ("OT", "Other"),
     ]
 
-    firstName = models.CharField(
+    first_name = models.CharField(
         max_length=50,
         validators=[
             RegexValidator(
@@ -56,7 +56,7 @@ class ContactSubmission(models.Model):
             )
         ],
     )
-    lastName = models.CharField(
+    last_name = models.CharField(
         max_length=50,
         validators=[
             RegexValidator(r"^[a-zA-Z]+$", "Only letters are allowed in the last name.")
@@ -75,10 +75,10 @@ class ContactSubmission(models.Model):
             MaxValueValidator(120, "Age must be less than 120."),
         ]
     )
-    nativeLanguage = models.CharField(max_length=2, choices=LANGUAGE_CHOICES)
-    originCountry = models.CharField(max_length=2, choices=COUNTRY_CHOICES)
+    native_language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES)
+    origin_country = models.CharField(max_length=2, choices=COUNTRY_CHOICES)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    arabicLevel = models.CharField(max_length=3, choices=ARABIC_LEVEL_CHOICES)
+    arabic_level = models.CharField(max_length=3, choices=ARABIC_LEVEL_CHOICES)
     message = models.TextField(max_length=1000)
 
     created_at = models.DateTimeField(auto_now_add=True)

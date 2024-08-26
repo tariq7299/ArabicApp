@@ -38,6 +38,10 @@ class CreateContactSubmission(graphene.Mutation):
         arabic_level,
         message,
     ):
+
+        print(
+            f"Sumitted data is ----> first: {first_name}, {last_name} {email}, {phone}, {age}, {native_language}, {origin_country}, {gender}, {arabic_level} "
+        )
         contact_submission = ContactSubmission(
             first_name=first_name,
             last_name=last_name,

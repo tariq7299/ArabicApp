@@ -5,9 +5,9 @@ import Footer from "../Footer";
 export default function Layout() {
   return (
     <>
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
       <Outlet />
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 }
