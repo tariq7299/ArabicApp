@@ -68,19 +68,29 @@ also to have the best the experience select your python interpreter in vs code, 
 .././kaleemVenv/bin/python3 manage.py runserver 
 ```
 
-# Some tips and hacks
+## Some tips and hacks
 
-## After you edit models.py
+### After you edit models.py
 
 - Head to root of project and then `python manage.py makemigrations <appNameYouChnagedItsModel>`
 - `python manage.py migrate` to apply migrations
 
-## Command files in django
+### Command files in django
 
 Lets say you want to do some custom commands with your models or other parts of your app
 
 [follow this page from Django docs](https://docs.djangoproject.com/en/5.0/howto/custom-management-commands/)
 
-## Orgnaize large terminal outputs
+### Orgnaize large terminal outputs
 
 Use `pprint` python package
+
+### Common comands
+
+**runserver**  
+
+```bash
+# From /Users/apple/Documents/LetsGOOOO/ArabicAppProject/ArabicApp/server/arabicApp
+.././kaleemVenv/bin/python3 manage.py runserver 
+
+```
