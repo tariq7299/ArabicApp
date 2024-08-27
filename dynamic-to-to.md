@@ -8,7 +8,10 @@
 
 9. Create Contats us page
     - Send a get request to get all options 
-        - Make the optins previous the cohsices lables and value be exactly like what the database needs
+        - Make the optins previous the cohsices lables and value be exactly like what the database needs 
+            - install pnpm depend
+            - create a virtual env
+            - install pip require
         
  - pReview a toaster indiciation successfull submission
  - Add errors helper handlers
@@ -33,3 +36,4 @@
     - Implement JWT auth with GraphQL in django
         - READ THIS ---> https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-764babd30bb0
         - Read this ----> https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-part-2-2e9b0e5f17cd
+

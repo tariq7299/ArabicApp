@@ -86,17 +86,28 @@ Lets say you want to do some custom commands with your models or other parts of 
 Use `pprint` python package
 
 ### Common comands
+*From /Users/apple/Documents/LetsGOOOO/ArabicAppProject/ArabicApp/server/arabicApp*
 
 **runserver**  
 
 ```bash
-# From /Users/apple/Documents/LetsGOOOO/ArabicAppProject/ArabicApp/server/arabicApp
-.././kaleemVenv/bin/python3 manage.py runserver 
+./../kaleemVenv/bin/python3 manage.py runserver 
 
 ```
 
 **Migrations**
 ```bash
-.././kaleemVenv/bin/python3 manage.py makemigrations
-.././kaleemVenv/bin/python3 manage.py migrate
+./../kaleemVenv/bin/python3 manage.py makemigrations
+./../kaleemVenv/bin/python3 manage.py migrate
+```
+
+**Virtual env**
+
+```bash
+# Activate virtaul env (WIndows)
+./../kaleemVenv/Scripts/activate
+# Exeute python venv interpreter (Windows)
+./../kaleemVenv/Scripts/python.exe
+# Exeute python venv interpreter (Mac)
+./../kaleemVenv/bin/python3
 ```

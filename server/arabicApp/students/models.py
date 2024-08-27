@@ -84,7 +84,7 @@ class ContactSubmission(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.firstName} {self.lastName} - {self.email}"
+        return f"{self.first_name} {self.last_name} - {self.email}"
 
     class Meta:
         ordering = ["-created_at"]
