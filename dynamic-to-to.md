@@ -9,9 +9,9 @@
 9. Create Contats us page
  - PReview a toaster indiciation successfull submission
     handleResponseNotification()
-
-        add data
-
+        - Find a way to correctly parse the errors of databases as jSON
+        - Display them one by one in the frontend
+        - 
 
 
 

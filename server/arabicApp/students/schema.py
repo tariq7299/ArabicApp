@@ -72,19 +72,20 @@ class CreateContactSubmission(graphene.Mutation):
 
         # print(f"heuuu {contact_submission}")
 
+        contact_submission = ContactSubmission(
+            first_name=first_name,
+            last_name=last_name,
+            email=email,
+            phone=phone,
+            age=age,
+            native_language=native_language,
+            origin_country=origin_country,
+            gender=gender,
+            arabic_level=arabic_level,
+            message=message,
+        )
+
         try:
-            contact_submission = ContactSubmission(
-                first_name=first_name,
-                last_name=last_name,
-                email=email,
-                phone=phone,
-                age=age,
-                native_language=native_language,
-                origin_country=origin_country,
-                gender=gender,
-                arabic_level=arabic_level,
-                message=message,
-            )
             contact_submission.full_clean()
             contact_submission.save()
             return CreateContactSubmission(
@@ -98,6 +99,9 @@ class CreateContactSubmission(graphene.Mutation):
             print("ValidationError", e)
             print("e", e.message_dict)
             print("e", e.message_dict.items())
+            errors_test = e.message_dict.items()
+            for field in errors_test:
+                print("field", field)
 
             return CreateContactSubmission(
                 success_message=None,
