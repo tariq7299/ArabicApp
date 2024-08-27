@@ -8,7 +8,8 @@ class CourseType(DjangoObjectType):
     class Meta:
         model = Course
         fields = "__all__"
-        
+
+
 class CreateCourse(graphene.Mutation):
     class Arguments:
         name = graphene.String(required=True)
@@ -32,7 +33,8 @@ class CreateCourse(graphene.Mutation):
         course = Course(name=name, level=level)
         course.save()
         return CreateCourse(course=course)
-    
+
+
 class UpdateCourse(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
@@ -69,6 +71,7 @@ class UpdateCourse(graphene.Mutation):
         course.save()
         return UpdateCourse(course=course)
 
+
 class DeleteCourse(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
@@ -97,6 +100,7 @@ class DeleteCourse(graphene.Mutation):
         course.delete()
         return DeleteCourse(success=True)
 
+
 class Query(graphene.ObjectType):
     courses = graphene.List(CourseType)
 
@@ -109,6 +113,7 @@ class Query(graphene.ObjectType):
         :return: All post objects from the database
         """
         return Course.objects.all()
+
 
 class Mutation(graphene.ObjectType):
     create_course = CreateCourse.Field()

@@ -9,15 +9,18 @@
 9. Create Contats us page
     - Send a get request to get all options 
         - Make the optins previous the cohsices lables and value be exactly like what the database needs 
-            - install pnpm depend
-            - create a virtual env
-            - install pip require
+           - queery it will get 
+            gender select
+            arabic level choices
+            language choices
+            country choices
+            
         
  - pReview a toaster indiciation successfull submission
  - Add errors helper handlers
  - Add axios folder
  - Make a qyeru to backend to qery for select options of each field
- - 
+ - add header and footer layout again
 
 
 
