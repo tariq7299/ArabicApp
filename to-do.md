@@ -103,7 +103,7 @@ page elemtnst will load
 - Wuery for all select options of contact us fields from backckedn (database) when page relaods
 - Make the phone field as phone filed with +CountryCode
 - Make country as Country with flags
-- 
+- make the contact us page more dynamic in rendring select choices and fields ! like in bolesa
 
 # Backend
 

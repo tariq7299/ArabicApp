@@ -21,7 +21,7 @@ import FormLabel from '@mui/material/FormLabel';
 import MyButton from "../components/common/MyButton";
 import InputLabel from '@mui/material/InputLabel';
 import { useForm, Controller } from 'react-hook-form';
-import { gql, useMutation } from '@apollo/client';
+import { gql, useMutation, useQuery } from '@apollo/client';
 
 // Define mutation
 const CREATE_CONTACT_SUBMISSION = gql`
@@ -67,6 +67,17 @@ const CREATE_CONTACT_SUBMISSION = gql`
   }
 `;
 
+const GET_SELECT_FIELDS_CHOICES = gql`
+  query getContactUsSelectFieldsChoices {
+    contactUsSelectFieldsChoices {
+      genderChoices
+      countryChoices
+      arabicLevelChoices
+      languageChoices
+    }
+  }
+`;
+
 export default function ContactUs() {
 
 
@@ -81,14 +92,18 @@ export default function ContactUs() {
 
   // console.log("watch", watch())
 
-  // const { loading, error, data } = useQuery(GET_LOCATIONS);
+  const { loading: loadingChoices, error: errorFetchingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
 
   // Pass mutation to useMutation
   const [submitContactSubmission, { data: responseFromSubmittion, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION);
 
-  // if (loading) return <p>Loading...</p>;
+  if (loadingChoices) return <p>Loading...</p>;
 
-  // if (error) return <p>Error : {error.message}</p>;
+  if (errorFetchingChoices) return <p>Error : {error.message}</p>;
+
+  const { genderChoices, countryChoices, arabicLevelChoices, languageChoices } = selectFieldsChoices.contactUsSelectFieldsChoices;
+
+  console.log("genderChoices", genderChoices)
 
   if (loading) return 'Submitting...';
 
@@ -106,6 +121,8 @@ export default function ContactUs() {
   }
 
   console.log("responseFromSubmittion", responseFromSubmittion)
+
+  console.log("selectFieldsChoices", selectFieldsChoices)
 
 
   // console.log('data', data)
@@ -190,6 +207,7 @@ export default function ContactUs() {
               <form onSubmit={handleSubmit(handleNewContactSubmission)} className="row d-flex- justify-content-lg-center p-lg-6 p-3 gap-3 ">
 
                 <div className="row d-flex   justify-content-between p-0">
+
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <Controller
                       name="firstName"
@@ -206,6 +224,7 @@ export default function ContactUs() {
 
 
                   </div>
+
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto  mx-lg-0">
 
                     <Controller
@@ -217,6 +236,7 @@ export default function ContactUs() {
                       )}
                     />
                   </div>
+
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
                     <Controller
                       name="email"
@@ -227,6 +247,7 @@ export default function ContactUs() {
                       )}
                     />
                   </div>
+
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
                     <Controller
                       name="phone"
@@ -237,6 +258,7 @@ export default function ContactUs() {
                       )}
                     />
                   </div>
+
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <Controller
                       name="age"
@@ -248,36 +270,59 @@ export default function ContactUs() {
                       )}
                     />
                   </div>
-                  <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
 
+                  <div className="col-12 col-lg-4 py-4 pe-xl-4 max-400 mx-auto mx-lg-0 ">
+
+                    <InputLabel htmlFor="nativeLanguage" id="nativeLanguage-label">Native Language</InputLabel>
                     <Controller
                       name="nativeLanguage"
                       control={control}
-                      defaultValue=""
+                      defaultValue={languageChoices[0][0]}
                       render={({ field }) => (
-                        <TextField {...field} type="text" label="Native Language" variant="standard" placeholder="English.." fullWidth />
+                        <Select
+                          {...field}
+                          id="nativeLanguage"
+                          aria-labelledby="nativeLanguage-label"
+                          fullWidth
+                          variant="standard"
+                        >
+                          {languageChoices?.map(([value, label]) => (
+                            <MenuItem key={value} value={value}>{label}</MenuItem>
+                          ))}
+                        </Select>
                       )}
                     />
 
                   </div>
-                  <div className="col-12 col-lg-5 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
 
+                  <div className="col-12 col-lg-5 py-4 pe-xl-4 max-400 mx-auto  mx-lg-0">
+                    <InputLabel htmlFor="originCountry" id="originCountry-label">Origin Country</InputLabel>
                     <Controller
                       name="originCountry"
                       control={control}
-                      defaultValue=""
+                      defaultValue={countryChoices[0][0]}
                       render={({ field }) => (
-                        <TextField {...field} type="text" label="Origin Country" variant="standard" placeholder="Egypt.." fullWidth />
+                        <Select
+                          {...field}
+                          id="originCountry"
+                          aria-labelledby="originCountry-label"
+                          fullWidth
+                          variant="standard"
+                        >
+                          {countryChoices?.map(([value, label]) => (
+                            <MenuItem key={value} value={value}>{label}</MenuItem>
+                          ))}
+                        </Select>
                       )}
                     />
-
                   </div>
+
                   <div className="col-12 col-lg-5 py-4 pe-xl-4 max-400 mx-auto  mx-lg-0">
                     <InputLabel htmlFor="gender" id="gender-label">Gender</InputLabel>
                     <Controller
                       name="gender"
                       control={control}
-                      defaultValue="male"
+                      defaultValue={genderChoices[0][0]}
                       render={({ field }) => (
                         <Select
                           {...field}
@@ -287,8 +332,9 @@ export default function ContactUs() {
                           variant="standard"
                           className=""
                         >
-                          <MenuItem value="male">Male</MenuItem>
-                          <MenuItem value="Female">Female</MenuItem>
+                          {genderChoices?.map(([value, label]) => (
+                            <MenuItem key={value} value={value}>{label}</MenuItem>
+                          ))}
                         </Select>
                       )}
                     />
@@ -298,7 +344,8 @@ export default function ContactUs() {
 
 
 
-                <FormControl className="row  col-9 col-lg-12 py-5  mx-auto ">
+                <FormControl className="row col-9 col-lg-12 py-5  mx-auto ">
+
                   <Controller
                     name="arabicLevel"
                     control={control}
@@ -314,18 +361,11 @@ export default function ContactUs() {
                           className="row d-flex justify-content-center col-12 align-items-center gap-4 gap-lg-0"
                           {...field}
                         >
-                          <div className="col-5 col-xl-3 col-lg-4 p-0" >
-                            <FormControlLabel value="beginner" control={<Radio />} label="Beginner" />
-                          </div>
-                          <div className="col-5  col-xl-3 col-lg-4 p-0">
-                            <FormControlLabel value="intermediate" control={<Radio />} label="Intermediate" />
-                          </div>
-                          <div className="col-5 col-xl-3 col-lg-4 p-0">
-                            <FormControlLabel value="advanced" control={<Radio />} label="Advanced" />
-                          </div>
-                          <div className="col-5  col-xl-3 col-lg-4 p-0">
-                            <FormControlLabel value="native" control={<Radio />} label="Native" />
-                          </div>
+                          {arabicLevelChoices?.map(([value, label]) => (
+                            <div key={value} className="col-5 col-xl-3 col-lg-4 p-0" >
+                              <FormControlLabel value={value} control={<Radio />} label={label} />
+                            </div>
+                          ))}
                         </RadioGroup>
                       </>
 
