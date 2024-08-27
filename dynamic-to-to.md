@@ -7,16 +7,15 @@
 ## Implemetation and steps
 
 9. Create Contats us page
-    - Send a get request to get all options 
-        - Make the optins previous the cohsices lables and value be exactly like what the database needs 
-           - queery it will get 
-            gender select
-            arabic level choices
-            language choices
-            country choices
-            
-        
- - pReview a toaster indiciation successfull submission
+ - PReview a toaster indiciation successfull submission
+    handleResponseNotification()
+
+        add data
+
+
+
+
+
  - Add errors helper handlers
  - Add axios folder
  - Make a qyeru to backend to qery for select options of each field

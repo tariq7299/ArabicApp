@@ -55,12 +55,14 @@ class ContactSubmission(models.Model):
                 r"^[a-zA-Z]+$", "Only letters are allowed in the first name."
             )
         ],
+        null=False,
     )
     last_name = models.CharField(
         max_length=50,
         validators=[
             RegexValidator(r"^[a-zA-Z]+$", "Only letters are allowed in the last name.")
         ],
+        null=False,
     )
     email = models.EmailField()
     phone = models.CharField(
@@ -68,17 +70,23 @@ class ContactSubmission(models.Model):
         validators=[
             RegexValidator(r"^\+?1?\d{9,15}$", "+999999999'. Up to 15 digits allowed.")
         ],
+        null=False,
     )
     age = models.IntegerField(
         validators=[
             MinValueValidator(7, "Age must be at least 7."),
             MaxValueValidator(120, "Age must be less than 120."),
-        ]
+        ],
+        null=False,
     )
-    native_language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES)
-    origin_country = models.CharField(max_length=2, choices=COUNTRY_CHOICES)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    arabic_level = models.CharField(max_length=3, choices=ARABIC_LEVEL_CHOICES)
+    native_language = models.CharField(
+        max_length=2, choices=LANGUAGE_CHOICES, null=False
+    )
+    origin_country = models.CharField(max_length=2, choices=COUNTRY_CHOICES, null=False)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=False)
+    arabic_level = models.CharField(
+        max_length=3, choices=ARABIC_LEVEL_CHOICES, null=False
+    )
     message = models.TextField(max_length=1000)
 
     created_at = models.DateTimeField(auto_now_add=True)

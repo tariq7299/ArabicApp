@@ -22,6 +22,8 @@ import MyButton from "../components/common/MyButton";
 import InputLabel from '@mui/material/InputLabel';
 import { useForm, Controller } from 'react-hook-form';
 import { gql, useMutation, useQuery } from '@apollo/client';
+import { handleSuccessfulResponse, handleErrorResponse } from "../helper/helperFunctions";
+import { toast } from "react-toastify";
 
 // Define mutation
 const CREATE_CONTACT_SUBMISSION = gql`
@@ -95,7 +97,44 @@ export default function ContactUs() {
   const { loading: loadingChoices, error: errorFetchingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
 
   // Pass mutation to useMutation
-  const [submitContactSubmission, { data: responseFromSubmittion, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION);
+  // const [submitContactSubmission, { data: responseFromSubmittion, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION);
+
+  const [submitContactSubmission, { data: responseFromSubmittion, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION, {
+    onError: (error) => {
+      // This will catch network errors and GraphQL errors
+      console.error('Mutation error:', error);
+
+      if (error.networkError) {
+        toast.error('Network error. Please check your connection and try again.');
+      } else if (error.graphQLErrors) {
+        error.graphQLErrors.forEach((graphQLError) => {
+          if (graphQLError.extensions?.code === 'BAD_USER_INPUT') {
+            // Handle validation errors
+            const validationErrors = graphQLError.extensions?.errors || {};
+            Object.values(validationErrors).forEach((errorMessage) => {
+              toast.error(errorMessage);
+            });
+          } else {
+            // Handle other types of GraphQL errors
+            toast.error(graphQLError.message || 'An error occurred. Please try again.');
+          }
+        });
+      } else {
+        toast.error('An unexpected error occurred. Please try again.');
+      }
+    },
+    onCompleted: (data) => {
+      if (data.createContactSubmission.successMessage) {
+        toast.success(data.createContactSubmission.successMessage);
+        // Handle successful submission (e.g., clear form, redirect, etc.)
+      } else if (data.createContactSubmission.errors) {
+        // Handle any errors returned in the mutation response
+        data.createContactSubmission.errors.forEach((errorMsg) => {
+          toast.error(errorMsg);
+        });
+      }
+    },
+  });
 
   if (loadingChoices) return <p>Loading...</p>;
 
@@ -103,29 +142,13 @@ export default function ContactUs() {
 
   const { genderChoices, countryChoices, arabicLevelChoices, languageChoices } = selectFieldsChoices.contactUsSelectFieldsChoices;
 
-  console.log("genderChoices", genderChoices)
 
-  if (loading) return 'Submitting...';
 
-  if (error) return `Submission error! ${error.message}`;
+  const handleNewContactSubmission = (data) => {
 
-  const handleNewContactSubmission = async (data) => {
-    try {
-      const result = await submitContactSubmission({ variables: { ...data } });
-      console.log("Submission result:", result);
-      // Handle successful submission (e.g., show success message, reset form)
-    } catch (err) {
-      console.error("Submission error:", err);
-      // Handle error (e.g., show error message)
-    }
+    submitContactSubmission({ variables: { ...data } });
+
   }
-
-  console.log("responseFromSubmittion", responseFromSubmittion)
-
-  console.log("selectFieldsChoices", selectFieldsChoices)
-
-
-  // console.log('data', data)
 
   return (
     <>

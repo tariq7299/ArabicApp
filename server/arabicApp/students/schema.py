@@ -1,6 +1,7 @@
 import graphene
 from graphene_django import DjangoObjectType
 from .models import ContactSubmission
+from django.core.exceptions import ValidationError
 
 
 class ContactSubmissionType(DjangoObjectType):
@@ -30,6 +31,8 @@ class CreateContactSubmission(graphene.Mutation):
         message = graphene.String(required=True)
 
     contact_submission = graphene.Field(ContactSubmissionType)
+    success_message = graphene.String()
+    errors = graphene.List(graphene.String)
 
     def mutate(
         self,
@@ -49,20 +52,66 @@ class CreateContactSubmission(graphene.Mutation):
         print(
             f"Sumitted data is ----> first: {first_name}, {last_name} {email}, {phone}, {age}, {native_language}, {origin_country}, {gender}, {arabic_level} "
         )
-        contact_submission = ContactSubmission(
-            first_name=first_name,
-            last_name=last_name,
-            email=email,
-            phone=phone,
-            age=age,
-            native_language=native_language,
-            origin_country=origin_country,
-            gender=gender,
-            arabic_level=arabic_level,
-            message=message,
-        )
-        contact_submission.save()
-        return CreateContactSubmission(contact_submission=contact_submission)
+
+        # contact_submission = ContactSubmission(
+        #     first_name=first_name,
+        #     last_name=last_name,
+        #     email=email,
+        #     phone=phone,
+        #     age=age,
+        #     native_language=native_language,
+        #     origin_country=origin_country,
+        #     gender=gender,
+        #     arabic_level=arabic_level,
+        #     message=message,
+        # )
+
+        # contact_submission.full_clean()
+
+        # contact_submission.save()
+
+        # print(f"heuuu {contact_submission}")
+
+        try:
+            contact_submission = ContactSubmission(
+                first_name=first_name,
+                last_name=last_name,
+                email=email,
+                phone=phone,
+                age=age,
+                native_language=native_language,
+                origin_country=origin_country,
+                gender=gender,
+                arabic_level=arabic_level,
+                message=message,
+            )
+            contact_submission.full_clean()
+            contact_submission.save()
+            return CreateContactSubmission(
+                success_message="Success! We will contact you soon",
+                contact_submission=contact_submission,
+                errors=None,
+            )
+        except ValidationError as e:
+            # Do something based on the errors contained in e.message_dict.
+            # print("e", e)
+            print("ValidationError", e)
+            print("e", e.message_dict)
+            print("e", e.message_dict.items())
+
+            return CreateContactSubmission(
+                success_message=None,
+                contact_submission=None,
+                errors=[
+                    f"{field}: {'; '.join(errors)}"
+                    for field, errors in e.message_dict.items()
+                ],
+            )
+
+        # return CreateContactSubmission(contact_submission=contact_submission)
+
+
+#
 
 
 class Query(graphene.ObjectType):
