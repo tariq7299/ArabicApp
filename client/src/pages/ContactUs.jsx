@@ -22,36 +22,14 @@ import MyButton from "../components/common/MyButton";
 import InputLabel from '@mui/material/InputLabel';
 import { useForm, Controller } from 'react-hook-form';
 import { gql, useMutation, useQuery } from '@apollo/client';
-import { handleSuccessfulResponse, handleErrorResponse } from "../helper/helperFunctions";
+import { handleResponseNotification } from "../helper/helperFunctions";
 import { toast } from "react-toastify";
 
 // Define mutation
 const CREATE_CONTACT_SUBMISSION = gql`
   # Submit new contact submission
-  mutation CreateContactSubmission(
-    $firstName: String!
-    $lastName: String!
-    $email: String!
-    $phone: String!
-    $age: Int!
-    $nativeLanguage: String!
-    $originCountry: String!
-    $gender: String!
-    $arabicLevel: String!
-    $message: String!
-  ) {
-    createContactSubmission(
-      firstName: $firstName
-      lastName: $lastName
-      email: $email
-      phone: $phone
-      age: $age
-      nativeLanguage: $nativeLanguage
-      originCountry: $originCountry
-      gender: $gender
-      arabicLevel: $arabicLevel
-      message: $message
-    ) {
+  mutation CreateContactSubmission( $input: CreateContactSubmissionInput!) {
+    createContactSubmission(input: $input) {
        contactSubmission {
         id
         firstName
@@ -65,6 +43,10 @@ const CREATE_CONTACT_SUBMISSION = gql`
         arabicLevel
         message
       }
+      errors {
+        field
+        messages
+    }
     }
   }
 `;
@@ -92,8 +74,6 @@ export default function ContactUs() {
   } = useForm()
 
 
-  // console.log("watch", watch())
-
   const { loading: loadingChoices, error: errorFetchingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
 
   // Pass mutation to useMutation
@@ -104,35 +84,19 @@ export default function ContactUs() {
       // This will catch network errors and GraphQL errors
       console.error('Mutation error:', error);
 
+
       if (error.networkError) {
         toast.error('Network error. Please check your connection and try again.');
       } else if (error.graphQLErrors) {
-        error.graphQLErrors.forEach((graphQLError) => {
-          if (graphQLError.extensions?.code === 'BAD_USER_INPUT') {
-            // Handle validation errors
-            const validationErrors = graphQLError.extensions?.errors || {};
-            Object.values(validationErrors).forEach((errorMessage) => {
-              toast.error(errorMessage);
-            });
-          } else {
-            // Handle other types of GraphQL errors
-            toast.error(graphQLError.message || 'An error occurred. Please try again.');
-          }
-        });
+
+        console.log("error.graphQLErrors", error.graphQLErrors)
+
       } else {
         toast.error('An unexpected error occurred. Please try again.');
       }
     },
     onCompleted: (data) => {
-      if (data.createContactSubmission.successMessage) {
-        toast.success(data.createContactSubmission.successMessage);
-        // Handle successful submission (e.g., clear form, redirect, etc.)
-      } else if (data.createContactSubmission.errors) {
-        // Handle any errors returned in the mutation response
-        data.createContactSubmission.errors.forEach((errorMsg) => {
-          toast.error(errorMsg);
-        });
-      }
+      console.log("data", data)
     },
   });
 
@@ -144,9 +108,28 @@ export default function ContactUs() {
 
 
 
-  const handleNewContactSubmission = (data) => {
+  const handleNewContactSubmission = async (data) => {
 
-    submitContactSubmission({ variables: { ...data } });
+    console.log("data", data)
+
+    // data.age
+
+    const parsedData = {
+      ...data,
+      age: data.age === '' ? 0 : parseInt(data.age, 10)
+    };
+
+    try {
+      const response = await submitContactSubmission({ variables: { input: { ...parsedData } } });
+
+      console.log("response", response)
+
+      // handleResponseNotification(response?.data?.)
+
+    } catch (err) {
+      console.log("err", err)
+
+    }
 
   }
 
@@ -288,7 +271,8 @@ export default function ContactUs() {
                       control={control}
                       defaultValue=""
                       render={({ field }) => (
-                        <TextField {...field} onChange={(e) => field.onChange(parseInt(e.target.value, 10) || '')} // Parse on change 
+                        <TextField {...field} onChange={(e) => field.onChange(parseInt(e.target.value, 10) || "")}
+                          onSubmit={(e) => field.onSubmit(parseInt(e.target.value, 10) || 0)}
                           type="text" label="Age" variant="standard" placeholder="24.." fullWidth />
                       )}
                     />

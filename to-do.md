@@ -155,3 +155,58 @@ page elemtnst will load
 
 - Create mutate.py and query.py and populate each instead of writing all in scheme.py
 - inhereit from User model and
+
+## Sutdents app
+
+### Erorr handling 
+- Try to set codes in the bacnend to handle errors better ! look at the following example:
+```jsx
+ if (graphQLError.extensions?.code === 'BAD_USER_INPUT') {
+            // Handle validation errors
+            const validationErrors = graphQLError.extensions?.errors || {};
+            Object.values(validationErrors).forEach((errorMessage) => {
+              toast.error(errorMessage);
+            });
+```
+
+- Try to use the following in backend:
+```python
+class CreateContactSubmission(DjangoModelFormMutation):
+    contact_submission = Field(ContactSubmissionType)
+
+    class Meta:
+        form_class = ContactSubmissionForm
+
+    @classmethod
+    def perform_mutate(cls, form, info):
+        if not form.is_valid():
+            # If the form is not valid, raise a GraphQLError with the validation errors
+            raise GraphQLError(form.errors.as_json())
+        return super().perform_mutate(form, info)
+```
+
+```jsx
+const [submitContactSubmission, { data: responseFromSubmission, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION, {
+  onError: (error) => {
+    console.error('Mutation error:', error);
+    if (error.networkError) {
+      toast.error('Network error. Please check your connection and try again.');
+    } else if (error.graphQLErrors) {
+      error.graphQLErrors.forEach(({ message }) => {
+        const errors = JSON.parse(message);
+        for (let field in errors) {
+          const fieldErrors = errors[field].map(err => err.message).join(", ");
+          toast.error(`${field}: ${fieldErrors}`);
+        }
+      });
+    } else {
+      toast.error('An unexpected error occurred. Please try again.');
+    }
+  },
+  onCompleted: (data) => {
+    console.log("data", data);
+    toast.success('Form submitted successfully!');
+  },
+});
+```
+So here we can use the native `graphQLErrors` instead of handling the errors like in rest apis with `response.success`

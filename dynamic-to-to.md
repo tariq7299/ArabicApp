@@ -9,9 +9,22 @@
 9. Create Contats us page
  - PReview a toaster indiciation successfull submission
     handleResponseNotification()
-        - Find a way to correctly parse the errors of databases as jSON
-        - Display them one by one in the frontend
-        - 
+    **Handle Errors of graphQL**
+        - Createa a form in django and use and write your validations
+        **Solution 1:** Get each errors key and in each data key
+        **Solution 2:** Give the handleResponse function a reponse?.data?.mutation/qyeur name
+        **
+
+
+
+        Go in each messages in each array element and print it ? let so
+
+
+    - cash the values of sleect field in contact us page
+
+
+
+    
 
 
 
