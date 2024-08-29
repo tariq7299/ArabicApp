@@ -124,7 +124,7 @@ export default function ContactUs() {
 
       console.log("response", response)
 
-      // handleResponseNotification(response?.data?.)
+      handleResponseNotification(response)
 
     } catch (err) {
       console.log("err", err)

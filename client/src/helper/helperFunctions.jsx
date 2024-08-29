@@ -58,28 +58,31 @@ export function handleResponseNotification(response, message, successCallback, e
 
     console.log("response", response)
 
-    const data = response?.data // {q1: {errors:[]}, m1: {erorrs:[]}}
+    console.log("DATAAAAA", response?.data)
 
-    const { mutationOrQueryName, errors } = response?.data // {q1: {errors:[]}, m1: {erorrs:[]}}
 
-    const operationNames = object.keys(response?.data)
+    const operationNames = Object.keys(response?.data)
+
+    console.log("operationNames", operationNames)
 
     operationNames.forEach((operationName) => {
 
-        if (!operationName.errors) {
+        if (!response?.data[operationName].errors || response?.data[operationName]?.errors?.length === 0) {
+
+            console.log("successssss")
             const toastMessage = message || operationName?.message
             toastMessage && toast.success(message)
             successCallback && successCallback()
             return
         }
 
-        console.log("operationName", operationName)
+        console.log("operationName", response?.data[operationName])
 
         // ... In case of a validation error
-        if (operationName.errors && operationName?.errors?.length > 0) {
+        if (response?.data[operationName].errors && response?.data[operationName]?.errors?.length > 0) {
 
-            console.log("operationName.errors", operationName.errors)
-            operationName.errors.map((error) => {
+            console.log("response?.data[operationName].errors", response?.data[operationName].errors)
+            response?.data[operationName].errors.map((error) => {
 
                 const errorMessages = error?.messages
 
