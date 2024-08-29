@@ -297,14 +297,14 @@ export default function ContactUs() {
                   <Controller
                     name="arabicLevel"
                     control={control}
-                    defaultValue="beginner"
+                    defaultValue={arabicLevelChoices[0][0]}
                     render={({ field }) => (
                       <>
                         <FormLabel id="arabic-level-label" className="py-3">Arabic Level</FormLabel>
                         <RadioGroup
                           row
                           aria-labelledby="arabic-level-label"
-                          defaultValue="female"
+                          // defaultValue={arabicLevelChoices[0][0]}
                           name="radio-buttons-group"
                           className="row d-flex justify-content-center col-12 align-items-center gap-4 gap-lg-0"
                           {...field}

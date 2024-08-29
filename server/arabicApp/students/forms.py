@@ -8,6 +8,8 @@ class ContactSubmissionForm(forms.ModelForm):
     class Meta:
         model = ContactSubmission
         error_messages = {
+            # I am doing this to add field name to the required error message
+            # As it the default is "This field is required"
             "first_name": {
                 "required": "First Name field is required",
             },

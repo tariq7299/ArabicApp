@@ -105,7 +105,7 @@ page elemtnst will load
 - Make country as Country with flags
 - make the contact us page more dynamic in rendring select choices and fields ! like in bolesa
 - Add ablitity to type your language if not dispalyed in the Native language selection
--
+- Populate conact imformation from the data base of the tutor
 
 # Backend
 
@@ -150,7 +150,7 @@ page elemtnst will load
 - Use faker to fake to insert fake data
 
 ## Courses App
-
+d
 - Create mutate.py and query.py and populate each instead of writing all in scheme.py
 
 ## Authenticaton App
