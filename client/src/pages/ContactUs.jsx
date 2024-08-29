@@ -23,44 +23,10 @@ import InputLabel from '@mui/material/InputLabel';
 import { useForm, Controller } from 'react-hook-form';
 import { gql, useMutation, useQuery } from '@apollo/client';
 import { handleResponseNotification } from "../helper/helperFunctions";
-import { toast } from "react-toastify";
+import { GET_SELECT_FIELDS_CHOICES } from "../graphql/queries/contactUs/GET_SELECT_FIELDS_CHOICES";
+import { CREATE_CONTACT_SUBMISSION } from "../graphql/mutations/contactUs/CREATE_CONTACT_SUBMISSION";
 
-// Define mutation
-const CREATE_CONTACT_SUBMISSION = gql`
-  # Submit new contact submission
-  mutation CreateContactSubmission( $input: CreateContactSubmissionInput!) {
-    createContactSubmission(input: $input) {
-       contactSubmission {
-        id
-        firstName
-        lastName
-        email
-        phone
-        age
-        nativeLanguage
-        originCountry
-        gender
-        arabicLevel
-        message
-      }
-      errors {
-        field
-        messages
-    }
-    }
-  }
-`;
 
-const GET_SELECT_FIELDS_CHOICES = gql`
-  query getContactUsSelectFieldsChoices {
-    contactUsSelectFieldsChoices {
-      genderChoices
-      countryChoices
-      arabicLevelChoices
-      languageChoices
-    }
-  }
-`;
 
 export default function ContactUs() {
 
@@ -76,33 +42,9 @@ export default function ContactUs() {
 
   const { loading: loadingChoices, error: errorFetchingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
 
-  // Pass mutation to useMutation
-  // const [submitContactSubmission, { data: responseFromSubmittion, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION);
-
-  const [submitContactSubmission, { data: responseFromSubmittion, loading, error }] = useMutation(CREATE_CONTACT_SUBMISSION, {
-    onError: (error) => {
-      // This will catch network errors and GraphQL errors
-      console.error('Mutation error:', error);
-
-
-      if (error.networkError) {
-        toast.error('Network error. Please check your connection and try again.');
-      } else if (error.graphQLErrors) {
-
-        console.log("error.graphQLErrors", error.graphQLErrors)
-
-      } else {
-        toast.error('An unexpected error occurred. Please try again.');
-      }
-    },
-    onCompleted: (data) => {
-      console.log("data", data)
-    },
-  });
+  const [submitContactSubmission, { loading: submitting }] = useMutation(CREATE_CONTACT_SUBMISSION);
 
   if (loadingChoices) return <p>Loading...</p>;
-
-  if (errorFetchingChoices) return <p>Error : {error.message}</p>;
 
   const { genderChoices, countryChoices, arabicLevelChoices, languageChoices } = selectFieldsChoices.contactUsSelectFieldsChoices;
 
@@ -112,7 +54,6 @@ export default function ContactUs() {
 
     console.log("data", data)
 
-    // data.age
 
     const parsedData = {
       ...data,
@@ -399,7 +340,7 @@ export default function ContactUs() {
                 <div className="d-flex justify-content-center justify-content-lg-end col-12 py-5 pt-lg-7">
                   <MyButton
                     type="submit"
-                    text="Send Message"
+                    text={submitting ? "Submitting..." : "Send Message"}
                     className="btn text-primary bg-secondary-2 col-auto button--medium "
                   ></MyButton>
                 </div>

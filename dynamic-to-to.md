@@ -7,31 +7,26 @@
 ## Implemetation and steps
 
 9. Create Contats us page
- - PReview a toaster indiciation successfull submission
-    handleResponseNotification()
-    **Handle Errors of graphQL**
-        - Createa a form in django and use and write your validations
-        **Solution 1:** Get each errors key and in each data key
-        **Solution 2:** Give the handleResponse function a reponse?.data?.mutation/qyeur name
-        **
+    - preview a successfull toast from backend 
 
 
+    - Createa a folder with the name asscoiated with the group of mutations and quries relatable together then createa inside it a mutations and queries
+    - Change the submission button text while loading and disable it
+    - Add the field name in the message itsef when user forgetst to enter it (Maybe add it to all error messages)
+        **Solution 1**: Add the field name with each field validaator message
+        **Solution 2**: Format the error message in scheme.py before sending it
+        **Solution 3**: Format the erorr message in handle and add the field name to eror if found in react frontend
 
-        Go in each messages in each array element and print it ? let so
-
-
+    - Fix Arablic level not provided error messsage
+    - remove conosle logs
+    - Add frontend validations using useform
+    - Add the phone input of +232 
+    - Add country input field that will show flags
+    - Provide correct input if arablic level input is not provided
+    - Write your comments of found in old schema file somewhre else
+    - 
     - cash the values of sleect field in contact us page
 
-
-
-    
-
-
-
-
- - Add errors helper handlers
- - Add axios folder
- - Make a qyeru to backend to qery for select options of each field
  - add header and footer layout again
 
 

@@ -1,7 +1,6 @@
 import graphene
 from graphene_django import DjangoObjectType
 from .models import ContactSubmission
-from django.core.exceptions import ValidationError
 from .forms import ContactSubmissionForm
 from graphene_django.forms.mutation import DjangoModelFormMutation
 
@@ -9,7 +8,6 @@ from graphene_django.forms.mutation import DjangoModelFormMutation
 class ContactSubmissionType(DjangoObjectType):
     class Meta:
         model = ContactSubmission
-        fields = "__all__"
 
 
 class ChoicesType(graphene.ObjectType):
@@ -24,6 +22,8 @@ class CreateContactSubmission(DjangoModelFormMutation):
 
     class Meta:
         form_class = ContactSubmissionForm
+        # You have to write this, in order to be able to access the submitted contact us request
+        return_field_name = "submittedContact"
 
 
 class Query(graphene.ObjectType):

@@ -104,6 +104,8 @@ page elemtnst will load
 - Make the phone field as phone filed with +CountryCode
 - Make country as Country with flags
 - make the contact us page more dynamic in rendring select choices and fields ! like in bolesa
+- Add ablitity to type your language if not dispalyed in the Native language selection
+-
 
 # Backend
 
@@ -145,7 +147,7 @@ page elemtnst will load
 - Chnage the arabicApp app inside django to become `core` instead
 - Use prettier to formate your code
 - get some view/template to be rendered at route "/" of my app
--
+- Use faker to fake to insert fake data
 
 ## Courses App
 

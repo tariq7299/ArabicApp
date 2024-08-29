@@ -68,7 +68,9 @@ class ContactSubmission(models.Model):
     phone = models.CharField(
         max_length=15,
         validators=[
-            RegexValidator(r"^\+?1?\d{9,15}$", "+999999999'. Up to 15 digits allowed.")
+            RegexValidator(
+                r"^\+?1?\d{9,15}$", "+999999999'. Up to 15 digits allowed in phone."
+            )
         ],
         null=False,
     )
@@ -87,7 +89,7 @@ class ContactSubmission(models.Model):
     arabic_level = models.CharField(
         max_length=3, choices=ARABIC_LEVEL_CHOICES, null=False
     )
-    message = models.TextField(max_length=1000)
+    message = models.TextField(max_length=1000, null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
 

@@ -84,9 +84,16 @@ export function handleResponseNotification(response, message, successCallback, e
             console.log("response?.data[operationName].errors", response?.data[operationName].errors)
             response?.data[operationName].errors.map((error) => {
 
+                console.log("errorINHERER", error)
+
                 const errorMessages = error?.messages
 
-                errorMessages.forEach((errorMessage) => toast.error(errorMessage))
+
+
+                errorMessages.forEach((errorMessage) => {
+                    toast.error(errorMessage)
+                })
+
 
             })
             errorCallback && errorCallback()
