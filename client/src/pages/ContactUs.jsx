@@ -22,17 +22,12 @@ import FormHelperText from '@mui/material/FormHelperText';
 import MyButton from "../components/common/MyButton";
 import InputLabel from '@mui/material/InputLabel';
 import { useForm, Controller } from 'react-hook-form';
-import { gql, useMutation, useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { handleResponseNotification } from "../helper/helperFunctions";
 import { GET_SELECT_FIELDS_CHOICES } from "../graphql/queries/contactUs/GET_SELECT_FIELDS_CHOICES";
 import { CREATE_CONTACT_SUBMISSION } from "../graphql/mutations/contactUs/CREATE_CONTACT_SUBMISSION";
-import ReactPhoneInput from 'react-phone-input-material-ui';
 import 'react-phone-input-2/lib/style.css'
-import { useMemo, useState } from "react";
 import React from 'react';
-// import ReactPhoneInput from 'react-phone-input-material-ui';
-// import PhoneField from "../components/common/PhoneField";
-// import PhoneInput from "react-phone-input-material-ui";
 import MuiPhoneNumber from "mui-phone-number";
 
 
@@ -40,17 +35,11 @@ import MuiPhoneNumber from "mui-phone-number";
 
 export default function ContactUs() {
 
-
   const {
-    register,
     handleSubmit,
-    watch,
-    getValues,
-    formState: { touchedFields, dirtyFields, errors, isDirty, isValid },
+    formState: { isDirty },
     control
   } = useForm()
-
-
 
   const { loading: loadingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
 
@@ -60,46 +49,8 @@ export default function ContactUs() {
 
   const { genderChoices, countryChoices, arabicLevelChoices, languageChoices } = selectFieldsChoices.contactUsSelectFieldsChoices;
 
-  console.log("countryChoices", countryChoices)
-
-
-  // const phoneCodes = countryChoices.map(country => country[0])
-
-  // console.log("phoneCodes", phoneCodes)
-
-  const phoneCodes = [
-    "us",
-    "gb",
-    "ca",
-    "au",
-    "fr",
-    "de",
-    "ot"
-  ]
-
-  // const [phoneNumber, setPhoneNumber] = useState('');
-
-  const handlePhoneChange = (value) => {
-    setPhoneNumber(value);
-  };
-
-  const onPhoneNumberChanged = (phoneNumber, country) => {
-    console.log(phoneNumber); // +4176 123 45 67
-    console.log(country); // { name: "Switzerland", dialCode: "41", countryCode: "ch" }
-  };
-
-
-
 
   const handleNewContactSubmission = async (data) => {
-
-    console.log("data", data)
-
-
-    // const parsedData = {
-    //   ...data,
-    //   age: data.age === '' ? 0 : parseInt(data.age, 10)
-    // };
 
     try {
       const response = await submitContactSubmission({ variables: { input: { ...data } } });
@@ -273,42 +224,6 @@ export default function ContactUs() {
                         <MuiPhoneNumber label="Phone" error={!!error} helperText={error?.message} onChange={field?.onChange} defaultCountry="us" disableDropdown={true} autoFormat={false} fullWidth />
                       )}
                     />
-
-                    {/* <Controller
-                      name="phone"
-                      control={control}
-                      defaultValue=""
-                      rules={{
-                        required: { value: true, message: "This field is required!" }, pattern: {
-                          value: /^\+?1?\d{9,15}$/,
-                          message: "+999999999'. Up to 15 digits allowed in phone."
-                        }
-                      }}
-
-                      render={({ field, fieldState: { error } }) => (
-                        <ReactPhoneInput
-                          // variant="standard"
-                          // value={value}
-                          // onChange={onChange} // passed function receives the phone value
-                          component={TextField}
-                          country={'us'}
-                          onlyCountries={phoneCodes}
-                          // <TextField
-                          {...field}
-                        // error={!!error}
-                        // helperText={error?.message} 
-                        // type="text"
-                        //  label="Phone Number"
-                        // variant="standard"
-                        //  placeholder="01099133377.." 
-                        //  fullWidth
-                        />
-                        // <TextField
-                        //   {...field}
-                        //   error={!!error}
-                        //   helperText={error?.message} type="text" label="Phone Number" variant="standard" placeholder="01099133377.." fullWidth />
-                      )}
-                    /> */}
 
                   </div>
 

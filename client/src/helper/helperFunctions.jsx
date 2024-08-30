@@ -56,59 +56,28 @@ import { toast } from 'react-toastify'
 
 export function handleResponseNotification(response, message, successCallback, errorCallback) {
 
-    // console.log("response", response)
-
-    // console.log("DATAAAAA", response?.data)
-
-    // console.log("DATAAAAA", response?.data)
-
-
     const operationNames = Object.keys(response?.data)
 
-    // console.log("operationNames", operationNames)
-
     operationNames.forEach((operationName) => {
-
-        // console.log("response?.data[operationName].isSuccessfull", response?.data[operationName].isSuccessfull)
-
-        // console.log("response?.data[operationName].errors", response?.data[operationName].errors)
-
-
         if (!response?.data[operationName].errors || response?.data[operationName]?.errors?.length === 0 || response?.data[operationName].isSuccessfull) {
 
-            // console.log("successssss")
-            // console.log("response?.data[operationName].responseMessage", response?.data[operationName].responseMessage)
             const toastMessage = message || response?.data[operationName].responseMessage
-            // console.log("toastMessage", toastMessage)
             toastMessage && toast.success(toastMessage)
             successCallback && successCallback()
             return
         }
 
-        // console.log("operationName", response?.data[operationName])
 
         // ... In case of a validation error
         if (response?.data[operationName].errors && response?.data[operationName]?.errors?.length > 0) {
 
-            // console.log("response?.data[operationName].errors", response?.data[operationName].errors)
             response?.data[operationName].errors.map((error) => {
-
-                // console.log("errorINHERER", error)
-
                 const errorMessages = error?.messages
-
-
-
                 errorMessages.forEach((errorMessage) => {
                     toast.error(errorMessage)
                 })
-
-
             })
             errorCallback && errorCallback()
-
-
-
         } else {
             errorCallback && errorCallback()
         }
