@@ -6,7 +6,6 @@ from graphene_django.forms.mutation import DjangoModelFormMutation
 
 
 class ContactSubmissionType(DjangoObjectType):
-    success = graphene.Boolean
     class Meta:
         model = ContactSubmission
 
@@ -20,36 +19,37 @@ class ChoicesType(graphene.ObjectType):
 
 class CreateContactSubmission(DjangoModelFormMutation):
     contact_submission = graphene.Field(ContactSubmissionType)
-    success = graphene.Boolean()
+    isSuccessfull = graphene.Boolean()
+    responseMessage = graphene.String()
 
     class Meta:
         form_class = ContactSubmissionForm
-        # You have to write this, in order to be able to access the submitted contact us request
+        # If you want to make the return field with a different name than the default "contactSubmission"
         # return_field_name = "submittedContact"
 
     @classmethod
     def perform_mutate(cls, form, info):
         if form.is_valid():
             return cls.form_valid(form, info)
-        # this is not triggering ! only form.is_valid() is working ?? why
+        # This not working ! as only form.is_valid() is wroking ! and form_invalid() is not workign !
         else:
             return cls.form_invalid(form, info)
-
+        
     @classmethod
     def form_valid(cls, form, info):
+        responseMessage = "Success ! We will contact you soon!"
         contact_submission = form.save()
-        return cls(contact_submission=contact_submission, success=True, errors=[])
-
-    # NOt working !
-    @classmethod
-    def form_invalid(cls, form, info):
-        errors = []
-        for field, messages in form.errors.items():
-            errors.append({
-                "field": field,
-                "messages": messages
-            })
-        return cls(errors=[], success=False)
+        return cls(contact_submission=contact_submission, isSuccessfull=True, errors=[], responseMessage=responseMessage)
+    
+    # @classmethod
+    # def form_invalid(cls, form, info):
+    #     errors = []
+    #     for field, messages in form.errors.items():
+    #         errors.append({
+    #             "field": field,
+    #             "messages": messages
+    #         })
+    #     return cls(errors=errors)
 
 class Query(graphene.ObjectType):
     all_contact_submissions = graphene.List(ContactSubmissionType)

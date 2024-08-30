@@ -7,13 +7,16 @@
 ## Implemetation and steps
 
 9. Create Contats us page
-    - preview a successfull toast from backend 
-    **Solution1**:
-        
-
-    - remove conosle logs
     - Add frontend validations using useform
+        -   **Solution 1**: Open bolesa api tables and check the same things to 
+            - See dirty fields || isValid and then disable the submit button
+            - Change the look of each input like material error input
+            - 
+
+
+
     - Add the phone input of +232 
+    - remove conosle logs
     - Add country input field that will show flags
     - Provide correct input if arablic level input is not provided
     - Write your comments of found in old schema file somewhre else

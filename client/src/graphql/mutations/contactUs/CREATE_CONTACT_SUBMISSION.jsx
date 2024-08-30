@@ -18,10 +18,12 @@ export const CREATE_CONTACT_SUBMISSION = gql`
         arabicLevel
         message
       }
+      isSuccessfull
+      responseMessage
       errors {
         field
         messages
-    }
+      }
     }
   }
 `;

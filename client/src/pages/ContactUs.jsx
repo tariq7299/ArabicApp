@@ -35,9 +35,59 @@ export default function ContactUs() {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    getValues,
+    formState: { touchedFields, dirtyFields, errors, isDirty, isValid },
     control
   } = useForm()
+
+  //   function returnOnlyTouchedFieldsVals(fieldsVals, touchedFields) {
+  //     const touchedFieldsss = Object.keys(fieldsVals).reduce((acc, key) => {
+  //         if (touchedFields[key]) {
+  //             acc[key] = fieldsVals[key];
+  //         }
+  //         return acc;
+  //     }, {});
+  //     console.log()
+  //     return touchedFieldsss
+  // }
+
+  function areAllFieldsEmpty(data) {
+    const areAllFiledsareEmpty = Object.values(data).every((value) => value === '' || value === undefined || value === null);
+    console.log("areAllFiledsareEmpty", areAllFiledsareEmpty)
+    return areAllFiledsareEmpty
+  }
+
+  function isSubmitButtonDisabled() {
+    // const formValues = getValues();
+    console.log("dirtyFields", dirtyFields)
+    console.log("areAllFieldsEmpty(dirtyFields", areAllFieldsEmpty(dirtyFields))
+    console.log("isValid", isValid)
+    console.log("isDirty", isDirty)
+    // const changedFields = this.returnOnlyTouchedFieldsVals(formValues, dirtyFields);
+    const value = !isDirty || areAllFieldsEmpty(dirtyFields);
+    // const value = !isDirty || !isValid || areAllFieldsEmpty(dirtyFields);
+    console.log("value", value)
+    return value;
+  }
+
+
+  // function isSubmitButtonDisabled() {
+  //   // If all fields is valid and contains content
+  //   // If fields got dirty
+  //   const watchFields = watch()
+  //   console.log("dirtyFields", dirtyFields)
+  //   const isAnyFieldFilled = Object.values(watchFields).some(
+  //     field => field?.fieldValue && (typeof field.fieldValue === 'string' && field.fieldValue?.trim()) !== ""
+  //   );
+  //   return isAnyFieldFilled
+  // }
+
+  // useEffect(() => {
+  //   const isAnyFieldFilled = Object.values(watchFields).some(
+  //     field => field?.fieldValue && (typeof field.fieldValue === 'string' && field.fieldValue?.trim()) !== ""
+  //   );
+  //   setIsSubmitEnabled(isAnyFieldFilled);
+  // }, [watchFields]);
 
 
   const { loading: loadingChoices, error: errorFetchingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
@@ -49,19 +99,18 @@ export default function ContactUs() {
   const { genderChoices, countryChoices, arabicLevelChoices, languageChoices } = selectFieldsChoices.contactUsSelectFieldsChoices;
 
 
-
   const handleNewContactSubmission = async (data) => {
 
     console.log("data", data)
 
 
-    const parsedData = {
-      ...data,
-      age: data.age === '' ? 0 : parseInt(data.age, 10)
-    };
+    // const parsedData = {
+    //   ...data,
+    //   age: data.age === '' ? 0 : parseInt(data.age, 10)
+    // };
 
     try {
-      const response = await submitContactSubmission({ variables: { input: { ...parsedData } } });
+      const response = await submitContactSubmission({ variables: { input: { ...data } } });
 
       console.log("response", response)
 
@@ -160,6 +209,7 @@ export default function ContactUs() {
                       name="firstName"
                       control={control}
                       defaultValue=""
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <TextField
                           type="text"
@@ -178,6 +228,7 @@ export default function ContactUs() {
                       name="lastName"
                       control={control}
                       defaultValue=""
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <TextField type="text" {...field} label="Last Name" variant="standard" placeholder="Mostafa..." fullWidth />
                       )}
@@ -189,6 +240,7 @@ export default function ContactUs() {
                       name="email"
                       control={control}
                       defaultValue=""
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <TextField {...field} type="email" label="Email" variant="standard" placeholder="tr.sar77an78@gmail.com.." fullWidth />
                       )}
@@ -200,6 +252,7 @@ export default function ContactUs() {
                       name="phone"
                       control={control}
                       defaultValue=""
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <TextField {...field} type="text" label="Phone Number" variant="standard" placeholder="01099133377.." fullWidth />
                       )}
@@ -211,13 +264,27 @@ export default function ContactUs() {
                       name="age"
                       control={control}
                       defaultValue=""
+                      rules={{
+                        required: true,
+                        valueAsNumber: true,
+                        min: {
+                          value: 7,
+                          message: "Age must be at least 7."
+                        },
+                        max: {
+                          value: 120,
+                          message: "Age must be less than 120."
+                        }
+                      }}
                       render={({ field }) => (
+
                         <TextField {...field} onChange={(e) => field.onChange(parseInt(e.target.value, 10) || "")}
                           onSubmit={(e) => field.onSubmit(parseInt(e.target.value, 10) || 0)}
                           type="text" label="Age" variant="standard" placeholder="24.." fullWidth />
                       )}
                     />
                   </div>
+                  {/* <h1>{errors?.age?.message}</h1> */}
 
                   <div className="col-12 col-lg-4 py-4 pe-xl-4 max-400 mx-auto mx-lg-0 ">
 
@@ -226,6 +293,7 @@ export default function ContactUs() {
                       name="nativeLanguage"
                       control={control}
                       defaultValue={languageChoices[0][0]}
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <Select
                           {...field}
@@ -249,6 +317,7 @@ export default function ContactUs() {
                       name="originCountry"
                       control={control}
                       defaultValue={countryChoices[0][0]}
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <Select
                           {...field}
@@ -271,6 +340,7 @@ export default function ContactUs() {
                       name="gender"
                       control={control}
                       defaultValue={genderChoices[0][0]}
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <Select
                           {...field}
@@ -298,6 +368,7 @@ export default function ContactUs() {
                     name="arabicLevel"
                     control={control}
                     defaultValue={arabicLevelChoices[0][0]}
+                    rules={{ required: true }}
                     render={({ field }) => (
                       <>
                         <FormLabel id="arabic-level-label" className="py-3">Arabic Level</FormLabel>
@@ -340,6 +411,7 @@ export default function ContactUs() {
                 <div className="d-flex justify-content-center justify-content-lg-end col-12 py-5 pt-lg-7">
                   <MyButton
                     type="submit"
+                    isDisabled={isSubmitButtonDisabled()}
                     text={submitting ? "Submitting..." : "Send Message"}
                     className="btn text-primary bg-secondary-2 col-auto button--medium "
                   ></MyButton>
