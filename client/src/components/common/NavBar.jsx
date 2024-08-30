@@ -7,12 +7,19 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import KalimaLogoSvg from "./KalimaLogoSvg";
 KalimaLogoSvg;
+import { useNavigate } from "react-router-dom";
+
+
+
 function NavBar() {
+
+  const navigate = useNavigate();
+
   return (
     <header>
       <Navbar expand="lg" className="bg-secondary-2  mx-lg-5" fixed="top">
         <Container fluid>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             {" "}
             <KalimaLogoSvg
               className={"kalima-logo--small kalima-logo--primary-color "}
@@ -37,9 +44,9 @@ function NavBar() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
+                <Nav.Link href="/" >Home</Nav.Link>
                 <Nav.Link href="#action2">Courses</Nav.Link>
-                <Nav.Link href="#action3">Contact us</Nav.Link>
+                <Nav.Link href="/contact-us">Contact us</Nav.Link>
                 <Nav.Link href="#action4">Plans</Nav.Link>
 
                 {/* <Nav.Link href="#action2">About us</Nav.Link> */}

@@ -31,15 +31,16 @@ import React from 'react';
 import MuiPhoneNumber from "mui-phone-number";
 
 
-
-
 export default function ContactUs() {
 
   const {
     handleSubmit,
     formState: { isDirty },
-    control
+    control,
+    watch
   } = useForm()
+
+
 
   const { loading: loadingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
 
@@ -48,7 +49,6 @@ export default function ContactUs() {
   if (loadingChoices) return <p>Loading...</p>;
 
   const { genderChoices, countryChoices, arabicLevelChoices, languageChoices } = selectFieldsChoices.contactUsSelectFieldsChoices;
-
 
   const handleNewContactSubmission = async (data) => {
 

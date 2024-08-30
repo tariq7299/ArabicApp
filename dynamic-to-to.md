@@ -7,20 +7,11 @@
 ## Implemetation and steps
 
 9. Create Contats us page
-    - Add frontend validations using useform
-        - add validation at the frontend to make the input dont accept more than 15 digitds 
-
-
-    - Add the phone input of +232 
-    - remove conosle logs
-    - Add country input field that will show flags
-    - Provide correct input if arablic level input is not provided
-    - Write your comments of found in old schema file somewhre else
-    - 
-    - cash the values of sleect field in contact us page
-
- - add header and footer layout again
-
+- make each nav link point to section of home page
+-m 
+- wRITE READ ME FILE AS IN CS50
+- SUBMIT FINAL
+- SUBMIT NETWORK
 
 
 
