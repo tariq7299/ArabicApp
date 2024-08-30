@@ -8,11 +8,7 @@
 
 9. Create Contats us page
     - Add frontend validations using useform
-        -   **Solution 1**: Open bolesa api tables and check the same things to 
-            - See dirty fields || isValid and then disable the submit button
-            - Change the look of each input like material error input
-            - 
-
+        - add validation at the frontend to make the input dont accept more than 15 digitds 
 
 
     - Add the phone input of +232 

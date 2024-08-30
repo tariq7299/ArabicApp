@@ -106,6 +106,9 @@ page elemtnst will load
 - make the contact us page more dynamic in rendring select choices and fields ! like in bolesa
 - Add ablitity to type your language if not dispalyed in the Native language selection
 - Populate conact imformation from the data base of the tutor
+- add all countries of the world to the choucies
+- add only letters are allowecd in the first and last anem inputs validation in the client side validation
+
 
 # Backend
 

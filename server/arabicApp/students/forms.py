@@ -21,6 +21,7 @@ class ContactSubmissionForm(forms.ModelForm):
             },
             "phone": {
                 "required": "Phone field is required",
+                 'max_length': "Phone number cannot exceed 15 digits."
             },
             "age": {
                 "required": "Age field is required",

@@ -26,6 +26,15 @@ import { gql, useMutation, useQuery } from '@apollo/client';
 import { handleResponseNotification } from "../helper/helperFunctions";
 import { GET_SELECT_FIELDS_CHOICES } from "../graphql/queries/contactUs/GET_SELECT_FIELDS_CHOICES";
 import { CREATE_CONTACT_SUBMISSION } from "../graphql/mutations/contactUs/CREATE_CONTACT_SUBMISSION";
+import ReactPhoneInput from 'react-phone-input-material-ui';
+import 'react-phone-input-2/lib/style.css'
+import { useMemo, useState } from "react";
+import React from 'react';
+// import ReactPhoneInput from 'react-phone-input-material-ui';
+// import PhoneField from "../components/common/PhoneField";
+// import PhoneInput from "react-phone-input-material-ui";
+import MuiPhoneNumber from "mui-phone-number";
+
 
 
 
@@ -50,6 +59,36 @@ export default function ContactUs() {
   if (loadingChoices) return <p>Loading...</p>;
 
   const { genderChoices, countryChoices, arabicLevelChoices, languageChoices } = selectFieldsChoices.contactUsSelectFieldsChoices;
+
+  console.log("countryChoices", countryChoices)
+
+
+  // const phoneCodes = countryChoices.map(country => country[0])
+
+  // console.log("phoneCodes", phoneCodes)
+
+  const phoneCodes = [
+    "us",
+    "gb",
+    "ca",
+    "au",
+    "fr",
+    "de",
+    "ot"
+  ]
+
+  // const [phoneNumber, setPhoneNumber] = useState('');
+
+  const handlePhoneChange = (value) => {
+    setPhoneNumber(value);
+  };
+
+  const onPhoneNumberChanged = (phoneNumber, country) => {
+    console.log(phoneNumber); // +4176 123 45 67
+    console.log(country); // { name: "Switzerland", dialCode: "41", countryCode: "ch" }
+  };
+
+
 
 
   const handleNewContactSubmission = async (data) => {
@@ -79,6 +118,7 @@ export default function ContactUs() {
   return (
     <>
       <section className="contact-us-page__section mt-7 py-4 py-lg-9 ">
+
 
         <Container fluid className="p-3 px-lg-6">
 
@@ -213,7 +253,28 @@ export default function ContactUs() {
                   </div>
 
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0">
+
+
+
+
                     <Controller
+                      name="phone"
+                      control={control}
+                      defaultValue=""
+                      rules={{
+                        required: { value: true, message: "This field is required!" }, pattern: {
+                          value: /^(\+\d{1,3}[- ]?)?(?=.{8,15}$)\d+$/,
+                          message: "Enter a valid phone number with the following format +999999999"
+                        },
+                        validate: (value) => value.replace(/\D/g, "").length <= 14 || "Phone number cannot exceed 15 digits"
+                      }}
+
+                      render={({ field, fieldState: { error } }) => (
+                        <MuiPhoneNumber label="Phone" error={!!error} helperText={error?.message} onChange={field?.onChange} defaultCountry="us" disableDropdown={true} autoFormat={false} fullWidth />
+                      )}
+                    />
+
+                    {/* <Controller
                       name="phone"
                       control={control}
                       defaultValue=""
@@ -225,13 +286,33 @@ export default function ContactUs() {
                       }}
 
                       render={({ field, fieldState: { error } }) => (
-                        <TextField
+                        <ReactPhoneInput
+                          // variant="standard"
+                          // value={value}
+                          // onChange={onChange} // passed function receives the phone value
+                          component={TextField}
+                          country={'us'}
+                          onlyCountries={phoneCodes}
+                          // <TextField
                           {...field}
-                          error={!!error}
-                          helperText={error?.message} type="text" label="Phone Number" variant="standard" placeholder="01099133377.." fullWidth />
+                        // error={!!error}
+                        // helperText={error?.message} 
+                        // type="text"
+                        //  label="Phone Number"
+                        // variant="standard"
+                        //  placeholder="01099133377.." 
+                        //  fullWidth
+                        />
+                        // <TextField
+                        //   {...field}
+                        //   error={!!error}
+                        //   helperText={error?.message} type="text" label="Phone Number" variant="standard" placeholder="01099133377.." fullWidth />
                       )}
-                    />
+                    /> */}
+
                   </div>
+
+
 
                   <div className="col-12 col-lg-4 py-5 pe-xl-4 max-400 mx-auto mx-lg-0 ">
                     <Controller
@@ -265,8 +346,7 @@ export default function ContactUs() {
                     <Controller
                       name="nativeLanguage"
                       control={control}
-                      // defaultValue={languageChoices[0][0]}
-                      defaultValue=""
+                      defaultValue={languageChoices[0][0]}
                       rules={{ required: { value: true, message: "This field is required!" } }}
                       render={({ field, fieldState: { error } }) => (
                         <FormControl variant="standard" fullWidth className=" " error={!!error}>

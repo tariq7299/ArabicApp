@@ -69,7 +69,7 @@ class ContactSubmission(models.Model):
         max_length=15,
         validators=[
             RegexValidator(
-                r"^\+?1?\d{9,15}$", "+999999999'. Up to 15 digits allowed in phone."
+                r"^(\+\d{1,3}[- ]?)?(?=.{10,15}$)\d+$", "Enter a valid phone number with the following format +999999999"
             )
         ],
         null=False,
