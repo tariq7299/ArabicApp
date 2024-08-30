@@ -5,7 +5,7 @@ export const CREATE_CONTACT_SUBMISSION = gql`
   # Submit new contact submission
   mutation CreateContactSubmission( $input: CreateContactSubmissionInput!) {
     createContactSubmission(input: $input) {
-       submittedContact {
+       contactSubmission {
         id
         firstName
         lastName

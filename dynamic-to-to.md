@@ -8,16 +8,9 @@
 
 9. Create Contats us page
     - preview a successfull toast from backend 
+    **Solution1**:
+        
 
-
-    - Createa a folder with the name asscoiated with the group of mutations and quries relatable together then createa inside it a mutations and queries
-    - Change the submission button text while loading and disable it
-    - Add the field name in the message itsef when user forgetst to enter it (Maybe add it to all error messages)
-        **Solution 1**: Add the field name with each field validaator message
-        **Solution 2**: Format the error message in scheme.py before sending it
-        **Solution 3**: Format the erorr message in handle and add the field name to eror if found in react frontend
-
-    - Fix Arablic level not provided error messsage
     - remove conosle logs
     - Add frontend validations using useform
     - Add the phone input of +232 
