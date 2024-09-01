@@ -2,14 +2,13 @@ from django import forms
 from .models import ContactSubmission
 
 
-# create a ModelForm
 class ContactSubmissionForm(forms.ModelForm):
-    # specify the name of model to use
     class Meta:
         model = ContactSubmission
+        # Custom error messages
         error_messages = {
             # I am doing this to add field name to the required error message
-            # As it the default is "This field is required"
+            # As it the default message is "This field is required"
             "first_name": {
                 "required": "First Name field is required",
             },
@@ -21,7 +20,7 @@ class ContactSubmissionForm(forms.ModelForm):
             },
             "phone": {
                 "required": "Phone field is required",
-                 'max_length': "Phone number cannot exceed 15 digits."
+                "max_length": "Phone number cannot exceed 15 digits.",
             },
             "age": {
                 "required": "Age field is required",

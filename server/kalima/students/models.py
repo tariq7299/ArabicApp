@@ -4,6 +4,10 @@ from django.core.validators import MinValueValidator, MaxValueValidator, RegexVa
 
 class ContactSubmission(models.Model):
 
+    # Here i specify the choices that i only want to include in my database for each field!
+    # So if frontend submitted a a value that is not in the list of choices it will raise a validation error
+    # ALso i sent those choices to the page that uses them in the "select" elemnts when user load the page, to force him to use the predifined choices i decalred here
+
     GENDER_CHOICES = [
         ("M", "Male"),
         ("F", "Female"),
@@ -69,7 +73,8 @@ class ContactSubmission(models.Model):
         max_length=15,
         validators=[
             RegexValidator(
-                r"^(\+\d{1,3}[- ]?)?(?=.{8,15}$)\d+$", "Enter a valid phone number with the following format +999999999"
+                r"^(\+\d{1,3}[- ]?)?(?=.{8,15}$)\d+$",
+                "Enter a valid phone number with the following format +999999999",
             )
         ],
         null=False,

@@ -9,7 +9,7 @@ function SubscriptionPlanCard() {
         <h2>Complete</h2>
       </div>
 
-      <p className="benefits-header">For access to all of Camply</p>
+      <p className="benefits-header">For access to all of Kalima</p>
 
       <div className="benefits-wrapper">
         <p>OUr most comprehennsive experience</p>

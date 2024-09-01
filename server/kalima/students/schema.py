@@ -17,11 +17,13 @@ class ChoicesType(graphene.ObjectType):
     country_choices = graphene.List(graphene.List(graphene.String))
 
 
+# This handles Submitting contact us form "contact-us"
 class CreateContactSubmission(DjangoModelFormMutation):
     contact_submission = graphene.Field(ContactSubmissionType)
     isSuccessfull = graphene.Boolean()
     responseMessage = graphene.String()
 
+    # Iam using the form class i have defined in forms.py "ContactSubmissionForm"
     class Meta:
         form_class = ContactSubmissionForm
         # If you want to make the return field with a different name than the default "contactSubmission"
@@ -32,15 +34,20 @@ class CreateContactSubmission(DjangoModelFormMutation):
         if form.is_valid():
             return cls.form_valid(form, info)
         # This not working ! as only form.is_valid() is wroking ! and form_invalid() is not workign !
-        else:
-            return cls.form_invalid(form, info)
-        
+        # else:
+        # return cls.form_invalid(form, info)
+
     @classmethod
     def form_valid(cls, form, info):
         responseMessage = "Success ! We will contact you soon!"
         contact_submission = form.save()
-        return cls(contact_submission=contact_submission, isSuccessfull=True, errors=[], responseMessage=responseMessage)
-    
+        return cls(
+            contact_submission=contact_submission,
+            isSuccessfull=True,
+            errors=[],
+            responseMessage=responseMessage,
+        )
+
     # @classmethod
     # def form_invalid(cls, form, info):
     #     errors = []
@@ -51,14 +58,16 @@ class CreateContactSubmission(DjangoModelFormMutation):
     #         })
     #     return cls(errors=errors)
 
+
 class Query(graphene.ObjectType):
     all_contact_submissions = graphene.List(ContactSubmissionType)
     contact_us_select_fields_choices = graphene.Field(ChoicesType)
 
+    # This Query returns all the contact submissions fo all users
     def resolve_all_contact_submissions(self, info):
         return ContactSubmission.objects.all()
 
-    # @staticmethod
+    # This returns all select fields choices specified in students/models.py
     def resolve_contact_us_select_fields_choices(self, info):
         return ChoicesType(
             gender_choices=ContactSubmission.GENDER_CHOICES,
