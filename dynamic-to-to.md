@@ -8,8 +8,17 @@
 
 9. Create Contats us page
 - make each nav link point to section of home page
--m 
-- wRITE READ ME FILE AS IN CS50
+    - **Solution 1**: Ask gpt to make the react bootstrap nav bar work  
+
+    - **Solution 2**: 
+
+
+
+
+- Create and uplaod a network app video
+- Write a readMe file of final project
+- Submit every project again
+    - 
 - SUBMIT FINAL
 - SUBMIT NETWORK
 

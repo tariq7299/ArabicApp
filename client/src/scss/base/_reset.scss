@@ -1,6 +1,14 @@
 // @use "../custom-bootstrap" as *;
 @use "./../../scss/abstracts/variables" as *;
 
+
+html {
+  scroll-padding-top: 50px;
+  /* height of your navbar */
+}
+
+
+
 html,
 body {
   padding: 0;

@@ -4,7 +4,7 @@ import Container from "react-bootstrap/esm/Container";
 
 function FreeResourcesSection() {
   return (
-    <div className="free-resoureces-section-container pt-7 pb-5">
+    <div className="free-resources-section-container pt-7 pb-5" id="free-resources-section">
       <Container
         className="p-3 px-lg
       -6"

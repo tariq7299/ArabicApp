@@ -1,6 +1,6 @@
 @use "src/scss/custom-bootstrap" as *;
 
-.free-resoureces-section-container {
+.free-resources-section-container {
   // padding-top: 2rem;
   // padding-bottom: 5rem;
 
@@ -48,6 +48,7 @@
 
     .free-resources-elements-wrapper {
       max-width: 880px;
+
       img {
         transform: translate(-10%, -10%);
         left: auto;

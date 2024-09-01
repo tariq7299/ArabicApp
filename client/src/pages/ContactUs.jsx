@@ -26,7 +26,6 @@ import { useMutation, useQuery } from '@apollo/client';
 import { handleResponseNotification } from "../helper/helperFunctions";
 import { GET_SELECT_FIELDS_CHOICES } from "../graphql/queries/contactUs/GET_SELECT_FIELDS_CHOICES";
 import { CREATE_CONTACT_SUBMISSION } from "../graphql/mutations/contactUs/CREATE_CONTACT_SUBMISSION";
-import 'react-phone-input-2/lib/style.css'
 import React from 'react';
 import MuiPhoneNumber from "mui-phone-number";
 
@@ -221,7 +220,7 @@ export default function ContactUs() {
                       }}
 
                       render={({ field, fieldState: { error } }) => (
-                        <MuiPhoneNumber label="Phone" error={!!error} helperText={error?.message} onChange={field?.onChange} defaultCountry="us" disableDropdown={true} autoFormat={false} fullWidth />
+                        <MuiPhoneNumber label="Phone" error={!!error} helperText={error?.message} onChange={field?.onChange} defaultCountry="us" autoFormat={false} fullWidth />
                       )}
                     />
 

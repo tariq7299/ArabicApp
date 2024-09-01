@@ -3,7 +3,7 @@ import Container from "react-bootstrap/esm/Container";
 
 function TestimonialsSection() {
   return (
-    <section className="testimonial-section-container py-5">
+    <section className="testimonial-section-container py-5" id="testimonial-section">
       <Container fluid className="test-wrapper p-3 px-lg-6">
         <Testimonial></Testimonial>
       </Container>

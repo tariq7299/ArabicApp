@@ -6,7 +6,7 @@ import Container from "react-bootstrap/esm/Container";
 
 function HeroSection() {
   return (
-    <div className="hero-section">
+    <div className="hero-section" id="hero-section">
       <Container fluid className="hero-section__container p-3 px-lg-5">
         <div className="hero-section__content p-3 px-lg-5">
           <MyTitle

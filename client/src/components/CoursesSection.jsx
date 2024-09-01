@@ -6,7 +6,7 @@ import Container from "react-bootstrap/esm/Container";
 
 function CoursesSection() {
   return (
-    <div className="Courses-section-container py-5">
+    <div className="Courses-section-container py-5" id="courses-section">
       <Container fluid className="">
         <div className="courses-cards-wrapper ">
           <CourseCard></CourseCard>
