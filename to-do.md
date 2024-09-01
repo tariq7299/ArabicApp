@@ -147,7 +147,7 @@ page elemtnst will load
 
 - Formate the code on save using a formatting and vs code settings
 - Use Groups and create groups that will facilitate Authorization
-- Chnage the arabicApp app inside django to become `core` instead
+- Chnage the kalima app inside django to become `core` instead
 - Use prettier to formate your code
 - get some view/template to be rendered at route "/" of my app
 - Use faker to fake to insert fake data

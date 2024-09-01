@@ -14,13 +14,51 @@
 
 
 
-
-- Create and uplaod a network app video
 - Write a readMe file of final project
-- Submit every project again
-    - 
+    ## How to run the app
+    ## Description
+    T
+    ## File and Folder Strucutre
+    ### Server side
+    ### Client side
+    ## Distinctiveness and Complexity
+    ### I have used new tech and tools that i learn on my own (wasn't taught in the course)
+    #### Server side
+    **GraphQl**
+    I diciede to use a graphql server instead of normal REST server just to learn something new and make it more challanging.
+    So I have used the following tools in my django api
+        *graphen
+    **JWT Auth**
+
+    #### Client side
+    **pnpm instead of npm**
+    **Apollo client**
+    **Material UI**
+    **Vite**
+    **React Hook Form**
+    **React toastify**
+    **React Router**
+    ### I have used some of the best pratices
+    #### Server side
+    **Seperated my apps in django server**
+    **Seperated graphql files**
+    **Used python virtual environment**
+    #### Client side
+    **Used a dynamic error handling function**
+    **Project and file structure**
+    **Sass file structure**
+    **Used @use @forward instead of @import in sass**
+    ### Attractive and nice design
+    **Carefully choose the colors**
+    **Nice logo**
+    **Resopnsive in all screen sizes**
+
+         
+
+
+
+
 - SUBMIT FINAL
-- SUBMIT NETWORK
 
 
 
