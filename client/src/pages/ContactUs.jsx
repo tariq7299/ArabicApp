@@ -27,7 +27,8 @@ import { handleResponseNotification } from "../helper/helperFunctions";
 import { GET_SELECT_FIELDS_CHOICES } from "../graphql/queries/contactUs/GET_SELECT_FIELDS_CHOICES";
 import { CREATE_CONTACT_SUBMISSION } from "../graphql/mutations/contactUs/CREATE_CONTACT_SUBMISSION";
 import React from 'react';
-import MuiPhoneNumber from "mui-phone-number";
+import { MuiTelInput } from 'mui-tel-input'
+
 
 
 export default function ContactUs() {
@@ -36,10 +37,12 @@ export default function ContactUs() {
     handleSubmit,
     formState: { isDirty },
     control,
-    watch
+    watch,
+    reset
   } = useForm()
 
 
+  console.log("watch", watch())
 
   const { loading: loadingChoices, data: selectFieldsChoices } = useQuery(GET_SELECT_FIELDS_CHOICES);
 
@@ -56,7 +59,7 @@ export default function ContactUs() {
 
       console.log("response", response)
 
-      handleResponseNotification(response)
+      handleResponseNotification(response, '', reset)
 
     } catch (err) {
       console.log("err", err)
@@ -210,7 +213,7 @@ export default function ContactUs() {
                     <Controller
                       name="phone"
                       control={control}
-                      defaultValue=""
+                      defaultValue="+1"
                       rules={{
                         required: { value: true, message: "This field is required!" }, pattern: {
                           value: /^(\+\d{1,3}[- ]?)?(?=.{8,15}$)\d+$/,
@@ -220,7 +223,11 @@ export default function ContactUs() {
                       }}
 
                       render={({ field, fieldState: { error } }) => (
-                        <MuiPhoneNumber label="Phone" error={!!error} helperText={error?.message} onChange={field?.onChange} defaultCountry="us" autoFormat={false} fullWidth />
+                        <MuiTelInput label="Phone" error={!!error} helperText={error?.message} onChange={field?.onChange}
+                          variant="standard"
+                          value={field?.value}
+                          onBlur={field?.onBlur}
+                          defaultCountry="us" fullWidth disableFormatting />
                       )}
                     />
 
